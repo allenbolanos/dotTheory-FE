@@ -3,38 +3,103 @@
   border: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto';
 }
 
 nav {
   display: flex;
   justify-content: start;
   align-items: center;
-  background: black;
+  background: #101110;
   padding: 0.5rem;
   padding-inline: 2rem;
 }
 
-.nav-item-2 {
+.nav-item-1 {
   display: flex;
-  gap: 1rem;
+  justify-content: start;
+  align-items: center;
 }
 
-.nav-item-2 svg {
+.nav-item-1 svg {
   cursor: pointer;
 }
 
-.nav-item-2 svg:hover {
+.nav-item-1 svg:hover {
   fill: red;
 }
 
-ul {
-  display: flex;
-  list-style: none;
+.nav-item-1 img:nth-child(2) {
+  margin-left: 1px;
 }
 
-li {
+.nav-item-1 img:nth-child(3) {
+  padding-inline: 1.5rem;
+}
+
+.nav-item-2 {
+  display: flex;
+  gap: 12px;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.nav-item-2 a {
+  cursor: pointer;
   color: white;
-  margin: 1em;
+  padding: 8px;
+  padding-inline: 1rem;
+}
+
+.nav-item-2 a:hover {
+  border-radius: 5px;
+  background: #292929;
+}
+
+.game-info {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  padding: 8px;
+  padding-inline: 1rem;
+}
+
+.game-info:hover {
+  border-radius: 5px;
+  background: #292929;
+}
+
+.game-info:hover .nav-item-2-dropdown {
+  display: flex;
+}
+
+.nav-item-2-dropdown {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  background: #292929;
+  top: 50px;
+  left: 0;
+  border-top: 4px solid #FF4754;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  padding: 6px;
+}
+
+.nav-item-2-dropdown a {
+  font-size: 11px;
+  font-weight: normal;
+  width: 10rem;
+  padding: 0.7rem;
+  margin: 0.3rem 0.6rem;
+  letter-spacing: 1px;
+}
+
+.nav-item-2-dropdown a:hover {
+  background: #444545;
 }
 
 .nav-item-3 {
