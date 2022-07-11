@@ -58,7 +58,7 @@ nav {
   background: #292929;
 }
 
-.game-info {
+.with-dropdown {
   position: relative;
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@ nav {
   height: 100%;
 }
 
-.game-info div:first-child{
+.with-dropdown div:first-child{
   display: flex;
   align-items: center;
   gap: 6px;
@@ -75,20 +75,20 @@ nav {
   padding-inline: 1rem;
 }
 
-.game-info:hover div:first-child {
+.with-dropdown:hover div:first-child {
   border-radius: 5px;
   background: #292929;
 }
 
-.game-info div:first-child p {
+.with-dropdown div:first-child p {
   white-space: nowrap;
 }
 
-.game-info:hover .game-info-dropdown {
+.with-dropdown:hover .dropdown-elements {
   display: flex;
 }
 
-.game-info-dropdown {
+.dropdown-elements {
   position: absolute;
   display: none;
   flex-direction: column;
@@ -100,11 +100,11 @@ nav {
   padding: 10px 6px;
 }
 
-.game-info-dropdown:hover {
+.dropdown-elements:hover {
   display: flex;
 }
 
-.game-info-dropdown a {
+.dropdown-elements a {
   font-size: 12px;
   font-weight: 500;
   color: #c7c7c7;
@@ -115,7 +115,7 @@ nav {
   letter-spacing: 2px;
 }
 
-.game-info-dropdown a:hover {
+.dropdown-elements a:hover {
   border-radius: 6px;
   background: #444545;
   color: #f9f9f9;
@@ -133,12 +133,6 @@ nav {
 
 div:hover > .red-underline {
   display: block;
-}
-
-.with-red-underline {
-  position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
 .with-red-underline {
