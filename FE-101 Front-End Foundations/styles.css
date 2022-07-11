@@ -9,7 +9,7 @@
 nav {
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: stretch;
   background: #101110;
   padding: 0.5rem;
   padding-inline: 2rem;
@@ -39,6 +39,7 @@ nav {
 
 .nav-item-2 {
   display: flex;
+  align-items: center;
   gap: 12px;
   font-weight: bold;
   font-size: 13px;
@@ -59,13 +60,19 @@ nav {
 
 .game-info {
   position: relative;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   color: white;
+  height: 100%;
+}
+
+.game-info p {
   padding: 8px;
   padding-inline: 1rem;
 }
 
-.game-info:hover {
+.game-info p:hover {
   border-radius: 5px;
   background: #292929;
 }
@@ -79,7 +86,7 @@ nav {
   display: none;
   flex-direction: column;
   background: #292929;
-  top: 50px;
+  top: 60px;
   left: 0;
   border-top: 4px solid #FF4754;
   border-top-right-radius: 2px;
@@ -89,13 +96,17 @@ nav {
   padding: 6px;
 }
 
+.nav-item-2-dropdown:hover {
+  display: flex;
+}
+
 .nav-item-2-dropdown a {
   font-size: 11px;
   font-weight: normal;
   width: 10rem;
   padding: 0.7rem;
   margin: 0.3rem 0.6rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .nav-item-2-dropdown a:hover {
