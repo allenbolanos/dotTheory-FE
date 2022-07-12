@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Teko:wght@600;700&display=swap');
+
 * {
   margin: 0;
   border: 0;
@@ -318,7 +320,7 @@ div:hover > .red-underline {
 }
 
 .article-banner img {
-  transform: translateY(-90px);
+  transform: translateY(-101px);
   width: 100%;
 }
 
@@ -399,7 +401,7 @@ article {
   z-index: 50;
 }
 
-.title {
+.title-container {
   padding: 5.5% 7.5%;
 }
 
@@ -427,4 +429,16 @@ article {
   width: 4px;
   height: 4px;
   background: black;
+}
+
+.title {
+  font-family: 'Teko', sans-serif;
+  font-size: 5.5rem;
+  font-weight: 900;
+  font-stretch: condensed;
+  color: #0F1822;
+  transform: scale(1, 1.5);
+  line-height: 4.4rem;
+  margin-top: 5.5rem;
+  letter-spacing: -2px;
 }
