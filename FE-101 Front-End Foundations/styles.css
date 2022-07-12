@@ -6,6 +6,11 @@
   font-family: 'Roboto';
 }
 
+body {
+  background: #EDE9E1;
+  height: 2000px;
+}
+
 nav {
   display: flex;
   justify-content: start;
@@ -29,28 +34,28 @@ nav {
   fill: red;
 }
 
+.nav-item-1 img:nth-child(1) {
+  margin-left: 4px;
+}
+
 .nav-item-1 img:nth-child(2) {
-  margin-left: 1px;
+  margin-left: 2px;
 }
 
 .nav-item-1 img:nth-child(3) {
-  padding-inline: 1.5rem;
+  margin-left: 4px;
+  margin-right: 8px;
+  width: 70px;
+  height: 26px;
 }
 
 .nav-item-2 {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 9px;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 2px;
-}
-
-.nav-item-2 a {
-  cursor: pointer;
-  color: white;
-  padding: 8px;
-  padding-inline: 1rem;
 }
 
 .nav-item-2 a:hover {
@@ -129,6 +134,7 @@ nav {
   background: #FF4754;
   border-radius: 2px;
   top: 2.65rem;
+  left: 0;
 }
 
 div:hover > .red-underline {
@@ -136,9 +142,18 @@ div:hover > .red-underline {
 }
 
 .with-red-underline {
+  cursor: pointer;
   position: relative;
   display: flex;
   flex-direction: column;
+  color: white;
+  padding: 8px;
+  padding-inline: 1rem;
+}
+
+.with-red-underline:hover {
+  border-radius: 5px;
+  background: #292929;
 }
 
 .nav-item-3 {
@@ -146,7 +161,7 @@ div:hover > .red-underline {
   align-items: center;
   gap: 6px;
   margin-left: auto;
-  padding: 1rem;
+  padding: 1rem 0.3rem;
 }
 
 .nav-item-3 a {
@@ -160,10 +175,10 @@ div:hover > .red-underline {
   background: linear-gradient(90deg, rgba(255,55,55,1) 0%, rgba(255,120,96,1) 100%);
   margin-left: 0.5rem;
   padding: 1rem;
-  padding-inline: 1.2rem;
+  padding-inline: 1.1rem;
   height: 1rem;
   border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
