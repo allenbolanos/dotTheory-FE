@@ -3,7 +3,7 @@
   border: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto';
+  font-family: 'Arial';
 }
 
 body {
@@ -54,9 +54,9 @@ nav {
 
 .nav-item-1 a:nth-child(2) {
   text-align: center;
-  margin-top: 2px;
   margin-left: 2px;
-  margin-right: 8px;
+  margin-right: 1px;
+  margin-bottom: 1px;
   width: 75px;
   height: 26px;
 }
@@ -155,10 +155,11 @@ nav {
 .nav-item-2 {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 3.2px;
   font-weight: bold;
   font-size: 12px;
   letter-spacing: 2px;
+  margin-bottom: 4px;
 }
 
 .nav-item-2 a:hover {
@@ -300,10 +301,11 @@ div:hover > .red-underline {
   align-items: center;
   background: linear-gradient(90deg, rgba(255,55,55,1) 0%, rgba(255,120,96,1) 100%);
   padding: 1rem;
-  padding-inline: 1.1rem;
+  padding-inline: 1.05rem;
+  margin-right: 1px;
   height: 1rem;
   border-radius: 12px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 2px;
 }
@@ -340,11 +342,11 @@ div:hover > .red-underline {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 180px;
+  top: 179px;
   z-index: 50;
   width: max-content;
   background: #8A968F;
-  padding: 34px 34px 23px 148px;
+  padding: 34px 37px 22px 148px;
 }
 
 .article-list-link::after {
@@ -367,10 +369,11 @@ div:hover > .red-underline {
 }
 
 .article-list-link p {
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 800;
   color: #ece8e1;
   white-space: nowrap;
+  font-stretch: condensed;
 }
 
 article {
