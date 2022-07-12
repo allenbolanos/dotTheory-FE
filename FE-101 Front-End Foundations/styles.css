@@ -26,26 +26,32 @@ nav {
   align-items: center;
 }
 
-.nav-item-1 svg {
+.nav-item-1 div {
   cursor: pointer;
-}
-
-.nav-item-1 svg:hover {
-  fill: red;
-}
-
-.nav-item-1 img:nth-child(1) {
+  display: flex;
+  align-items: center;
+  margin-top: 1px;
   margin-left: 4px;
 }
 
-.nav-item-1 img:nth-child(2) {
+.rg-logo {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(140deg) brightness(104%) contrast(104%);
+}
+
+.rg-logo:hover {
+  filter: invert(11%) sepia(61%) saturate(7152%) hue-rotate(344deg) brightness(107%) contrast(108%);
+}
+
+.nav-item-1 div img:nth-child(2) {
   margin-left: 2px;
+  margin-bottom: 1px;
 }
 
-.nav-item-1 img:nth-child(3) {
-  margin-left: 4px;
+.nav-item-1 a img {
+  margin-top: 2px;
+  margin-left: 2px;
   margin-right: 8px;
-  width: 70px;
+  width: 75px;
   height: 26px;
 }
 
@@ -121,6 +127,7 @@ nav {
   padding-left: 1.2rem;
   margin: 0.3rem 0.6rem;
   letter-spacing: 2px;
+  text-decoration: none;
 }
 
 .dropdown-elements a:hover {
@@ -154,7 +161,6 @@ div:hover > .red-underline {
   position: relative;
   display: flex;
   flex-direction: column;
-  color: white;
   padding: 8px;
   padding-inline: 1rem;
 }
@@ -164,16 +170,27 @@ div:hover > .red-underline {
   background: #292929;
 }
 
+.with-red-underline a {
+  color: white;
+  text-decoration: none;
+}
+
 .nav-item-3 {
   display: flex;
   align-items: center;
-  gap: 6px;
   margin-left: auto;
   padding: 1rem 0.3rem;
 }
 
-.nav-item-3 a {
-  margin-top: 4px;
+.nav-item-3 img {
+  cursor: pointer;
+  padding: 8px;
+  margin-right: 5px;
+}
+
+.nav-item-3 img:hover {
+  border-radius: 5px;
+  background: #292929;
 }
 
 .nav-item-3 button {
@@ -181,7 +198,6 @@ div:hover > .red-underline {
   display: flex;
   align-items: center;
   background: linear-gradient(90deg, rgba(255,55,55,1) 0%, rgba(255,120,96,1) 100%);
-  margin-left: 0.5rem;
   padding: 1rem;
   padding-inline: 1.1rem;
   height: 1rem;
