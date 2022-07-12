@@ -331,8 +331,8 @@ div:hover > .red-underline {
   align-items: center;
   width: 80.9%;
   height: 100%;
-  border-right: 1px solid #B3AAB3;
-  border-left: 1px solid #B3AAB3;
+  border-right: 1px solid rgba(236,232,225,.5);
+  border-left: 1px solid rgba(236,232,225,.5);
   z-index: 50;
 }
 
@@ -386,6 +386,45 @@ article {
   padding-inline: 10rem;
 }
 
-.title a {
-  float: right;
+.black-line {
+  position: absolute;
+  top: 0;
+  left: 9.55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80.9%;
+  height: 100%;
+  border-left: 1px solid #938F8A;
+  z-index: 50;
+}
+
+.title {
+  padding: 5.5% 7.5%;
+}
+
+.title-date-and-updates {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.title-date-and-updates p {
+  letter-spacing: 1px;
+}
+
+.title-date-and-updates a {
+  display: flex;
+  align-items: end;
+  color: #ff4655;
+  text-decoration: none;
+}
+
+.title-date-and-updates a::before {
+  content: "";
+  margin-right: 1rem;
+  margin-bottom: 4px;
+  width: 4px;
+  height: 4px;
+  background: black;
 }
