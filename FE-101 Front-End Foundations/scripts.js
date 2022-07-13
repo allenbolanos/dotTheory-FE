@@ -41,14 +41,16 @@ async function fetchRelatedContentData() {
 
   relatedContent.forEach(e => {
     $relatedContent.innerHTML += `
-      <div class="related-content-card">
-        <img src="${e.imageSrc}">
-        <div class="related-content-details">
-          <p>0${e.id}</p>
-          <p>${e.date}</p>
-          <p>${e.title}</p>
+      <a href="${e.contentLink}">
+        <div class="related-content-card">
+          <img src="${e.imageSrc}">
+          <div class="related-content-details">
+            <p>0${e.id}</p>
+            <p>${e.date}</p>
+            <p>${e.title}</p>
+          </div>
         </div>
-      </div>
+      </a>
     `
   });
 }

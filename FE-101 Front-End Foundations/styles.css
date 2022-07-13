@@ -743,7 +743,12 @@ aside img:hover {
   height: max-content;
 }
 
+.related-content-cards-container a {
+  text-decoration: none;
+}
+
 .related-content-card {
+  cursor: pointer;
   width: 300px;
   height: 16rem;
   border: 1px solid #bdbcb7;
@@ -758,7 +763,7 @@ aside img:hover {
   position: relative;
   display: grid;
   grid-template-columns: 2.8rem 13rem;
-  grid-template-rows: 1.3rem 3.5rem;
+  grid-template-rows: 1.3rem 2.9rem;
   padding-top: 1rem;
 }
 
@@ -779,6 +784,7 @@ aside img:hover {
   margin-right: auto;
   font-size: 1.5rem;
   font-weight: 600;
+  color: #202930;
   transform: rotate(270deg);
 }
 
