@@ -464,7 +464,7 @@ aside img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
   height: max-content;
   border-left: 1px solid #938F8A;
 }
