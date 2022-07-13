@@ -1,4 +1,4 @@
-async function init() {
+async function fetchContentData() {
   const $content = document.querySelector('.content-container');
 
   const response = await fetch('content.json');
@@ -29,4 +29,28 @@ async function init() {
   });
 }
 
-init();
+fetchContentData();
+
+async function fetchRelatedContentData() {
+  const $relatedContent = document.querySelector('.related-content-cards-container');
+
+  const response = await fetch('related-content.json');
+  const data = await response.json();
+
+  const { relatedContent } = data;
+
+  relatedContent.forEach(e => {
+    $relatedContent.innerHTML += `
+      <div class="related-content-card">
+        <img src="${e.imageSrc}">
+        <div class="related-content-details">
+          <p>0${e.id}</p>
+          <p>${e.date}</p>
+          <p>${e.title}</p>
+        </div>
+      </div>
+    `
+  });
+}
+
+fetchRelatedContentData();
