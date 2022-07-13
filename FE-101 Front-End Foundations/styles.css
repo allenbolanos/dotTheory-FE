@@ -480,7 +480,7 @@ aside img:hover {
   justify-content: center;
   align-items: center;
   margin-left: 7rem;
-  width: 58%;
+  width: 705px;
 }
 
 .content-container div p {
@@ -542,7 +542,7 @@ aside img:hover {
   justify-content: flex-start;
   gap: 2rem;
   height: 90%;
-  width: 58%;
+  width: 705px;
   margin-left: 7rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid #938F8A;
@@ -594,7 +594,7 @@ aside img:hover {
   justify-content: flex-start;
   align-items: center;
   margin-left: 7rem;
-  width: 58%;
+  width: 705px;
 }
 
 .tags-container div:first-child p {
@@ -642,7 +642,7 @@ aside img:hover {
   justify-content: flex-end;
   align-items: center;
   margin-left: 7rem;
-  width: 58%;
+  width: 705px;
   gap: 1rem;
 }
 
