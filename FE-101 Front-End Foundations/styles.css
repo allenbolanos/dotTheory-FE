@@ -385,7 +385,7 @@ article {
   margin-top: 570px;
   background: inherit;
   width: 100%;
-  height: 3000px;
+  height: 100%;
   z-index: 50;
   padding-inline: 9.55%;
 }
@@ -396,7 +396,7 @@ article {
   align-items: flex-start;
   padding: 5.5% 8.5%;
   width: 100%;
-  height: 100%;
+  height: max-content;
   border-left: 1px solid #938F8A;
 }
 
@@ -430,7 +430,6 @@ article {
   font-family: 'Teko', sans-serif;
   font-size: 5.5rem;
   font-weight: 900;
-  font-stretch: condensed;
   color: #0F1822;
   transform: scale(1, 1.5);
   line-height: 4.4rem;
@@ -458,4 +457,70 @@ aside img {
   transform: rotate(270deg);
   width: 1.3rem;
   filter: invert(36%) sepia(65%) saturate(2139%) hue-rotate(331deg) brightness(104%) contrast(99%);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  height: max-content;
+  border-left: 1px solid #938F8A;
+}
+
+.content-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7rem;
+  width: 58%;
+}
+
+.content-container div p {
+  font-size: 0.95rem;
+  font-family: 'Arial';
+  line-height: 1.5rem;
+  color: #768079;
+  align-self: flex-start;
+  margin-bottom: 2rem;
+}
+
+.content-container div p:first-child {
+  font-size: 0.9rem;
+  font-family: 'Arial';
+  font-weight: bold;
+  color: #0f1923;
+  align-self: flex-start;
+}
+
+.add-desc {
+  margin-top: -1.5rem;
+}
+
+.content-container div a {
+  font-size: 0.9rem;
+  font-family: 'Arial';
+  color: #FE4755;
+  align-self: flex-start;
+  text-decoration: underline;
+  margin-bottom: 2.5rem;
+}
+
+.content-container div a:hover {
+  background: #FE4755;
+  color: #ECE8E1;
+}
+
+.content-container div iframe {
+  width: 100%;
+  height: 25rem;
+  margin-bottom: 2rem;
+}
+
+.content-container div img {
+  width: 100%;
+  height: 6rem;
+  margin-block: 1.2rem;
 }
