@@ -810,7 +810,7 @@ aside img:hover {
 
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: -32rem;
   display: flex;
   flex-direction: column;
   width: 100%;
