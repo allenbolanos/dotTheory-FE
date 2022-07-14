@@ -850,7 +850,7 @@ footer {
   height: 100%;
   background: #101110;
   padding-top: 1.5rem;
-  padding-bottom: 3.5rem;
+  padding-bottom: 3rem;
 }
 
 .footer-social-media {
@@ -888,6 +888,7 @@ footer {
   text-align: center;
   width: 38rem;
   color: #7e7e7e;
+  line-height: 1.3rem;
 }
 
 .other-dl-links {
