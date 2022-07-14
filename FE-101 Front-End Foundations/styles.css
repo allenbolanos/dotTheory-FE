@@ -387,7 +387,6 @@ div:hover > .red-underline {
   margin-top: 570px;
   background: #EDE9E1;
   padding-inline: 9.55%;
-  border: 1px solid red;
   z-index: 30;
 }
 
@@ -814,6 +813,7 @@ footer {
   bottom: 0;
   display: flex;
   flex-direction: column;
+  width: 100%;
   z-index: 50;
 }
 
@@ -821,19 +821,105 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   width: 100%;
+  padding: 1.5rem;
   background: #292929;
+  font-family: 'Teko';
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .download-links a {
   cursor: pointer;
   text-decoration: none;
   color: #F9F8F8;
-  padding: 4px;
-  border-radius: 10px;
+  padding: 0.5rem 1.1rem;
+  border-radius: 4px;
 }
 
 .download-links a:hover {
   background: #444444;
+}
+
+.actual-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  height: 100%;
+  background: #101110;
+  padding-top: 1.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.footer-social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer-social-media a {
+  display: flex;
+  align-items: center;
+  background: #292929;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.footer-social-media img {
+  height: 1rem;
+  filter: invert(100%) sepia(0%) saturate(7492%) hue-rotate(144deg) brightness(89%) contrast(121%);
+}
+
+.footer-rg-logo {
+  height: 2rem;
+  margin-top: 1rem;
+  filter: invert(47%) sepia(1%) saturate(0%) hue-rotate(281deg) brightness(94%) contrast(84%);
+}
+
+.footer-rg-logo:hover {
+  filter: invert(100%) sepia(72%) saturate(2%) hue-rotate(56deg) brightness(111%) contrast(101%);
+}
+
+.copyright-text {
+  font-size: 0.8rem;
+  text-align: center;
+  width: 38rem;
+  color: #7e7e7e;
+}
+
+.other-dl-links {
+  background: none;
+  gap: 0rem;
+  padding: 0;
+}
+
+.esrb-rating {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+  background: #292929;
+  padding: 0.8rem;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.esrb-rating img {
+  height: 6.1rem;
+}
+
+.esrb-rating ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #efefef;
+}
+
+.esrb-rating ul li {
+  flex: 1;
 }
