@@ -316,6 +316,8 @@ div:hover > .red-underline {
   position: absolute;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
   z-index: 20;
 }
 
@@ -327,11 +329,8 @@ div:hover > .red-underline {
 .white-lines {
   position: absolute;
   top: 0;
-  left: 9.55%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80.9%;
+  align-self: center;
+  width: 1300px;
   height: 100%;
   border-right: 1px solid rgba(236,232,225,.5);
   border-left: 1px solid rgba(236,232,225,.5);
@@ -345,6 +344,7 @@ div:hover > .red-underline {
   justify-content: center;
   align-items: center;
   top: 179px;
+  left: 0;
   z-index: 50;
   width: max-content;
   background: #8A968F;
