@@ -10,7 +10,6 @@
 
 body {
   background: #EDE9E1;
-  height: 30000px;
 }
 
 nav {
@@ -379,16 +378,30 @@ div:hover > .red-underline {
   font-stretch: condensed;
 }
 
-article {
+.article-footer-container {
   position: absolute;
   display: flex;
-  flex-direction: column;
-  margin-top: 570px;
-  background: inherit;
+  justify-content: center;
   width: 100%;
+  height: max-content;
+  margin-top: 570px;
+  background: #EDE9E1;
+  padding-inline: 9.55%;
+  border: 1px solid red;
+  z-index: 30;
+}
+
+article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: inherit;
+  width: 1300px;
   height: 100%;
   z-index: 50;
-  padding-inline: 9.55%;
+  
+  border-left: 1px solid #938F8A;
 }
 
 .title-container {
@@ -398,7 +411,6 @@ article {
   padding: 5.5% 8.5%;
   width: 100%;
   height: max-content;
-  border-left: 1px solid #938F8A;
 }
 
 .title-date-and-updates {
@@ -464,16 +476,6 @@ aside img:hover {
   filter: invert(0%) sepia(1%) saturate(5%) hue-rotate(304deg) brightness(97%) contrast(103%);
 }
 
-.content-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  height: max-content;
-  border-left: 1px solid #938F8A;
-}
-
 .content-container div {
   display: flex;
   flex-direction: column;
@@ -533,7 +535,6 @@ aside img:hover {
 .author-container {
   display: flex;
   justify-content: center;
-  border-left: 1px solid #938F8A;
   padding-top: 4rem;
 }
 
@@ -585,7 +586,6 @@ aside img:hover {
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
-  border-left: 1px solid #938F8A;
   padding-top: 4rem;
 }
 
@@ -661,8 +661,8 @@ aside img:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   gap: 2.5rem;
-  border-left: 1px solid #938F8A;
   padding-top: 7.5rem;
   padding-bottom: 2rem;
 }
@@ -670,6 +670,7 @@ aside img:hover {
 .related-content-background {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .related-content-background p {
@@ -687,6 +688,7 @@ aside img:hover {
 
 .related-content-background p:nth-child(2) {
   transform: translateX(20rem);
+  overflow: hidden;
 }
 
 .related-content-upper {
@@ -750,7 +752,7 @@ aside img:hover {
 .related-content-card {
   cursor: pointer;
   width: 300px;
-  height: 16rem;
+  height: 16.5rem;
   border: 1px solid #bdbcb7;
   background: #EDE9E1;
 }
@@ -763,7 +765,7 @@ aside img:hover {
   position: relative;
   display: grid;
   grid-template-columns: 2.8rem 13rem;
-  grid-template-rows: 1.3rem 2.9rem;
+  grid-template-rows: 1.3rem 3.4rem;
   padding-top: 1rem;
 }
 
@@ -807,3 +809,31 @@ aside img:hover {
   margin-left: -12px;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+}
+
+.download-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  background: #292929;
+}
+
+.download-links a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #F9F8F8;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.download-links a:hover {
+  background: #444444;
+}
