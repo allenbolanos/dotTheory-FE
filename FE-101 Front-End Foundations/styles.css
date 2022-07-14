@@ -615,6 +615,7 @@ aside img:hover {
   margin-left: 1rem;
   margin-bottom: 0.8rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .tags-container div:first-child a:hover {
