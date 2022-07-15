@@ -1,7 +1,7 @@
 async function fetchContentData() {
   const $content = document.querySelector('.content-container');
 
-  const response = await fetch('content.json');
+  const response = await fetch('../data/content.json');
   const data = await response.json();
 
   const { content } = data;
@@ -34,7 +34,7 @@ fetchContentData();
 async function fetchRelatedContentData() {
   const $relatedContent = document.querySelector('.related-content-cards-container');
 
-  const response = await fetch('related-content.json');
+  const response = await fetch('../data/related-content.json');
   const data = await response.json();
 
   const { relatedContent } = data;

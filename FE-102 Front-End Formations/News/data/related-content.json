@@ -3,28 +3,28 @@
     {
       "id": 1,
       "contentLink": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-5-01/",
-      "imageSrc": "/FE-101 Front-End Foundations/assets/related-content-1.jpg",
+      "imageSrc": "../assets/common/related-content-1.jpg",
       "date": "07/12/22",
       "title": "VALORANT PATCH NOTES 5.01" 
     },
     {
       "id": 2,
       "contentLink": "https://www.youtube.com/watch?v=le474A3jBxA",
-      "imageSrc": "/FE-101 Front-End Foundations/assets/related-content-2.webp",
+      "imageSrc": "../assets/common/related-content-2.webp",
       "date": "06/22/22",
       "title": "DIVE IN // Episode 5: Act I Kickoff - VALORANT" 
     },
     {
       "id": 3,
       "contentLink": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-5-0/A",
-      "imageSrc": "/FE-101 Front-End Foundations/assets/related-content-3.webp",
+      "imageSrc": "../assets/common/related-content-3.webp",
       "date": "06/17/22",
       "title": "VALORANT Patch Notes 5.0" 
     },
     {
       "id": 4,
       "contentLink": "https://playvalorant.com/en-us/news/game-updates/valorant-map-pool-changes/",
-      "imageSrc": "/FE-101 Front-End Foundations/assets/related-content-4.webp",
+      "imageSrc": "../assets/common/related-content-4.webp",
       "date": "06/17/22",
       "title": "VALORANT Map Pool Changes" 
     }
