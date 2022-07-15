@@ -1,6 +1,4 @@
 footer {
-  position: absolute;
-  bottom: -32rem;
   display: flex;
   flex-direction: column;
   width: 100%;
