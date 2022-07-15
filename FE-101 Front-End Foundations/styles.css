@@ -322,7 +322,8 @@ div:hover > .red-underline {
 }
 
 .article-banner img {
-  transform: translateY(-101px);
+  object-fit: cover;
+  transform: translateY(-37px);
   width: 100%;
 }
 
@@ -330,7 +331,7 @@ div:hover > .red-underline {
   position: absolute;
   top: 0;
   align-self: center;
-  width: 1300px;
+  width: 1232px;
   height: 100%;
   border-right: 1px solid rgba(236,232,225,.5);
   border-left: 1px solid rgba(236,232,225,.5);
@@ -386,7 +387,6 @@ div:hover > .red-underline {
   height: max-content;
   margin-top: 570px;
   background: #EDE9E1;
-  padding-inline: 9.55%;
   z-index: 30;
 }
 
@@ -396,10 +396,9 @@ article {
   flex-direction: column;
   align-items: center;
   background: inherit;
-  width: 1300px;
+  width: 1232px;
   height: 100%;
   z-index: 50;
-  
   border-left: 1px solid #938F8A;
 }
 
