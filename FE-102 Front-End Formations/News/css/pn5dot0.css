@@ -16,11 +16,6 @@ ul {
   list-style: none;
 }
 
-h3 {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
 .article-banner {
   position: absolute;
   width: 100%;
@@ -220,6 +215,19 @@ aside img:hover {
   font-size: 1.4rem;
 }
 
+.container-sections {
+  padding-bottom: 2.5rem;
+}
+
+.container-sections h2 {
+  margin-bottom: 2rem;
+}
+
+.container-sections h3 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .map-updates-container {
   position: relative;
   padding-block: 2.5rem;
@@ -230,7 +238,7 @@ aside img:hover {
   content: "///";
   font-weight: 700;
   font-size: 1.5rem;
-  top: 28rem;
+  top: 29rem;
   left: -10rem;
   color: #768079;
 }
@@ -259,8 +267,13 @@ aside img:hover {
   margin-left: 1rem;
 }
 
-.map-updates-container img {
-  padding-top: 4rem;
+.pearl-banner {
+  padding-top: 2rem;
+  padding-bottom: 5.5rem;
+}
+
+.split-banner {
+  padding-top: 3rem;
   padding-bottom: 5.5rem;
 }
 
@@ -276,22 +289,6 @@ aside img:hover {
 .map-pool-changes-link:hover {
   background: #FE4755;
   color: #ECE8E1;
-}
-
-.competitive-updates-container {
-  padding-bottom: 2.5rem;
-}
-
-.competitive-updates-container h2 {
-  margin-bottom: 2rem;
-}
-
-.bugs-container {
-  padding-bottom: 2.5rem;
-}
-
-.bugs-container h2 {
-  margin-bottom: 1.7rem;
 }
 
 .shoutout-link {
@@ -310,53 +307,6 @@ aside img:hover {
 
 .bugs-container ul {
   margin-bottom: 2rem;
-}
-
-.content-container-1 div p {
-  font-size: 0.95rem;
-  font-family: 'Arial';
-  line-height: 1.5rem;
-  color: #768079;
-  align-self: flex-start;
-  margin-bottom: 2rem;
-}
-
-.content-container-1 div p:first-child {
-  font-size: 0.9rem;
-  font-family: 'Arial';
-  font-weight: bold;
-  color: #0f1923;
-  align-self: flex-start;
-}
-
-.add-desc {
-  margin-top: -1.5rem;
-}
-
-.content-container-1 div a {
-  font-size: 0.9rem;
-  font-family: 'Arial';
-  color: #FE4755;
-  align-self: flex-start;
-  text-decoration: underline;
-  margin-bottom: 2.5rem;
-}
-
-.content-container-1 div a:hover {
-  background: #FE4755;
-  color: #ECE8E1;
-}
-
-.content-container-1 div iframe {
-  width: 100%;
-  height: 25rem;
-  margin-bottom: 2rem;
-}
-
-.content-container-1 div img {
-  width: 100%;
-  height: 6rem;
-  margin-block: 1.2rem;
 }
 
 .author-container {
