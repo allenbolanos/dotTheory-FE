@@ -211,12 +211,18 @@ aside img:hover {
 }
 
 .container-sections h2 {
+  font-family: 'Roboto';
   margin-bottom: 1.5rem;
 }
 
 .container-sections h3 {
+  font-family: 'Roboto';
   font-size: 1rem;
   margin-bottom: 1.5rem;
+}
+
+.agent-updates h2{
+  font-size: 1.1rem;
 }
 
 .agent-updates-container {
