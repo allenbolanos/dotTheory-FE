@@ -260,15 +260,13 @@ aside img:hover {
 }
 
 .author-container div:first-child img {
-  height: 100%;
+  height: 140px;
 }
 
 .author-description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: stretch;
-  height: 100%;
 }
 
 .author-description p:first-child {
