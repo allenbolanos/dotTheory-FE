@@ -278,7 +278,37 @@ aside img:hover {
   color: #ECE8E1;
 }
 
+.competitive-updates-container {
+  padding-bottom: 2.5rem;
+}
+
 .competitive-updates-container h2 {
+  margin-bottom: 2rem;
+}
+
+.bugs-container {
+  padding-bottom: 2.5rem;
+}
+
+.bugs-container h2 {
+  margin-bottom: 1.7rem;
+}
+
+.shoutout-link {
+  font-size: 1rem;
+  font-family: 'Arial';
+  color: #FE4755;
+  align-self: flex-start;
+  text-decoration: underline;
+  margin-bottom: 2.5rem;
+}
+
+.shoutout-link:hover {
+  background: #FE4755;
+  color: #ECE8E1;
+}
+
+.bugs-container ul {
   margin-bottom: 2rem;
 }
 
