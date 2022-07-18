@@ -190,7 +190,7 @@ aside img:hover {
   filter: invert(0%) sepia(1%) saturate(5%) hue-rotate(304deg) brightness(97%) contrast(103%);
 }
 
-.content-container div {
+.content-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -198,17 +198,8 @@ aside img:hover {
   width: 705px;
 }
 
-.content-container div img {
+.content-container article img {
   width: 100%;
-}
-
-.content-container div img:first-child {
-  padding-block: 2.5rem;
-}
-
-.content-container div img:first-child:hover {
-  cursor: pointer;
-  background: #FF4655;
 }
 
 .content-container h2 {
@@ -220,7 +211,7 @@ aside img:hover {
 }
 
 .container-sections h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .container-sections h3 {
@@ -228,12 +219,12 @@ aside img:hover {
   margin-bottom: 1.5rem;
 }
 
-.map-updates-container {
+.agent-updates-container {
   position: relative;
   padding-block: 2.5rem;
 }
 
-.map-updates-container::before {
+.agent-updates-container::before {
   position: absolute;
   content: "///";
   font-weight: 700;
@@ -256,7 +247,7 @@ aside img:hover {
   font-weight: 500;
 }
 
-.description::before {
+.li-marker::before {
   content: "\B7   /";
   font-weight: 700;
   color: #0f1923;
@@ -267,46 +258,36 @@ aside img:hover {
   margin-left: 1rem;
 }
 
-.pearl-banner {
+.agent-banner {
+  width: 100%;
   padding-top: 2rem;
   padding-bottom: 5.5rem;
 }
 
-.split-banner {
-  padding-top: 3rem;
-  padding-bottom: 5.5rem;
+.agent-skills-update {
+  padding-block: 1rem;
 }
 
-.map-pool-changes-link {
-  font-size: 1rem;
-  font-family: 'Arial';
-  color: #FE4755;
-  align-self: flex-start;
-  text-decoration: underline;
-  margin-bottom: 2.5rem;
+.skill {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  width: 705px;
+  border: 1px solid #bdbcb7;
 }
 
-.map-pool-changes-link:hover {
-  background: #FE4755;
-  color: #ECE8E1;
-}
-
-.shoutout-link {
-  font-size: 1rem;
-  font-family: 'Arial';
-  color: #FE4755;
-  align-self: flex-start;
-  text-decoration: underline;
-  margin-bottom: 2.5rem;
-}
-
-.shoutout-link:hover {
-  background: #FE4755;
-  color: #ECE8E1;
+.middle-skill {
+  border-top: none;
+  border-bottom: none;
 }
 
 .bugs-container ul {
   margin-bottom: 2rem;
+}
+
+.bug-fix {
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
 }
 
 .author-container {
