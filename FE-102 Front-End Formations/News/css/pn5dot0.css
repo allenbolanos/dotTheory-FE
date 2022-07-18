@@ -12,6 +12,15 @@ body {
   background: #EDE9E1;
 }
 
+ul {
+  list-style: none;
+}
+
+h3 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .article-banner {
   position: absolute;
   width: 100%;
@@ -211,11 +220,6 @@ aside img:hover {
   font-size: 1.4rem;
 }
 
-.content-container h3 {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
 .map-updates-container {
   position: relative;
   padding-block: 2.5rem;
@@ -231,15 +235,17 @@ aside img:hover {
   color: #768079;
 }
 
-.map-updates-container ul {
-  list-style: none;
-}
-
 .description {
-  font-family: 'Arial';
+  font-family: 'Roboto';
   font-size: 1rem;
+  font-weight: 500;
   color: #768079;
   line-height: 1.6rem;
+}
+
+.description i {
+  font-family: 'Roboto';
+  font-weight: 500;
 }
 
 .description::before {
@@ -270,6 +276,10 @@ aside img:hover {
 .map-pool-changes-link:hover {
   background: #FE4755;
   color: #ECE8E1;
+}
+
+.competitive-updates-container h2 {
+  margin-bottom: 2rem;
 }
 
 .content-container-1 div p {
