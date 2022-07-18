@@ -163,7 +163,7 @@ article {
 aside {
   position: absolute;
   top: 10rem;
-  right: 6rem;
+  right: -3rem;
   display: flex;
   align-self: flex-end;
   gap: 2rem;
@@ -186,7 +186,7 @@ aside img:hover {
   filter: invert(0%) sepia(1%) saturate(5%) hue-rotate(304deg) brightness(97%) contrast(103%);
 }
 
-.content-container div {
+.content-container-1 div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -195,7 +195,7 @@ aside img:hover {
   width: 705px;
 }
 
-.content-container div p {
+.content-container-1 div p {
   font-size: 0.95rem;
   font-family: 'Arial';
   line-height: 1.5rem;
@@ -204,7 +204,7 @@ aside img:hover {
   margin-bottom: 2rem;
 }
 
-.content-container div p:first-child {
+.content-container-1 div p:first-child {
   font-size: 0.9rem;
   font-family: 'Arial';
   font-weight: bold;
@@ -216,7 +216,7 @@ aside img:hover {
   margin-top: -1.5rem;
 }
 
-.content-container div a {
+.content-container-1 div a {
   font-size: 0.9rem;
   font-family: 'Arial';
   color: #FE4755;
@@ -225,18 +225,18 @@ aside img:hover {
   margin-bottom: 2.5rem;
 }
 
-.content-container div a:hover {
+.content-container-1 div a:hover {
   background: #FE4755;
   color: #ECE8E1;
 }
 
-.content-container div iframe {
+.content-container-1 div iframe {
   width: 100%;
   height: 25rem;
   margin-bottom: 2rem;
 }
 
-.content-container div img {
+.content-container-1 div img {
   width: 100%;
   height: 6rem;
   margin-block: 1.2rem;
