@@ -31,6 +31,17 @@ ul {
   width: 100%;
 }
 
+.white-lines {
+  position: absolute;
+  top: 0;
+  align-self: center;
+  width: 1232px;
+  height: 100%;
+  border-right: 1px solid rgba(236,232,225,.5);
+  border-left: 1px solid rgba(236,232,225,.5);
+  z-index: 50;
+}
+
 .article-list-link {
   cursor: pointer;
   position: absolute;
