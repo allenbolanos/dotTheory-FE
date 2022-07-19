@@ -162,6 +162,7 @@ article {
   line-height: 4.4rem;
   margin-top: 5.5rem;
   letter-spacing: -2px;
+  width: 86%;
 }
 
 aside {
@@ -230,6 +231,10 @@ aside img:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.about-fade-container h2 {
+  align-self: flex-start;
 }
 
 .fade-pic {
