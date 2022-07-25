@@ -7,7 +7,7 @@
       "additionalDescription": null,
       "optionalLinkText": null,
       "optionalLink": null,
-      "imageSrc": "../assets/valorant-pearl.jpg"
+      "imageSrc": "../../assets/valorant-pearl.jpg"
     },
     {
       "subtitle": "NEW MAP: PEARL (JUN. 22 PEARL-ONLY QUEUE, JUL. 12 ALL QUEUES)",
@@ -16,7 +16,7 @@
       "additionalDescription": null,
       "optionalLinkText": null,
       "optionalLink": null,
-      "imageSrc": "../assets/valorant-skins.png"
+      "imageSrc": "../../assets/valorant-skins.png"
     },
     {
       "subtitle": "EPISODE 5 ACT I BATTLEPASS (JUN. 22)",
@@ -25,7 +25,7 @@
       "additionalDescription": "Purchase the Act I Premium Battlepass to earn even more tiers of VALORANT goods, like the Task Force 809 Phantom, Spitfire Operator, or the Cat Tactics Gun Buddy.",
       "optionalLinkText": "Need a refresher? Learn more about VALORANT’s Battlepass.",
       "optionalLink": "https://playvalorant.com/en-us/news/game-updates/what-is-the-valorant-battlepass/",
-      "imageSrc": "../assets/valorant-comics.png"
+      "imageSrc": "../../assets/valorant-comics.png"
     },
     {
       "subtitle": "EVENT PASS: CROSSOVER (JUN. 22–JUL. 12)",
@@ -34,7 +34,7 @@
       "additionalDescription": "Earn enough XP in time to add these 3 exclusive Player Cards, Radianite Points, and new Titles, to your collection.",
       "optionalLinkText": null,
       "optionalLink": null,
-      "imageSrc": "../assets/valorant-event-skins.png"
+      "imageSrc": "../../assets/valorant-event-skins.png"
     },
     {
       "subtitle": "NEW SKINLINE: PRELUDE TO CHAOS (JUN. 22)",
@@ -43,7 +43,7 @@
       "additionalDescription": null,
       "optionalLinkText": null,
       "optionalLink": null,
-      "imageSrc": "../assets/valorant-skinline.png"
+      "imageSrc": "../../assets/valorant-skinline.png"
     },
     {
       "subtitle": "NEW RANK: ASCENDANT (JUN. 22)",
