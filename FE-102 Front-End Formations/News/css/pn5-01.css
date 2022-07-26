@@ -1,0 +1,105 @@
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 7rem;
+  width: 705px;
+}
+
+.content-container article img {
+  width: 100%;
+}
+
+.content-container h2 {
+  font-size: 1.4rem;
+}
+
+.container-sections {
+  padding-bottom: 2.5rem;
+}
+
+.container-sections h2 {
+  font-family: 'Roboto';
+  margin-bottom: 1.5rem;
+}
+
+.container-sections h3 {
+  font-family: 'Roboto';
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.agent-updates h2{
+  font-size: 1.1rem;
+}
+
+.agent-updates-container {
+  position: relative;
+  padding-block: 2.5rem;
+}
+
+.agent-updates-container::before {
+  position: absolute;
+  content: "///";
+  font-weight: 700;
+  font-size: 1.5rem;
+  top: 29rem;
+  left: -10rem;
+  color: #768079;
+}
+
+.description {
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-weight: 500;
+  color: #768079;
+  line-height: 1.6rem;
+}
+
+.description i {
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+.li-marker::before {
+  content: "\B7   /";
+  font-weight: 700;
+  color: #0f1923;
+  margin-right: 0.5rem;
+}
+
+.indent {
+  margin-left: 1rem;
+}
+
+.agent-banner {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 5.5rem;
+}
+
+.agent-skills-update {
+  padding-block: 1rem;
+}
+
+.skill {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  width: 705px;
+  border: 1px solid #bdbcb7;
+}
+
+.middle-skill {
+  border-top: none;
+  border-bottom: none;
+}
+
+.bugs-container ul {
+  margin-bottom: 2rem;
+}
+
+.bug-fix {
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
