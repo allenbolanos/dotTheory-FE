@@ -29,7 +29,7 @@ async function renderContent() {
   });
 }
 
-renderContentData();
+renderContent();
 
 async function renderRelatedContent() {
   const $relatedContent = document.querySelector('.related-content-cards-container');
