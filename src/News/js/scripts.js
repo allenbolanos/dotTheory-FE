@@ -1,7 +1,7 @@
-async function fetchContentData() {
-  const $content = document.querySelector('.content-container');
+async function renderContent() {
+  const $content = document.querySelector('.content-container-1');
 
-  const response = await fetch('../../data/content.json');
+  const response = await fetch('../data/content.json');
   const data = await response.json();
 
   const { content } = data;
@@ -29,12 +29,12 @@ async function fetchContentData() {
   });
 }
 
-fetchContentData();
+renderContentData();
 
-async function fetchRelatedContentData() {
+async function renderRelatedContent() {
   const $relatedContent = document.querySelector('.related-content-cards-container');
 
-  const response = await fetch('../../data/related-content.json');
+  const response = await fetch('../data/related-content.json');
   const data = await response.json();
 
   const { relatedContent } = data;
@@ -55,4 +55,4 @@ async function fetchRelatedContentData() {
   });
 }
 
-fetchRelatedContentData();
+renderRelatedContent();
