@@ -1,0 +1,132 @@
+.latest-news-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-bottom: 10.65rem;
+}
+
+.latest-news-bg-text {
+  white-space: nowrap;
+  line-height: 15rem;
+  width: 100%;
+}
+
+.latest-news-bg-text p:nth-child(2) {
+  transform: translateX(28rem);
+  margin-top: 2rem;
+}
+
+.latest-news-content {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.latest-news-content::before {
+  content: "";
+  position: absolute;
+  top: 2.2rem;
+  right: 36.66rem;
+  width: 8px;
+  height: 8px;
+  background: #FE4755;
+}
+
+.latest-news-content::after {
+  content: "";
+  position: absolute;
+  top: 2.2rem;
+  left: 36.6rem;
+  width: 8px;
+  height: 8px;
+  background: #FE4755;
+}
+
+.latest-news-title-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 9.5rem;
+}
+
+.latest-news-title-container p {
+  font-family: 'Teko';
+  font-size: 6rem;
+  font-weight: 900;
+  color: #ff4655;
+  transform: scale(0.9, 1.4);
+  margin-left: -1.3rem;
+}
+
+.latest-news-title-container a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #FE4755;
+  margin-left: auto;
+  margin-right: -6px;
+  margin-bottom: 5rem;
+  transform: scale(0.95, 0.95);
+}
+
+.news-cards-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15.19rem;
+}
+
+.news-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 24.4rem;
+}
+
+.news-card-date-and-category {
+  display: flex;
+  gap: 0.5rem;
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 0.7rem;
+  width: 100%;
+}
+
+.news-card-date-and-category p {
+  color: #0f1923;
+  letter-spacing: 1px;
+}
+
+.news-card-date-and-category p:nth-child(2) {
+  position: relative;
+  display: flex;
+  align-items: end;
+  color: #ff4655;
+}
+
+.news-card-date-and-category p:nth-child(2)::before {
+  content: "";
+  margin-right: 0.5rem;
+  margin-bottom: 4px;
+  width: 1px;
+  height: 1px;
+  background: black;
+}
+
+.news-card img {
+  width: 100%;
+}
+
+.news-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #383e3a;
+  width: 100%;
+}
