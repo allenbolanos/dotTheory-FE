@@ -1,0 +1,170 @@
+.your-maps-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.your-maps-bg-wrapper {
+  position: relative;
+  width: 100vw;
+  padding-bottom: 50rem;
+}
+
+.split-bg {
+  position: absolute;
+  top: -5rem;
+  right: -8.3rem;
+  z-index: 50;
+}
+
+.your-maps-bg-outline-text {
+  position: absolute;
+  left: -2.9rem;
+  top: 2.5rem;
+  align-self: flex-start;
+  letter-spacing: 0.5rem;
+  font-size: 22rem;
+}
+
+.birds-bg {
+  position: absolute;
+  top: 10rem;
+  left: 26rem;
+  z-index: 40;
+}
+
+.your-maps-left-bg-sprite {
+  position: absolute;
+  top: 4.9rem;
+  left: -4.2rem;
+  width: 1.85rem;
+  height: 15rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.your-maps-left-bg-sprite img {
+  margin-top: -6.4rem;
+  margin-left: -2.2rem;
+}
+
+.your-maps-left-bg-sprite-2 {
+  position: absolute;
+  top: 36.1rem;
+  left: -4.2rem;
+  width: 3.5rem;
+  height: 6.3rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.your-maps-left-bg-sprite-2 img {
+  margin-left: -2.2rem;
+}
+
+.your-maps-title-description-wrapper {
+  position: absolute;
+  width: 80.9%;
+}
+
+.your-maps-content-container {
+  place-content: flex-start;
+  top: 8.75rem;
+  left: 6.59rem;
+  color: #0E1823;
+  margin-right: 9rem;
+  border-top: 1px solid rgba(15,25,35,.4);
+  padding-top: 4.5rem;
+  z-index: 60;
+}
+
+.your-maps-content-container h5 {
+  margin-top: 4rem;
+}
+
+.your-maps-content-container p {
+  color: #768079;
+}
+
+.view-all-maps-button-wrapper {
+  margin-top: 3.7rem;
+}
+
+.view-all-maps-button-wrapper span:first-child {
+  border: 1px solid #bdbcb7;
+  border-bottom: none;
+}
+
+.view-all-maps-button-wrapper span:nth-child(3) {
+  border: 1px solid #bdbcb7;
+  border-top: none;
+}
+
+.view-all-maps-button::before {
+  background: #FE4755;
+}
+
+@media screen and (max-width: 1023px) {
+
+  .split-bg {
+    right: -42.3rem;
+  }
+
+  .your-maps-content-container { 
+    top: 7rem;
+    left: 0;
+    width: 124%;
+  }
+
+  .your-maps-content-container h1 {
+    font-size: 5rem;
+  }
+
+  .your-maps-content-container h5 {
+    margin-top: 3rem;
+  }
+
+  .your-maps-content-container p {
+    font-size: 1.1rem;
+    width: 58%;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+  .split-bg {
+    right: -55rem;
+  }
+
+  .your-maps-content-container { 
+    align-items: center;
+    top: 7rem;
+    left: 0;
+    width: 124%;
+  }
+
+  .your-maps-content-container h1 {
+    font-size: 3rem;
+  }
+
+  .your-maps-content-container h5 {
+    margin-top: 3rem;
+  }
+
+  .your-maps-content-container p {
+    font-size: 1rem;
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 376px) {
+
+  .split-bg {
+    right: -60rem;
+  }
+
+}
