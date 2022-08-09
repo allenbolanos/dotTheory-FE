@@ -1,0 +1,13 @@
+.copyright-text {
+  width: 100%;
+}
+
+.download-links {
+  flex-direction: column;
+  font-size: 0.7rem;
+  padding-inline: 0;
+}
+
+.other-dl-links {
+  font-size: 0.6rem;
+}
