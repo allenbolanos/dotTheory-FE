@@ -1,0 +1,87 @@
+.dimension-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dimension-section::after {
+  content: "";
+  position: absolute;
+  align-self: center;
+  width: 1229px;
+  height: 100%;
+  border-left: 1px solid rgba(236,232,225,.5);
+  z-index: 20;
+}
+
+.dimension-section img {
+  position: relative;
+  object-fit: none;
+  object-position: 50% 0;
+  display: flex;
+  justify-content: center;
+  height: 53.15rem;
+}
+
+.dimension-content-container {
+  position: absolute;
+  top: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.6rem;
+  width: 1230px;
+  margin-left: 4rem;
+  color: #ece8e1;
+}
+
+.dimension-section div h5 {
+  font-size: 1.2rem;
+  letter-spacing: 8px;
+}
+
+.dimension-section div p {
+  font-family: 'Teko';
+  font-size: 6.8rem;
+  transform: scale(1.1, 1.4);
+
+  margin-left: 1rem;
+  letter-spacing: -2px;
+}
+
+.dimension-button {
+  margin-top: -1.2rem;
+  margin-left: -0.1rem;
+}
+
+.dimension-red-boxes {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 1230px;
+}
+
+.dimension-red-boxes::after {
+  content: "";
+  position: absolute;
+  left: 46.15rem;
+  width: 6.25rem;
+  height: 0.2rem;
+  background: #FE4755;
+}
+
+.left-red-box {
+  width: 0.65rem;
+  height: 0.65rem;
+  background: #FE4755;
+  margin-bottom: 1.25rem;
+}
+
+.right-red-box {
+  align-self: flex-end;
+  width: 0.85rem;
+  height: 0.9rem;
+  background: #FE4755;
+}
