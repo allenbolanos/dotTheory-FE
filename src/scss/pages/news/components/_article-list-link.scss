@@ -28,11 +28,19 @@
 .article-list-link img {
   width: 1.2rem;
   height: 1.2rem;
-  transform: rotate(180deg);
+  @include mixin.arrow-sway();
+  @include mixin.arrow-sway-keyframes(rotate(180deg));
 }
+
 
 .article-list-link p {
   @include mixin.text($size: 14px, $weight: 800, $color: $white-text);
   white-space: nowrap;
   font-stretch: condensed;
+  transition: 0.2s ease-in-out;
 }
+
+.article-list-link:hover p {
+  transform: scale(1.02);
+}
+

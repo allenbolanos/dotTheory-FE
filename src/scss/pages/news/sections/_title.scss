@@ -55,6 +55,7 @@
   display: flex;
   align-items: end;
   color: $red-text;
+  width: auto;
 }
 
 .upper-content a::before {
@@ -66,11 +67,15 @@
   background: black;
 }
 
+#category-upper-content a:hover::after {
+  width: calc(100% - 1rem);
+}
+
 .upper-content a:hover::after {
+  content: "";
   position: absolute;
   bottom: -4px;
   right: 0;
-  content: "";
   width: 7.1rem;
   height: 1px;
   background: red;

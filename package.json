@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run watch:scss",
-    "watch:scss": "sass --watch scss/main.scss:css/main.css scss/pages/home/home.scss:css/pages/home/home.css scss/pages/category/category.scss:css/pages/category/category.css scss/pages/news/article.scss:css/pages/news/article.css",
+    "watch:scss": "sass --watch src/scss/main.scss:src/css/main.css src/scss/pages/home/home.scss:src/css/pages/home/home.css src/scss/pages/category/category.scss:src/css/pages/category/category.css src/scss/pages/news/article.scss:src/css/pages/news/article.css src/scss/pages/about/about.scss:src/css/pages/about/about.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

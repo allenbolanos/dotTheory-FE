@@ -54,9 +54,18 @@ footer {
 .footer-social-media a {
   display: flex;
   align-items: center;
-  background: #292929;
+  background: $secondary-black-bg;
   padding: 8px;
   border-radius: 12px;
+  transition: 0.25s ease-in;
+}
+
+.footer-social-media a:hover {
+  background: $secondary-white-bg;
+}
+
+.footer-social-media a:hover img {
+  filter: invert(10%) sepia(0%) saturate(7492%) hue-rotate(144deg) brightness(89%) contrast(121%);
 }
 
 .footer-social-media img {

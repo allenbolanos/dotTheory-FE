@@ -1,0 +1,406 @@
+main {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Teko";
+  font-size: 10rem;
+  transform: scale(0.7, 1);
+  line-height: 0;
+}
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+h2 {
+  font-family: "Roboto";
+  font-size: 8rem;
+  font-weight: 300;
+}
+
+.dotTheory-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: 0.5s ease-in;
+}
+
+.dot-rectangle {
+  position: absolute;
+  height: 16rem;
+  z-index: 10;
+  background: black;
+}
+
+.dot-circle {
+  position: absolute;
+  z-index: 20;
+  background: black;
+  border-radius: 50%;
+}
+
+@keyframes dot-circle-grow {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  40% {
+    width: 16rem;
+    height: 16rem;
+  }
+  50% {
+    width: 3rem;
+    height: 3.5rem;
+  }
+  90% {
+    width: 3rem;
+    height: 3.5rem;
+  }
+  100% {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+@keyframes dot-circle-shrink {
+  0% {
+    width: 16rem;
+    height: 16rem;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+.theory-text, .dot-text {
+  position: absolute;
+  bottom: -4rem;
+  z-index: 30;
+  color: #ece8e1;
+}
+
+.theory-text {
+  opacity: 0;
+}
+
+.dotTheory-desc {
+  position: absolute;
+  z-index: 30;
+  font-size: 1.3rem;
+  color: #ece8e1;
+}
+
+.dotTheory-content {
+  position: relative;
+  width: 50%;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  gap: 2rem;
+  opacity: 0;
+}
+
+.dotTheory-content > p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.frontEnd-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: 0.5s ease-in;
+}
+
+.frontEnd-rectangle {
+  position: absolute;
+  height: 16rem;
+  z-index: 10;
+  background: black;
+  width: 100%;
+}
+
+.frontEnd-text {
+  position: absolute;
+  bottom: -4rem;
+  z-index: 30;
+  color: #ece8e1;
+}
+
+.training-desc-text {
+  position: absolute;
+  bottom: -6.5rem;
+  z-index: 30;
+  font-size: 2rem;
+  color: #ece8e1;
+}
+
+.track-desc-text {
+  position: absolute;
+  bottom: -6.5rem;
+  z-index: 30;
+  font-size: 2rem;
+  color: #ece8e1;
+}
+
+.frontEnd-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.video-click-svg {
+  position: absolute;
+  top: -5rem;
+  width: 60rem;
+  height: 60rem;
+  z-index: 10;
+}
+@media screen and (max-width: 1600px) {
+  .video-click-svg {
+    width: 48rem;
+    height: 48rem;
+  }
+}
+
+.video-click-hand, .play-button {
+  transform-origin: center;
+}
+
+@keyframes handClick {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.9);
+  }
+  35% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.015);
+  }
+  35% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.frontEnd-p-container {
+  position: absolute;
+  top: 6rem;
+  left: -16rem;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: start;
+  gap: 2rem;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1600px) {
+  .frontEnd-p-container {
+    top: 4rem;
+  }
+}
+
+.frontEnd-p-container > p {
+  top: 2rem;
+}
+
+.frontEnd-p4-container, .frontEnd-p3-container, .frontEnd-p2-container, .frontEnd-p1-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3.5rem;
+  width: 100%;
+  font-size: 1.3rem;
+  opacity: 0;
+}
+
+.tetris-svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.svg-layout-wrapper {
+  position: relative;
+  left: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.grid-svg, .flex-svg {
+  position: absolute;
+  z-index: 30;
+  width: 3rem;
+  height: 3rem;
+}
+
+.sass-svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.orbit-svg-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 4rem;
+  height: 4rem;
+}
+
+.orbit-svg {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  transform-origin: center;
+}
+
+.orbit-earth, .orbit-moon, .orbit-sun {
+  transform-origin: center;
+}
+
+.orbit-sun circle {
+  fill: #FFFE9F;
+}
+
+.flower-svg {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  transform-origin: center;
+  transform: scale(0);
+}
+
+@keyframes LBlockDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(9.6rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes swapLayout {
+  0% {
+    z-index: 20;
+    transform: translateY(0);
+  }
+  49% {
+    z-index: 20;
+  }
+  50% {
+    z-index: 40;
+    transform: translateX(3.2rem);
+  }
+  100% {
+    z-index: 40;
+    transform: translateY(0);
+  }
+}
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes orbitZoomIn {
+  0% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(12);
+  }
+  85% {
+    transform: scale(12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes flowerScale {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(0.8);
+  }
+  85% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+  }
+}
+@keyframes toWhite {
+  0% {
+    fill: #FFFE9F;
+  }
+  60% {
+    fill: #FFFE9F;
+  }
+  70% {
+    fill: #FDFEFF;
+  }
+  90% {
+    fill: #FDFEFF;
+  }
+  100% {
+    fill: #FFFE9F;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

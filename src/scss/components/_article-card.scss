@@ -5,6 +5,16 @@
   cursor: pointer;
   border: 1px solid $tertiary-grey-border-color;
   background: $secondary-white;
+  @include mixin.card-transition();
+}
+
+.article-card:hover {
+  transform: scale(1.03);
+}
+
+.article-card:active {
+  transition: none !important;
+  border: 1px solid $red;
 }
 
 .article-card img {

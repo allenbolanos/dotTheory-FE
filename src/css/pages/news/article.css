@@ -95,7 +95,21 @@ img[alt="Valorant Article Banner"] {
 .article-list-link img {
   width: 1.2rem;
   height: 1.2rem;
-  transform: rotate(180deg);
+  animation-name: sway;
+  animation-delay: 0.1s;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes sway {
+  0% {
+    transform: translateX(0) rotate(180deg);
+  }
+  50% {
+    transform: translateX(0.5rem) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(180deg);
+  }
 }
 
 .article-list-link p {
@@ -104,6 +118,11 @@ img[alt="Valorant Article Banner"] {
   color: #ece8e1;
   white-space: nowrap;
   font-stretch: condensed;
+  transition: 0.2s ease-in-out;
+}
+
+.article-list-link:hover p {
+  transform: scale(1.02);
 }
 
 aside img {
@@ -300,6 +319,7 @@ aside img:hover {
   display: flex;
   align-items: end;
   color: #ff4655;
+  width: auto;
 }
 
 .upper-content a::before {
@@ -311,11 +331,15 @@ aside img:hover {
   background: black;
 }
 
+#category-upper-content a:hover::after {
+  width: calc(100% - 1rem);
+}
+
 .upper-content a:hover::after {
+  content: "";
   position: absolute;
   bottom: -4px;
   right: 0;
-  content: "";
   width: 7.1rem;
   height: 1px;
   background: red;

@@ -1,0 +1,426 @@
+@use '../../base/variables' as *;
+@use '../../base/mixin';
+
+main {
+  @include mixin.grid-column($justify-items: center, $align-items: center);
+}
+
+h1 {
+  text-align: center;
+  @include mixin.scaled-text('Teko', 10rem, $scale: (0.7, 1));
+  line-height: 0;
+
+  @media #{$md} {
+    font-size: 6rem;
+  }
+}
+
+h2 {
+  @include mixin.text('Roboto', 8rem, 300)
+}
+
+.dotTheory-section {
+  position: relative;
+  @include mixin.flex-column(center, center);
+  width: 100%;
+  transition: 0.5s ease-in;
+}
+
+.dot-rectangle {
+  @include mixin.absolute-container($height: 16rem, $z-index: 10);
+  background: black;
+}
+
+.dot-circle {
+  @include mixin.absolute-container($z-index: 20);
+  background: black;
+  border-radius: 50%;
+}
+
+@keyframes dot-circle-grow {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  40% {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  50% {
+    width: 3rem;
+    height: 3.5rem;
+  }
+
+  90% {
+    width: 3rem;
+    height: 3.5rem;
+  }
+
+  100% {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+@keyframes dot-circle-shrink {
+  0% {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+%dotTheory-title {
+  @include mixin.absolute-container($bottom: -4rem, $z-index: 30);
+  color: $white-text;
+}
+
+.dot-text {
+  @extend %dotTheory-title;
+}
+
+.theory-text {
+  @extend %dotTheory-title;
+  opacity: 0;
+}
+
+.dotTheory-desc {
+  @include mixin.absolute-container($z-index: 30);
+  @include mixin.text($size: 1.3rem, $color: $white-text);
+}
+
+.dotTheory-content {
+  position: relative;
+  width: 50%;
+  @include mixin.grid-column($justify-items: center);
+  gap: 2rem;
+  opacity: 0;
+}
+
+%paragraph-styling {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.dotTheory-content > p {
+  @extend %paragraph-styling;
+}
+
+.frontEnd-section {
+  position: relative;
+  @include mixin.flex-column(center, center);
+  width: 100%;
+  transition: 0.5s ease-in;
+}
+
+.frontEnd-rectangle {
+  @include mixin.absolute-container($height: 16rem, $z-index: 10);
+  background: black;
+  width: 100%;
+}
+
+.frontEnd-text {
+  @include mixin.absolute-container($bottom: -4rem, $z-index: 30);
+  color: $white-text;
+}
+
+%frontEnd-subtext {
+  @include mixin.absolute-container($bottom: -6.5rem, $z-index: 30);
+  @include mixin.text($size: 2rem, $color: $white-text);
+}
+
+.training-desc-text {
+  @include mixin.absolute-container($bottom: -6.5rem, $z-index: 30);
+  @include mixin.text($size: 2rem, $color: $white-text);
+}
+
+.track-desc-text {
+  @include mixin.absolute-container($bottom: -6.5rem, $z-index: 30);
+  @include mixin.text($size: 2rem, $color: $white-text);
+}
+
+.frontEnd-content {
+  position: relative;
+  @include mixin.grid-column(auto, center, center);
+  opacity: 1;
+}
+
+.video-click-svg {
+  @include mixin.absolute-container(-5rem, $width: 60rem, $height: 60rem, $z-index: 10);
+
+  @media #{$about-breakpoint} {
+    width: 48rem;
+    height: 48rem;
+  }
+}
+
+.video-click-hand, .play-button {
+  transform-origin: center;
+}
+
+@keyframes handClick {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(0.9);
+  }
+
+  35% {
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.015);
+  }
+
+  35% {
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.frontEnd-p-container {
+  @include mixin.absolute-container(6rem, $left: -16rem, $z-index: 30);
+  @include mixin.grid-column(auto, start);
+  gap: 2rem;
+  white-space: nowrap;
+
+  @media #{$about-breakpoint} {
+    top: 4rem;
+  }
+}
+
+.frontEnd-p-container > p {
+  top: 2rem;
+}
+
+%p-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3.5rem;
+  width: 100%;
+  @include mixin.text($size: 1.3rem);
+  opacity: 0;
+}
+
+.frontEnd-p1-container {
+  @extend %p-container;
+}
+
+.frontEnd-p2-container {
+  @extend %p-container;
+}
+
+.frontEnd-p3-container {
+  @extend %p-container;
+}
+
+.frontEnd-p4-container {
+  @extend %p-container;
+}
+
+@mixin svgSize($width: 4rem, $height: 4rem) {
+  width: $width;
+  height: $height;
+}
+
+.tetris-svg {
+  @include svgSize();
+}
+
+.svg-layout-wrapper {
+  position: relative;
+  left: 0.5rem;
+  @include svgSize();
+}
+
+.grid-svg, .flex-svg {
+  @include mixin.absolute-container($z-index: 30);
+  @include svgSize(3rem, 3rem);
+}
+
+.sass-svg {
+  @include svgSize();
+}
+
+.orbit-svg-wrapper {
+  position: relative;
+  overflow: hidden;
+  @include svgSize();
+}
+
+.orbit-svg {
+  @include mixin.absolute-container(0.5rem, $left: 0.5rem);
+  @include svgSize(3rem, 3rem);
+  transform-origin: center;
+}
+
+.orbit-earth, .orbit-moon, .orbit-sun {
+  transform-origin: center;
+}
+
+.orbit-sun circle {
+  fill: #FFFE9F;
+}
+
+.flower-svg {
+  @include mixin.absolute-container(0.5rem, $left: 0.5rem);
+  @include svgSize(3rem, 3rem);
+  transform-origin: center;
+  transform: scale(0);
+}
+
+@keyframes LBlockDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(9.6rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes swapLayout {
+  0% {
+    z-index: 20;
+    transform: translateY(0);
+  }
+
+  49% {
+    z-index: 20;
+  }
+
+  50% {
+    z-index: 40;
+    transform: translateX(3.2rem);
+  }
+
+  100% {
+    z-index: 40;
+    transform: translateY(0);
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitZoomIn {
+  0% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(1) ;
+  }
+
+  70% {
+    transform: scale(12) ;
+  }
+
+  85% {
+    transform: scale(12);
+  }
+
+  100% {
+    transform: scale(1) ;
+  }
+}
+
+@keyframes flowerScale {
+  0% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(0);
+  }
+
+  70% {
+    transform: scale(0.8);
+  }
+
+  85% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(0) rotate(360deg);
+  }
+}
+
+@keyframes toWhite {
+  0% {
+    fill: #FFFE9F;
+  }
+
+  60% {
+    fill: #FFFE9F;
+  }
+
+  70% {
+    fill: #FDFEFF;
+  }
+
+  90% {
+    fill: #FDFEFF;
+  }
+
+  100% {
+    fill: #FFFE9F;
+  }
+}

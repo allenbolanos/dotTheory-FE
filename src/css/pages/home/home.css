@@ -45,7 +45,7 @@ main {
   left: 0.4rem;
   width: 17.15rem;
   height: 3.3rem;
-  z-index: 40;
+  z-index: 1000;
   font-family: "Roboto";
   font-weight: 600;
   color: #ece8e1;
@@ -401,10 +401,33 @@ main {
   margin-right: -6px;
   margin-bottom: 5rem;
   text-decoration: none;
+  transition: 0.2s ease-in-out;
 }
 @media screen and (max-width: 1024px) {
   .news-page-link {
     display: none;
+  }
+}
+
+.news-page-link:hover {
+  transform: scale(1.02);
+}
+
+img[alt="News Page Arrow Icon"] {
+  animation-name: sway;
+  animation-delay: 0.1s;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes sway {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -456,6 +479,7 @@ main {
   flex-direction: column;
   gap: 1.5rem;
   width: 24.4rem;
+  transition: 0.5s ease-in-out;
 }
 @media screen and (max-width: 1024px) {
   .news-card {
@@ -471,6 +495,10 @@ main {
   .news-card {
     width: 19rem;
   }
+}
+
+.news-card:hover {
+  transform: scale(1.02);
 }
 
 .news-card-date-and-category {
@@ -516,6 +544,16 @@ main {
 
 .news-card img {
   width: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+.news-card:hover img {
+  filter: drop-shadow(8px 8px 4px #0f1923);
+}
+
+.news-card:active img {
+  transition: none !important;
+  filter: drop-shadow(8px 8px 4px #ff4655);
 }
 
 .news-card-title {
@@ -534,6 +572,7 @@ main {
 
 .dimension-section::after {
   content: "";
+  background: none;
   position: absolute;
   width: 100%;
   height: 100%;
