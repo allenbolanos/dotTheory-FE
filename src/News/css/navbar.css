@@ -1,5 +1,5 @@
 nav {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -9,7 +9,12 @@ nav {
   background: #101110;
   padding: 0.5rem;
   padding-inline: 2rem;
-  z-index: 30;
+  z-index: 1000;
+  width: 100%;
+}
+
+input[type=checkbox] {
+  display: none;
 }
 
 .nav-item-1 {
@@ -143,11 +148,20 @@ nav {
 .nav-item-2 {
   display: flex;
   align-items: center;
+  flex-shrink: 1;
+  flex-wrap: wrap;
   gap: 3.2px;
   font-weight: bold;
   font-size: 12px;
   letter-spacing: 2px;
   margin-bottom: 4px;
+  overflow: hidden;
+  background: #101110;
+  pointer-events: none;
+}
+
+.nav-item-2-lg-background {
+  display: none;
 }
 
 .nav-item-2 a:hover {
@@ -162,9 +176,14 @@ nav {
   cursor: pointer;
   color: white;
   height: 100%;
+  pointer-events: auto;
 }
 
-.with-dropdown div:first-child{
+.nav-item-2:hover {
+  overflow: visible;
+}
+
+.with-dropdown-title {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -172,16 +191,16 @@ nav {
   padding-inline: 1rem;
 }
 
-.with-dropdown:hover div:first-child {
+.with-dropdown:hover .with-dropdown-title {
   border-radius: 5px;
   background: #292929;
 }
 
-.with-dropdown div:first-child p {
+.with-dropdown-title p {
   white-space: nowrap;
 }
 
-.with-dropdown div:first-child img {
+.with-dropdown-title img {
   filter: invert(55%) sepia(8%) saturate(48%) hue-rotate(251deg) brightness(89%) contrast(85%);
 }
 
@@ -198,7 +217,9 @@ nav {
   left: 0;
   border-top: 4px solid #FF4754;
   border-radius: 2px;
-  padding: 10px 6px;
+  width: 12.5rem;
+  padding: 0.7rem 0.4rem;
+  z-index: 200;
 }
 
 .dropdown-elements:hover {
@@ -212,7 +233,6 @@ nav {
   font-size: 12px;
   font-weight: 600;
   color: #c7c7c7;
-  width: 11rem;
   padding: 0.7rem;
   padding-left: 1.2rem;
   margin: 0.3rem 0.6rem;
@@ -229,6 +249,10 @@ nav {
 .dropdown-elements a img {
   height: 7px;
   width: 7px;
+}
+
+.browse {
+  width: max-content;
 }
 
 .red-underline {
@@ -278,6 +302,10 @@ div:hover > .red-underline {
   margin-right: 5px;
 }
 
+.burger-menu-container {
+  display: none;
+}
+
 .nav-item-3 img:hover {
   border-radius: 5px;
   background: #292929;
@@ -296,4 +324,5 @@ div:hover > .red-underline {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 2px;
-} 
+  white-space: nowrap;
+}

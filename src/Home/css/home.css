@@ -25,7 +25,7 @@ main {
 }
 
 .main-section {
-  width: 1229px;
+  width: 80.9%;
   border-left: 1px solid rgba(9,9,9,.4);
 }
 
@@ -128,4 +128,12 @@ main {
   font-weight: 400;
   line-height: 1.5rem;
   width: 23.3rem;
+}
+
+@media screen and (max-width: 1023px) {
+
+  .main-section {
+    width: 90%;
+  }
+
 }

@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="../css/category.css">
   <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" media="screen and (max-width: 1023px)" href="../css/navbar-lg.css">
+  <link rel="stylesheet" media="screen and (max-width: 640px)" href="../css/category-sm.css">
+  <link rel="stylesheet" media="screen and (max-width: 640px)" href="../css/navbar-sm.css">
+  <link rel="stylesheet" media="screen and (max-width: 640px)" href="../css/footer-sm.css">
   <script type="text/javascript" src="../js/renderCategories.js" defer></script>
   <title>Category Page</title>
 </head>
@@ -23,7 +27,7 @@
     </div>
     <div class="nav-item-2">
       <div class="with-dropdown">
-        <div>
+        <div class="with-dropdown-title">
           <p>GAME INFO</p>
           <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
         </div>
@@ -46,7 +50,7 @@
         <div class="red-underline"></div>
       </div>
       <div class="with-dropdown">
-        <div>
+        <div class="with-dropdown-title">
           <p>SUPPORT</p>
           <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
         </div>
@@ -66,7 +70,7 @@
         </div>
       </div>
       <div class="with-dropdown">
-        <div>
+        <div class="with-dropdown-title">
           <p>OUR SOCIALS</p>
           <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
         </div>
@@ -105,22 +109,122 @@
         <div class="red-underline"></div>
       </div>
       <div class="with-dropdown">
-        <div>
+        <div class="with-dropdown-title ">
           <p>BROWSE</p>
           <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
         </div>
         <div class="dropdown-elements browse">
-          <a href="../pn5-01.html">Valorant Patch Notes 5.01</a>
-          <a href="../ep5act1.html">What's New In Valorant Episode 5 Act I</a>
-          <a href="../pn5-0.html">Valorant Patch Notes 5.0</a>
-          <a href="../mpc-061722.html">Valorant Map Pool Changes</a>
-          <a href="../pn4-11.html">Valorant Patch Notes 4.11</a>
-          <a href="../vai-fade.html">Valorant Agent Insights: Fade</a>
+          <a href="../../News/articles/pn5-01.html">Valorant Patch Notes 5.01</a>
+          <a href="../../News/articles/ep5act1.html">What's New In Valorant Episode 5 Act I</a>
+          <a href="../../News/articles//pn5-0.html">Valorant Patch Notes 5.0</a>
+          <a href="../../News/articles/mpc-061722.html">Valorant Map Pool Changes</a>
+          <a href="../../News/articles/pn4-11.html">Valorant Patch Notes 4.11</a>
+          <a href="../../News/articles/vai-fade.html">Valorant Agent Insights: Fade</a>
+        </div>
+      </div>
+    </div>
+    <input type="checkbox" id="burger-menu-dropdown">
+    <div class="nav-item-2-lg-background">
+      <div class="nav-item-2-lg-wrapper">
+        <div class="nav-item-2-lg-content-container">
+          <div class="close-burger-menu-container">
+            <img class="close-burger-menu-valorant-logo" src="../assets/navbar/valorant-logo.svg" alt="Valorant Logo" /> 
+            <label class="close-burger-menu-icon" for="burger-menu-dropdown">
+              <img  src="../assets/navbar/nav-close-icon.svg" alt="Navbar Close Icon">
+            </label>
+          </div>
+          <div class="with-dropdown">
+            <label for="game-info-toggle-dropdown" class="with-dropdown-title shared-title-styling">
+              <p>GAME INFO</p>
+              <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+            </label>
+            <input type="checkbox" id="game-info-toggle-dropdown">
+            <div class="dropdown-elements">
+              <a href="https://playvalorant.com/en-us/agents/">AGENTS</a>
+              <a href="https://playvalorant.com/en-us/maps/">MAPS</a>
+              <a href="https://playvalorant.com/en-us/arsenal/">ARSENAL</a>
+            </div>
+          </div>
+          <a class="with-red-underline shared-title-styling" href="https://playvalorant.com/en-us/media/">MEDIA</a>
+          <a class="with-red-underline shared-title-styling" href="https://playvalorant.com/en-us/news/">NEWS</a>
+          <a class="with-red-underline shared-title-styling" href="https://playvalorant.com/en-us/leaderboards/">LEADERBOARDS</a>
+          <div class="with-dropdown">
+            <label for="support-toggle-dropdown" class="with-dropdown-title shared-title-styling">
+              <p>SUPPORT</p>
+              <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+            </label>
+            <input type="checkbox" id="support-toggle-dropdown">
+            <div class="dropdown-elements">
+              <a href="https://playvalorant.com/en-us/specs/" target="_blank">
+                SPECS
+              </a>
+              <a href="https://support-valorant.riotgames.com/hc/en-us/" target="_blank">
+                SUPPORT
+              </a>
+              <a href="https://playvalorant.com/en-us/news/announcements/valorant-community-code/" target="_blank">
+                COMMUNITY CODE
+              </a>
+            </div>
+          </div>
+          <div class="with-dropdown">
+            <label for="our-socials-toggle-dropdown" class="with-dropdown-title shared-title-styling">
+              <p>OUR SOCIALS</p>
+              <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+            </label>
+            <input type="checkbox" id="our-socials-toggle-dropdown">
+            <div class="dropdown-elements">
+              <a href="https://twitter.com/playvalorant" target="_blank">
+                Twitter
+              </a>
+              <a href="https://www.youtube.com/PlayValorant" target="_blank">
+                Youtube
+              </a>
+              <a href="https://www.instagram.com/playvalorantofficial/" target="_blank">
+                Instagram
+              </a>
+              <a href="https://www.facebook.com/PlayVALORANT/" target="_blank">
+                Facebook
+              </a>
+              <a href="https://discord.com/invite/valorant" target="_blank">
+                Discord
+              </a>
+            </div>
+          </div>
+          <div class="with-red-underline shared-title-styling">
+            <div class="esports">
+              <a href="https://valorantesports.com/" target="_blank">ESPORTS</a>
+              <img src="../assets/navbar/external-arrow.svg" alt="External Arrow" />
+            </div>
+          </div>
+          <a class="with-red-underline shared-title-styling" href="https://playvalorant.com/en-us/pbe/">PBE SIGNUP</a>
+          <div class="with-dropdown">
+            <label for="browse-toggle-dropdown" class="with-dropdown-title shared-title-styling">
+              <p>BROWSE</p>
+              <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+            </label>
+            <input type="checkbox" id="browse-toggle-dropdown">
+            <div class="dropdown-elements browse">
+              <a href="../../News/articles/pn5-01.html">Valorant Patch Notes 5.01</a>
+              <a href="../../News/articles/ep5act1.html">What's New In Valorant Episode 5 Act I</a>
+              <a href="../../News/articles//pn5-0.html">Valorant Patch Notes 5.0</a>
+              <a href="../../News/articles/mpc-061722.html">Valorant Map Pool Changes</a>
+              <a href="../../News/articles/pn4-11.html">Valorant Patch Notes 4.11</a>
+              <a href="../../News/articles/vai-fade.html">Valorant Agent Insights: Fade</a>
+            </div>
+          </div>
+          <div class="nav-item-2-play-now">
+            <button>
+              <p>PLAY NOW</p>
+            </button>
+          </div>
         </div>
       </div>
     </div>
     <div class="nav-item-3">
       <img src="../assets/navbar/language-globe.svg" alt="Language Globe" />
+      <label for="burger-menu-dropdown" class="burger-menu-container">
+        <img src="../assets/navbar/burger-menu.svg" alt="Burger Menu">
+      </label>
       <button>
         <p>PLAY NOW</p>
       </button>
@@ -128,6 +232,11 @@
   </nav>
   <main>
     <section class="main-section">
+      <section class="category-section">
+        <h1>CATEGORY</h1>
+        <h5>Agent Insights</h5>
+        <div class="article-cards-container agent-insights"></div>
+      </section>
     </section>
   </main>
   <footer>
