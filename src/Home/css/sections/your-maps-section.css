@@ -1,9 +1,7 @@
 .your-maps-section {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
 }
 
 .your-maps-bg-wrapper {
@@ -112,6 +110,14 @@
     right: -42.3rem;
   }
 
+  .your-maps-left-bg-sprite {
+    display: none;
+  }
+
+  .your-maps-left-bg-sprite-2  {
+    display: none;
+  }
+
   .your-maps-content-container { 
     top: 7rem;
     left: 0;
@@ -119,7 +125,7 @@
   }
 
   .your-maps-content-container h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .your-maps-content-container h5 {

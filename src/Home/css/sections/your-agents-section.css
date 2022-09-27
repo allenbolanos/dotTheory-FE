@@ -1,8 +1,8 @@
 .your-agents-section {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
   justify-content: center;
 }
 
@@ -29,6 +29,7 @@
   border-left: 1px solid #FE4755;
 	border-right: 9.2rem solid transparent;
 	border-bottom: 3.5rem solid #FE4755;
+  z-index: -10;
 }
 
 .your-agents-main-bg-wrapper::after {
@@ -70,9 +71,8 @@
 }
 
 .main-bg-sprite {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
   margin-top: 1.25rem;
   margin-left: 2.15rem;
 }
@@ -173,13 +173,13 @@
     margin-top: 5rem;
   }
 
-}
-
-@media screen and (max-width: 376px) {
-
   .your-agents-content-container h1 {
     font-size: 3rem;
   }
+
+}
+
+@media screen and (max-width: 376px) {
 
   .your-agents-content-container h5 {
     font-size: 0.9rem;

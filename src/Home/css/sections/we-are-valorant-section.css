@@ -1,8 +1,8 @@
 .we-are-valorant-section {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: end;
 }
 
 .we-are-valorant-section::before {
@@ -213,7 +213,7 @@
   z-index: 50;
 }
 
-.we-are-valorant-button-wrapper {
+.we-are-valorant-video-button-wrapper {
   position: absolute;
   top: 10.25rem;
   left: 19.82rem;
@@ -223,7 +223,7 @@
   border: 1px solid white;
 }
 
-.we-are-valorant-button-wrapper::after {
+.we-are-valorant-video-button-wrapper::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -233,7 +233,7 @@
   background: white;
 }
 
-.we-are-valorant-button-wrapper button img {
+.we-are-valorant-video-button-wrapper button img {
   position: absolute;
   top: 0;
   right: 0;
@@ -252,10 +252,9 @@
   }
 
   .description-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: flex-start;
     width: 12.4rem;
     margin-left: 8rem;
   }
@@ -270,7 +269,7 @@
     bottom: 0;
   }
 
-  .we-are-valorant-button-wrapper {
+  .we-are-valorant-video-button-wrapper {
     top: 8rem;
     bottom: 0;
     left: 0;
@@ -295,7 +294,8 @@
   }
 
   .we-are-valorant-title-container h1 {
-    margin-left: -2.1rem;
+    font-size: 4rem;
+    margin-left: -1.4rem;
   }
 
   .protocol-text {
@@ -307,7 +307,6 @@
   }
 
   .we-are-valorant-content-wrapper {
-    flex-direction: column;
     padding-bottom: 40rem;
     width: 100%;
   }
@@ -332,8 +331,9 @@
   }
 
   .we-are-valorant-button {
-    align-self: center;
+    place-self: center;
   }
+
 
   .we-are-valorant-button button {
     font-size: 1.1rem;
@@ -354,7 +354,7 @@
     display: none;
   }
 
-  .we-are-valorant-button-wrapper {
+  .we-are-valorant-video-button-wrapper {
     top: 14rem;
   }
 
@@ -372,7 +372,7 @@
   }
 
   .we-are-valorant-title-container h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-left: 0;
   }
 
@@ -385,25 +385,16 @@
   }
 
   .description-container {
-    align-items: center;
+    justify-items: center;
   }
 
-  .description-container p {
-    width: 23.3rem;
-  }
-
-  .we-are-valorant-button-wrapper {
+  .we-are-valorant-video-button-wrapper {
     top: 8rem;
   }
 
 }
 
 @media screen and (max-width: 376px) {
-
-  .we-are-valorant-title-container h1 {
-    font-size: 3rem;
-    margin-left: -1rem;
-  }
 
   .we-are-valorant-content-wrapper {
     padding-bottom: 18rem;
@@ -413,7 +404,7 @@
     top: 28rem;
   }
 
-  .we-are-valorant-button-wrapper {
+  .we-are-valorant-video-button-wrapper {
     top: 4rem;
   }
 

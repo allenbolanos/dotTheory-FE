@@ -1,7 +1,8 @@
 .hero-section {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
 }
 
 .hero-section::after {
@@ -24,9 +25,9 @@
 .hero-section-content {
   position: absolute;
   align-self: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
   align-items: center;
   width: 80.9%;
   height: 100%;
@@ -69,10 +70,9 @@
 
 .hero-title-container {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
   margin-bottom: -1.1rem;
   gap: 2.4rem;
   z-index: 40;

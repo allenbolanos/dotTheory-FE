@@ -1,14 +1,13 @@
 .dimension-section {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
 }
 
 .dimension-section::after {
   content: "";
   position: absolute;
-  align-self: center;
   width: 100%;
   height: 100%;
   border-left: 1px solid rgba(236,232,225,.5);
@@ -27,9 +26,9 @@
 .dimension-content-container {
   position: absolute;
   top: 25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: flex-start;
   gap: 2.6rem;
   width: 100%;
   margin-left: 4rem;

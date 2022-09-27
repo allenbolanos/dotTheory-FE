@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" media="screen and (max-width: 1023px)" href="../css/navbar-lg.css">
-  <link rel="stylesheet" media="screen and (max-width: 640px)" href="../css/category-sm.css">
   <link rel="stylesheet" media="screen and (max-width: 640px)" href="../css/navbar-sm.css">
   <link rel="stylesheet" media="screen and (max-width: 640px)" href="../css/footer-sm.css">
   <script type="text/javascript" src="../js/renderCategories.js" defer></script>
@@ -231,13 +230,34 @@
     </div>
   </nav>
   <main>
-    <section class="main-section">
+    <div class="category-section-wrapper">
       <section class="category-section">
         <h1>CATEGORY</h1>
         <h5>Agent Insights</h5>
+        <input type="checkbox" id="show-list-view">
+        <div class="grid-view-button-wrapper view-button-wrapper-shared">
+          <label for="show-list-view">
+            <div class="grid-view-button view-button-shared">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </label>
+        </div>
+        <div class="list-view-button-wrapper view-button-wrapper-shared">
+          <label for="show-list-view">
+            <div class="list-view-button view-button-shared">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </label>
+        </div>
         <div class="article-cards-container agent-insights"></div>
       </section>
-    </section>
+    </div>
   </main>
   <footer>
     <div class="download-links">

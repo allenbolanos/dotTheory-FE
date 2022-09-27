@@ -1,10 +1,13 @@
+.content-container-1 {
+  grid-area: contentSection;
+}
+
 .content-container-1 div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 7rem;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: flex-start;
   width: 705px;
+  margin-left: 7rem;
 }
 
 .content-container-1 div p {

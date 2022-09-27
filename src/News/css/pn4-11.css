@@ -1,34 +1,3 @@
-.content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 7rem;
-  width: 705px;
-}
-
-.content-container article img {
-  width: 100%;
-}
-
-.content-container h2 {
-  font-size: 1.4rem;
-}
-
-.container-sections {
-  padding-bottom: 2.5rem;
-}
-
-.container-sections h2 {
-  font-family: 'Roboto';
-  margin-bottom: 1.5rem;
-}
-
-.container-sections h3 {
-  font-family: 'Roboto';
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
 .social-updates-container span {
   font-weight: 600;
   color: #0F1822;
@@ -47,33 +16,4 @@
   top: 11rem;
   left: -10rem;
   color: #768079;
-}
-
-.indent {
-  margin-left: 1rem;
-}
-
-.description {
-  font-family: 'Roboto';
-  font-size: 1rem;
-  font-weight: 500;
-  color: #768079;
-  line-height: 1.6rem;
-}
-
-.li-marker::before {
-  content: "\B7   /";
-  font-weight: 700;
-  color: #0f1923;
-  margin-right: 0.5rem;
-}
-
-@media screen and (max-width: 1023px) {
-
-  .content-container {
-    width: 100%;
-    margin-top: 2.5rem;
-    margin-left: 0;
-  }
-
 }

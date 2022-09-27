@@ -1,11 +1,3 @@
-.content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 7rem;
-  width: 705px;
-}
-
 .content-container div img {
   width: 100%;
 }
@@ -19,21 +11,8 @@
   background: #FF4655;
 }
 
-.content-container h2 {
-  font-size: 1.4rem;
-}
-
-.container-sections {
-  padding-bottom: 2.5rem;
-}
-
 .container-sections h2 {
-  margin-bottom: 2rem;
-}
-
-.container-sections h3 {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem !important;
 }
 
 .map-updates-container {
@@ -51,28 +30,9 @@
   color: #768079;
 }
 
-.description {
-  font-family: 'Roboto';
-  font-size: 1rem;
-  font-weight: 500;
-  color: #768079;
-  line-height: 1.6rem;
-}
-
 .description i {
   font-family: 'Roboto';
   font-weight: 500;
-}
-
-.description::before {
-  content: "\B7   /";
-  font-weight: 700;
-  color: #0f1923;
-  margin-right: 0.5rem;
-}
-
-.indent {
-  margin-left: 1rem;
 }
 
 .pearl-banner {
@@ -115,14 +75,4 @@
 
 .bugs-container ul {
   margin-bottom: 2rem;
-}
-
-@media screen and (max-width: 1023px) {
-
-  .content-container {
-    width: 100%;
-    margin-top: 2.5rem;
-    margin-left: 0;
-  }
-
 }

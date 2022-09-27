@@ -1,8 +1,7 @@
 .latest-news-section {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto;
   margin-top: 1.5rem;
   padding-bottom: 10.65rem;
 }
