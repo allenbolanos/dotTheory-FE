@@ -67,7 +67,7 @@
   margin-left: -2.5rem;
 }
 
-.latest-news-title-container a {
+.news-page-link {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -79,6 +79,10 @@
   margin-right: -6px;
   margin-bottom: 5rem;
   transform: scale(0.95, 0.95);
+}
+
+.news-page-link-lower {
+  display: none;
 }
 
 .news-cards-container {
@@ -140,9 +144,22 @@
 
 @media screen and (max-width: 1023px) {
 
+  .latest-news-section {
+    padding-bottom: 3.5rem;
+  }
+
+  .latest-news-content {
+    position: relative;
+    margin-top: -33.5rem;
+  }
+
+  .latest-news-title-container {
+    margin-top: 7.5rem;
+  }
+
   .latest-news-title-container p {
-    font-size: 3rem;
-    margin-left: -1.3rem;
+    margin-left: -2.1rem;
+    font-size: 5rem;
   }
 
   .latest-news-title-container a {
@@ -151,11 +168,16 @@
   }
 
   .news-cards-container {
+    width: max-content;
     margin-top: 12.3rem;
   }
 
+  .news-card {
+    width: 55rem;
+  }
+
   .news-card-date-and-category {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   
   .news-card-date-and-category p:nth-child(2)::before {
@@ -163,8 +185,16 @@
     height: 3px;
   }
 
-  .news-card-title {
-    font-size: 0.8rem;
+  .news-page-link {
+    display: none;
+  }
+
+  .news-page-link-lower {
+    display: flex;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    margin-left: -2.5%;
+    margin-bottom: 0;
   }
 
 }
@@ -181,45 +211,44 @@
   }
 
   .latest-news-title-container a {
-    font-size: 0.8rem;
     margin-bottom: 5rem;
   }
 
   .news-cards-container {
-    width: 1000px;
-    margin-top: 11rem;
+    margin-top: 10rem;
   }
 
-  .news-card-date-and-category {
-    font-size: 0.8rem;
-  }
-  
-  .news-card-date-and-category p:nth-child(2)::before {
-    width: 3px;
-    height: 3px;
-  }
-
-  .news-card-title {
-    font-size: 1rem;
+  .news-card {
+    width: 34rem;
   }
 
 }
 
 @media screen and (max-width: 376px) { 
 
+  .latest-news-section {
+    padding-bottom: 4rem;
+  }
+
   .latest-news-title-container {
-    flex-direction: column-reverse;
-    margin-left: -0.2rem;
+    margin-top: 6rem;
   }
 
   .latest-news-title-container a {
-    font-size: 0.8rem;
     margin-bottom: 0;
     margin-left: 0;
   }
 
   .news-cards-container {
-    margin-top: 13rem;
+    margin-top: 8.5rem;
+  }
+
+  .news-card {
+    width: 19rem;
+  }
+
+  .news-page-link-lower {
+    margin-top: 0;
   }
 
 }

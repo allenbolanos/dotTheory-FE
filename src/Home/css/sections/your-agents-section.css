@@ -162,6 +162,10 @@
 
 @media screen and (max-width: 640px) {
 
+  .your-agents-background-container {
+    display: none;
+  }
+
   .your-agents-content-container {
     display: flex;
     flex-direction: column;

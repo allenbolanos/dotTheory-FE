@@ -133,6 +133,7 @@
 }
 
 .description-container p {
+  font-family: 'Roboto';
   font-size: 0.95rem;
   line-height: 1.5rem;
   color: #768079;
@@ -259,10 +260,6 @@
     margin-left: 8rem;
   }
 
-  .description-container h5 {
-    align-self: flex-start;
-  }
-
   .we-are-valorant-video-wrapper {
     top: 9rem;
     width: 550px;
@@ -365,6 +362,10 @@
 
 @media screen and (max-width: 640px) {
 
+  .we-are-valorant-title-container {
+    justify-content: center;
+  }
+
   .we-are-valorant-title-container::after {
     width: 0.4rem;
     height: 0.45rem;
@@ -372,7 +373,7 @@
 
   .we-are-valorant-title-container h1 {
     font-size: 4rem;
-    margin-left: -1.4rem;
+    margin-left: 0;
   }
 
   .we-are-valorant-content-wrapper {
@@ -383,9 +384,12 @@
     top: 22rem;
   }
 
+  .description-container {
+    align-items: center;
+  }
+
   .description-container p {
-    width: 90%;
-    font-size: 1.1rem;
+    width: 23.3rem;
   }
 
   .we-are-valorant-button-wrapper {

@@ -12,14 +12,12 @@ async function renderCategories() {
     {$patchNotes 
       ? $patchNotes.innerHTML += `
           ${e.type === 'Patch_Notes' 
-            ? `<a href="${e.content_link}">
-                <div class="article-card">
-                  <img src="${e.image_src}">
-                  <div class="article-card-details">
-                    <p>0${e.number}</p>
-                    <p>${e.date}</p>
-                    <p>${e.title}</p>
-                  </div>
+            ? `<a href="${e.content_link}" class="article-card">
+                <img src="${e.image_src}">
+                <div class="article-card-details">
+                  <p>0${e.number}</p>
+                  <p>${e.date}</p>
+                  <p>${e.title}</p>
                 </div>
               </a>`
             : ''

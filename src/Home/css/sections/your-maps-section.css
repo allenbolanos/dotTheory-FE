@@ -131,6 +131,10 @@
     width: 58%;
   }
 
+  .view-all-maps-button-wrapper  {
+    align-self: center;
+  }
+
 }
 
 @media screen and (max-width: 640px) {
