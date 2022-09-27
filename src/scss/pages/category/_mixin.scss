@@ -1,0 +1,7 @@
+@mixin hide-button() {
+  display: none;
+}
+
+@mixin show-button() {
+  display: block;
+}

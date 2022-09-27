@@ -1,0 +1,121 @@
+@use '../base/variables' as *;
+@use '../base/mixin';
+
+footer {
+  @include mixin.flex-column();
+  width: 100%;
+}
+
+.download-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  background: $secondary-black-bg;
+  @include mixin.text('Teko', 0.8rem, 600);
+  letter-spacing: 1px;
+  padding: 1.5rem;
+
+  @media #{$md} {
+    flex-direction: column;
+    font-size: 0.7rem;
+    padding-inline: 0;
+  }
+}
+
+.download-links a {
+  cursor: pointer;
+  text-decoration: none;
+  color: $secondary-white-text;
+  padding: 0.5rem 1.1rem;
+  border-radius: 4px;
+}
+
+.download-links a:hover {
+  background: $footer-download-links-hover-bg;
+}
+
+.actual-footer {
+  @include mixin.flex-column($align-items: center);
+  gap: 1.5rem;
+  height: 100%;
+  background: $nav-footer-bg-color;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.footer-social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer-social-media a {
+  display: flex;
+  align-items: center;
+  background: #292929;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.footer-social-media img {
+  height: 1rem;
+  filter: invert(100%) sepia(0%) saturate(7492%) hue-rotate(144deg) brightness(89%) contrast(121%);
+}
+
+.footer-rg-logo {
+  height: 2rem;
+  margin-top: 1rem;
+  filter: invert(47%) sepia(1%) saturate(0%) hue-rotate(281deg) brightness(94%) contrast(84%);
+}
+
+.footer-rg-logo:hover {
+  filter: invert(100%) sepia(72%) saturate(2%) hue-rotate(56deg) brightness(111%) contrast(101%);
+}
+
+.copyright-text {
+  text-align: center;
+  @include mixin.text($size: 0.8rem, $color: $secondary-grey-text);
+  line-height: 1.3rem;
+  width: 38rem;
+
+  @media #{$md} {
+    width: 100%;
+  }
+}
+
+.other-dl-links {
+  background: none;
+  gap: 0rem;
+  padding: 0;
+
+  @media #{$md} {
+    font-size: 0.6rem;
+  }
+}
+
+.esrb-rating {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+  background: $secondary-black-bg;
+  padding: 0.8rem;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.esrb-rating img {
+  height: 6.1rem;
+}
+
+.esrb-rating ul {
+  @include mixin.flex-column();
+  @include mixin.text($size: 0.75rem, $weight: 600, $color: $secondary-white-text);
+  letter-spacing: 1px;
+  list-style: none;
+}
+
+.esrb-rating ul li {
+  flex: 1;
+}

@@ -1,0 +1,4 @@
+@use '../../layout/article-layout';
+@forward './components/index';
+@forward './sections/index';
+@forward './articles/index';

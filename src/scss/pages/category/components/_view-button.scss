@@ -1,0 +1,53 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixin';
+@use '../mixin' as category-mixin;
+
+%view-button-wrapper-shared {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: flex-end;
+  align-self: center;
+}
+
+.grid-view-button-wrapper {
+  @extend %view-button-wrapper-shared;
+}
+
+.list-view-button-wrapper {
+  @extend %view-button-wrapper-shared;
+  @include category-mixin.hide-button();
+}
+
+%view-button-shared {
+  cursor: pointer;
+  background: $black-bg;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+.list-view-button {
+  @include mixin.flex-column(space-around);
+  @extend %view-button-shared;
+}
+
+.grid-view-button {
+  @include mixin.grid-column(1fr 1fr);
+  gap: 0.2rem;
+  @extend %view-button-shared;
+}
+
+.list-view-button > div {
+  background: $secondary-white;
+  width: 100%;
+  height: 0.2rem;
+  border-radius: 2px;
+}
+
+.grid-view-button > div {
+  background: $secondary-white;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}

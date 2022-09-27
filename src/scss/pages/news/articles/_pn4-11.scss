@@ -1,0 +1,16 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixin';
+@use '../article-mixin';
+
+
+.social-updates-container span {
+  @include mixin.text($weight: 600, $color: $black-text);
+}
+
+.bugs-container {
+  @include article-mixin.relative-container();
+}
+
+.bugs-container::before {
+  @include article-mixin.three-lines(11rem);
+}

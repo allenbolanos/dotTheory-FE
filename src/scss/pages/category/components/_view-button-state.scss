@@ -1,0 +1,28 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixin';
+@use '../mixin' as category-mixin;
+
+#change-view:checked ~ .grid-view-button-wrapper {
+  @include category-mixin.hide-button();
+}
+
+#change-view:checked ~ .list-view-button-wrapper, .grid-view-button-wrapper {
+  @include category-mixin.show-button(); 
+
+  @media #{$md} {
+    @include category-mixin.hide-button();
+  }
+}
+
+#change-view:checked ~ .article-cards-container {
+  @include mixin.flex-column($align-items: flex-start);
+  width: 100%;
+
+  @media #{$md} {
+    align-items: center;
+  }
+}
+
+#change-view:checked ~ .article-cards-container .article-card {
+  width: 400px;
+}

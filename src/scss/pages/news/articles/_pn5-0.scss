@@ -1,0 +1,59 @@
+@use '../../../base/variables' as *;
+@use '../article-mixin';
+
+.content-container div img {
+  width: 100%;
+}
+
+.content-container div img:first-child {
+  padding-block: 2.5rem;
+}
+
+.content-container div img:first-child:hover {
+  cursor: pointer;
+  background: $red-bg;
+}
+
+.container-sections h2 {
+  margin-bottom: 2rem !important;
+}
+
+.map-updates-container {
+  @include article-mixin.relative-container();
+}
+
+.map-updates-container::before {
+  @include article-mixin.three-lines(29rem);
+}
+
+.pearl-banner {
+  padding-top: 2rem;
+  padding-bottom: 5.5rem;
+}
+
+.split-banner {
+  padding-top: 3rem;
+  padding-bottom: 5.5rem;
+}
+
+.map-pool-changes-link {
+  @include article-mixin.paragraph-link(1rem);
+}
+
+.map-pool-changes-link:hover {
+  background: $red-bg;
+  color: $white-text;
+}
+
+.shoutout-link {
+  @include article-mixin.paragraph-link(1rem);
+}
+
+.shoutout-link:hover {
+  background: $red-bg;
+  color: $white-text;
+}
+
+.bugs-container ul {
+  margin-bottom: 2rem;
+}

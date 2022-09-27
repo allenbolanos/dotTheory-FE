@@ -1,0 +1,19 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixin';
+@use '../article-mixin';
+
+.container-sections h2 {
+  font-size: 1.1rem !important;
+}
+
+.summary-container {
+  @include article-mixin.relative-container();
+}
+
+.summary-container::before {
+  @include article-mixin.three-lines(12rem);
+}
+
+.lucky-number-seven-container span {
+  @include mixin.text($weight: 600, $color: $black-text);
+}

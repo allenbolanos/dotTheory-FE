@@ -1,0 +1,19 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixin';
+
+.article-cards-container {
+  grid-column: 1 / span 2;
+  grid-row-start: 3;
+  @include mixin.grid-column(repeat(auto-fill, minmax(300px, 1fr)), $justify-content: start);
+  grid-gap: 2.5rem;
+  width: 100%;
+
+  @media #{$md} {
+    grid-template-columns: max-content;
+    justify-content: center;
+  }
+
+  @media #{$sm} {
+    grid-template-columns: 80%;
+  }
+}

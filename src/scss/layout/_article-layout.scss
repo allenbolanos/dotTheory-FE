@@ -1,0 +1,28 @@
+@use '../base/variables' as *;
+@use '../base/mixin';
+
+main {
+  @include mixin.absolute-container($z-index: 30);
+  @include mixin.main($mt: 38%);
+  background: $secondary-white-bg;
+}
+
+article {
+  position: relative;
+  @include mixin.grid-column(auto 1px, center);
+  grid-template-areas: 
+  "titleSection          aside"
+  "contentSection        aside"
+  "authorSection         aside"
+  "tagsSection           aside"
+  "relatedContentSection aside";
+  background: inherit;
+  width: $default-width;
+  height: 100%;
+  border-left: 1px solid $article-grey-border-color;
+
+  @media #{$lg} {
+    grid-template-columns: auto;
+    width: 90%;
+  }
+}

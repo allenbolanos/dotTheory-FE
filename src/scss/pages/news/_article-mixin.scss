@@ -1,0 +1,24 @@
+@use '../../base/variables' as *;
+@use '../../base/mixin';
+
+@mixin three-lines($top: null) {
+  content: "///";
+  position: absolute;
+  top: $top;
+  left: -10rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #768079;
+}
+
+@mixin paragraph-link($link-size: null, $link-weight: null) {
+  align-self: flex-start;
+  @include mixin.text($size: $link-size, $weight: $link-weight, $color: $red-text);
+  text-decoration: underline;
+  margin-bottom: 2.5rem;
+}
+
+@mixin relative-container() {
+  position: relative;
+  padding-block: 2.5rem;
+}

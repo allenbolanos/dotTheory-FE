@@ -1,0 +1,19 @@
+.social-updates-container span {
+  font-weight: 600;
+  color: #0F1822;
+}
+
+.bugs-container {
+  position: relative;
+  padding-block: 2.5rem;
+}
+
+.bugs-container::before {
+  position: absolute;
+  content: "///";
+  font-weight: 700;
+  font-size: 1.5rem;
+  top: 11rem;
+  left: -10rem;
+  color: #768079;
+}

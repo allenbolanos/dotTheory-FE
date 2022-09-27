@@ -1,0 +1,78 @@
+.content-container div img {
+  width: 100%;
+}
+
+.content-container div img:first-child {
+  padding-block: 2.5rem;
+}
+
+.content-container div img:first-child:hover {
+  cursor: pointer;
+  background: #FF4655;
+}
+
+.container-sections h2 {
+  margin-bottom: 2rem !important;
+}
+
+.map-updates-container {
+  position: relative;
+  padding-block: 2.5rem;
+}
+
+.map-updates-container::before {
+  position: absolute;
+  content: "///";
+  font-weight: 700;
+  font-size: 1.5rem;
+  top: 29rem;
+  left: -10rem;
+  color: #768079;
+}
+
+.description i {
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+.pearl-banner {
+  padding-top: 2rem;
+  padding-bottom: 5.5rem;
+}
+
+.split-banner {
+  padding-top: 3rem;
+  padding-bottom: 5.5rem;
+}
+
+.map-pool-changes-link {
+  font-size: 1rem;
+  font-family: 'Arial';
+  color: #FE4755;
+  align-self: flex-start;
+  text-decoration: underline;
+  margin-bottom: 2.5rem;
+}
+
+.map-pool-changes-link:hover {
+  background: #FE4755;
+  color: #ECE8E1;
+}
+
+.shoutout-link {
+  font-size: 1rem;
+  font-family: 'Arial';
+  color: #FE4755;
+  align-self: flex-start;
+  text-decoration: underline;
+  margin-bottom: 2.5rem;
+}
+
+.shoutout-link:hover {
+  background: #FE4755;
+  color: #ECE8E1;
+}
+
+.bugs-container ul {
+  margin-bottom: 2rem;
+}

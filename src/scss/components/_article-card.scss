@@ -1,0 +1,54 @@
+@use '../base/variables' as *;
+@use '../base/mixin';
+
+.article-card {
+  cursor: pointer;
+  border: 1px solid $tertiary-grey-border-color;
+  background: $secondary-white;
+}
+
+.article-card img {
+  width: 100%;
+}
+
+.article-card-details {
+  position: relative;
+  @include mixin.grid-column(2.8rem auto);
+  grid-template-rows: 1.3rem 3.4rem;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.article-card-details::after {
+  content: "";
+  @include mixin.absolute-container($bottom: 0, $left: 0, $width: 4px, $height: 4px);
+  background: $red-bg;
+}
+
+.article-card-details p:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  place-self: start;
+  @include mixin.text($size: 1.5rem, $weight: 600, $color: $black-text);
+  margin-right: auto;
+  transform: rotate(270deg);
+}
+
+.article-card-details p:nth-child(2) {
+  @include mixin.text('Teko', 1rem, 600, $tertiary-grey-text);
+  width: max-content;
+
+  @media #{$lg} {
+    font-size: 1rem;
+  }
+}
+
+.article-card-details p:nth-child(3) {
+  grid-column: 2 / 3;
+  place-self: start;
+  @include mixin.scaled-text('Roboto', 1rem, 600, $grey-text, (0.9, 1), -12px);
+
+  @media #{$lg} {
+    font-size: 1rem;
+  }
+}

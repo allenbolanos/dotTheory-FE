@@ -1,0 +1,51 @@
+
+// Colors
+$red: #ff4655;
+$white: #ece8e1;
+$secondary-white: #ede9e1;
+$tertiary-white: #dbd9d2;
+$black: #0f1923;
+$secondary-black: #292929;
+$grey: #383e3a;
+$secondary-grey: #768079;
+$tertiary-grey: #bdbcb7;
+
+// Background Colors
+$main-background-color: $secondary-white;
+$red-bg: $red;
+$white-bg: $white;
+$secondary-white-bg: $secondary-white;
+$black-bg: $black;
+$secondary-black-bg: $secondary-black;
+$article-grey-bg-color: #8a968f;
+$nav-footer-bg-color: #101110;
+$dropdown-link-hover-bg: #444545;
+$play-now-button-bg: linear-gradient(90deg, rgba(255,55,55,1) 0%, rgba(255,120,96,1) 100%);
+$burger-dropdown-link-hover-bg: #333232;
+$burger-bg: #1E1F1E;
+$footer-download-links-hover-bg: #444444;
+
+// Text Colors
+$white-text: $white;
+$secondary-white-text: $secondary-white;
+$tertiary-white-text: $tertiary-white;
+$black-text: $black;
+$red-text: $red;
+$grey-text: $grey;
+$secondary-grey-text: $secondary-grey;
+$tertiary-grey-text: $tertiary-grey;
+$dropdown-link-color: #c7c7c7;
+$dropdown-link-hover-color: #f9f9f9;
+
+// Border Colors
+$tertiary-grey-border-color: $tertiary-grey;
+$article-grey-border-color: #938f8a;
+
+// Default width for content containers
+$default-width: 80.9%;
+
+// Media query breakpoints
+$xl: 'screen and (max-width: 1506px)';
+$lg: 'screen and (max-width: 1024px)';
+$md: 'screen and (max-width: 640px)';
+$sm: 'screen and (max-width: 376px)';

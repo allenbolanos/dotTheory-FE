@@ -1,0 +1,15 @@
+@use '../base/variables' as *;
+@use '../base/mixin';
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  @include mixin.grid-column(1fr minmax(auto, 1229px) 1fr);
+  padding-top: 6rem;
+
+  @media #{$md} {
+    padding-top: 4rem;
+  }
+}

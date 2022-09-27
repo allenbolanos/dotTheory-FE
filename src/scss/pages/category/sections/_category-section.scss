@@ -1,0 +1,36 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixin';
+
+.category-section-wrapper {
+  grid-column-start: 2;
+  width: 100%;
+}
+
+.category-section {
+  @include mixin.grid-column(minmax(300px, auto) auto);
+  grid-template-rows: repeat(3, auto);
+  padding-bottom: 4rem;
+  width: 100%;
+
+  @media #{$md} {
+    @include mixin.grid-column(1fr, center);
+  }
+}
+
+.category-section h1 {
+  @include mixin.scaled-text('Teko', 10rem, $scale: (0.7, 1), $margin-left: -18%);
+
+  @media #{$md} {
+    font-size: 6rem;
+    margin-left: 0;
+  }
+}
+
+.category-section h5 {
+  grid-row-start: 2;
+  @include mixin.scaled-text('Teko', 3rem, $scale: (0.7, 1), $margin-left: -17.7%);
+
+  @media #{$md} {
+    margin-left: 0;
+  }
+}

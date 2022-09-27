@@ -1,0 +1,51 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixin';
+
+.content-container {
+  grid-area: contentSection;
+  @include mixin.grid-column($justify-items: flex-start);
+  margin-left: 7rem;
+  width: 705px;
+
+  @media #{$lg} {
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-left: 0;
+    padding: 0;
+  }
+}
+
+.container-sections {
+  padding-bottom: 2.5rem;
+}
+
+.container-sections h2 {
+  @include mixin.text('Roboto', 1.4rem);
+  margin-bottom: 1.5rem;
+}
+
+.container-sections h3 {
+  @include mixin.text('Roboto', 1rem);
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  @include mixin.text('Roboto', 1rem, 500, $secondary-grey-text);
+  line-height: 1.6rem;
+}
+
+.indent {
+  margin-left: 1rem;
+}
+
+.description::before {
+  content: "\B7   /";
+  font-weight: 700;
+  color: $black-text;
+  margin-right: 0.5rem;
+}
+
+.description i {
+  font-family: 'Roboto';
+  font-weight: 500;
+}

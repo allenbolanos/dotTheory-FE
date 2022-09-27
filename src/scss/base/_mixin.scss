@@ -1,0 +1,81 @@
+@use './variables';
+
+/// Defines the styling of the main tag on the Detail Pages and Home page.
+/// @param {behavior} $overflow - element's overflow
+/// @param {length} $mt - element's top margin
+@mixin main($overflow: null, $mt: null) {
+  display: grid;
+  grid-template-columns: 100vw;
+  justify-items: center;
+  overflow: $overflow;
+  margin-top: $mt;
+}
+
+/// Defines the styling of an element with an absolute position
+/// @param {position} $top - element's top edge from its parent.
+/// @param {position} $right - element's right edge from its parent.
+/// @param {position} $bottom - element's bottom edge from its parent.
+/// @param {position} $left - element's left edge from its parent.
+/// @param {length} $width - element's width.
+/// @param {length} $height - element's height.
+/// @param {order} $z-index - element's stacking order.
+@mixin absolute-container($top: null, $right: null, $bottom: null, $left: null, $width: null, $height: null, $z-index: null) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  width: $width;
+  height: $height;
+  z-index: $z-index;
+}
+
+/// Defines the styling of a text
+/// @param {string} $family - text's font family.
+/// @param {length} $size - text's font size.
+/// @param {number} $weight - text's font weight.
+/// @param {hex-code} $color - text's color.
+@mixin text($family: null, $size: null, $weight: null, $color: null) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+/// Defines the styling of a scaled text
+/// @param {string} $family - text's font family.
+/// @param {length} $size - text's font size.
+/// @param {number} $weight - text's font weight.
+/// @param {hex-code} $color - text's color.
+/// @param {values} $scale - text's X and Y scale.
+/// @param {length} $margin-left - text's left margin.
+@mixin scaled-text($family: null, $size: null, $weight: null, $color: null, $scale, $margin-left: null) {
+  @include text($family, $size, $weight, $color);
+  transform: scale($scale);
+  margin-left: $margin-left;
+}
+
+/// Defines the styling of a container with a column flex layout.
+/// @param {alignment} $justify-content - flex items' alignment on the main axis
+/// @param {alignment} $align-items - flex items' alignment on the cross axis
+@mixin flex-column($justify-content: null, $align-items: null) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin grid-column($columns-template: auto, $justify-items: null, $align-items: null, $justify-content: null) {
+  display: grid;
+  grid-template-columns: $columns-template;
+  justify-items: $justify-items;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin navbar-dropdown-position($left: null) {
+  position: fixed;
+  top: 4rem;
+  left: $left;
+}
+

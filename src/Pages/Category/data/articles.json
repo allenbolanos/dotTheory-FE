@@ -1,0 +1,52 @@
+{
+  "articles": [
+    {
+      "type": "Patch_Notes",
+      "content_link": "../../News/articles/pn5-01.html",
+      "image_src": "../assets/patch_notes/related-content-1.jpg",
+      "number": 1,
+      "date": "07/12/22",
+      "title": "VALORANT PATCH NOTES 5.01" 
+    },
+    {
+      "type": "Patch_Notes",
+      "content_link": "../../News/articles/pn5-0.html",
+      "image_src": "../assets/patch_notes/related-content-3.webp",
+      "number": 2,
+      "date": "06/17/22",
+      "title": "VALORANT PATCH NOTES 5.0"
+    },
+    {
+      "type": "Patch_Notes",
+      "content_link": "../../News/articles/pn4-11.html",
+      "image_src": "../assets/patch_notes/patch_4.11_banner.webp",
+      "number": 3,
+      "date": "06/07/22",
+      "title": "VALORANT PATCH NOTES 4.11"
+    },
+    {
+      "type": "Episode_Updates",
+      "content_link": "../../News/articles/ep5act1.html",
+      "image_src": "../assets/episode_updates/related-content-2.webp",
+      "number": 1,
+      "date": "07/12/22",
+      "title": "DIVE IN // Episode 5: Act I Kickoff - VALORANT"
+    },
+    {
+      "type": "Episode_Updates",
+      "content_link": "../../News/articles/mpc-061722.html",
+      "image_src": "../assets/episode_updates/related-content-4.webp",
+      "number": 2,
+      "date": "06/17/22",
+      "title": "VALORANT Map Pool Changes"
+    },
+    {
+      "type": "Agent_Insights",
+      "content_link": "../../News/articles/vai-fade.html",
+      "image_src": "../assets/agent_insights/fade-article-banner.webp",
+      "number": 1,
+      "date": "06/06/22",
+      "title": "VALORANT Agent Insights: Fade"
+    }
+  ]
+}

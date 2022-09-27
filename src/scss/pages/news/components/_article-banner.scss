@@ -1,0 +1,23 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixin';
+
+.article-banner {
+  @include mixin.absolute-container($z-index: 20);
+  @include mixin.grid-column($justify-items: center);
+}
+
+img[alt="Valorant Article Banner"] {
+  object-fit: cover;
+  transform: translateY(-58px);
+  width: 100%;
+}
+
+.white-lines {
+  @include mixin.absolute-container(0, $width: $default-width, $height: 100%, $z-index: 50);
+  border-right: 1px solid rgba(236,232,225,.5);
+  border-left: 1px solid rgba(236,232,225,.5);
+
+  @media #{$lg} {
+    width: 90%;
+  }
+}

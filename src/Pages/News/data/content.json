@@ -1,0 +1,58 @@
+{
+  "content": [
+    {
+      "subtitle": "",
+      "video": "<iframe src='https://www.youtube.com/embed/le474A3jBxA' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+      "description": "VALORANT Episode 5 adds another dimension to unwavering gameplay with the new Ascendant rank, a subaquatic map, two ways to stack your Act I collection, and a handful of Chaos.",
+      "additionalDescription": null,
+      "optionalLinkText": null,
+      "optionalLink": null,
+      "imageSrc": "../assets/articles/ep5act1/valorant-pearl.jpg"
+    },
+    {
+      "subtitle": "NEW MAP: PEARL (JUN. 22 PEARL-ONLY QUEUE, JUL. 12 ALL QUEUES)",
+      "video": "<iframe src='https://www.youtube.com/embed/Sb22sSA7oTE' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+      "description": "Pearl is the wonder in the deep blue. The newest VALORANT destination mixes technological marvels with tactical three-lane gameplay. You’re going to have to survive without the rotation and mobility support of doors, ascenders, or teleporters—so quit staring at the fish!",
+      "additionalDescription": null,
+      "optionalLinkText": null,
+      "optionalLink": null,
+      "imageSrc": "../assets/articles/ep5act1/valorant-skins.png"
+    },
+    {
+      "subtitle": "EPISODE 5 ACT I BATTLEPASS (JUN. 22)",
+      "video": null,
+      "description": "If exploring Omega Earth underwater isn’t enough for you, grab a hold of the Act I exclusive items that burn, shine, and glitter in your hands. The collection includes the Shimmer Classic, Operation: Vacation Player Card, and Perfect Pattern Gun Buddy.",
+      "additionalDescription": "Purchase the Act I Premium Battlepass to earn even more tiers of VALORANT goods, like the Task Force 809 Phantom, Spitfire Operator, or the Cat Tactics Gun Buddy.",
+      "optionalLinkText": "Need a refresher? Learn more about VALORANT’s Battlepass.",
+      "optionalLink": "https://playvalorant.com/en-us/news/game-updates/what-is-the-valorant-battlepass/",
+      "imageSrc": "../assets/articles/ep5act1/valorant-comics.png"
+    },
+    {
+      "subtitle": "EVENT PASS: CROSSOVER (JUN. 22–JUL. 12)",
+      "video": null,
+      "description": "Stop asking yourself “what if?” and find out what it might feel like to bag-and-board VALORANT stories and take them home. Mark the first foray into Omega Earth with comic book-inspired Player Cards drawn by some the best to ever do it.",
+      "additionalDescription": "Earn enough XP in time to add these 3 exclusive Player Cards, Radianite Points, and new Titles, to your collection.",
+      "optionalLinkText": null,
+      "optionalLink": null,
+      "imageSrc": "../assets/articles/ep5act1/valorant-event-skins.png"
+    },
+    {
+      "subtitle": "NEW SKINLINE: PRELUDE TO CHAOS (JUN. 22)",
+      "video": null,
+      "description": "Gaze long into the abyss…and it just might spit out some sinister weapon skins. Prelude to Chaos shapes the Vandal, Operator, Shorty, and Spectre into their most powerful look yet. You can also carve your way to victory with the sword melee.",
+      "additionalDescription": null,
+      "optionalLinkText": null,
+      "optionalLink": null,
+      "imageSrc": "../assets/articles/ep5act1/valorant-skinline.png"
+    },
+    {
+      "subtitle": "NEW RANK: ASCENDANT (JUN. 22)",
+      "video": null,
+      "description": "Do you ever feel like you’re just treading water in the Competitive queue? Ascendant is the new rank added between Diamond and Immortal, and promises to make waves in the status quo. We’re shooting to spread the rank density, but that doesn’t mean you won’t have to earn your spot.",
+      "additionalDescription": null,
+      "optionalLinkText": null,
+      "optionalLink": null,
+      "imageSrc": null
+    }
+  ]
+}

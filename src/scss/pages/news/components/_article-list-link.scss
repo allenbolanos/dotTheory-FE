@@ -1,0 +1,38 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixin';
+
+.article-list-link {
+  cursor: pointer;
+  @include mixin.absolute-container(179px, $left: 0, $width: 18.8rem, $height: 4.5rem, $z-index: 50);
+  @include mixin.grid-column(repeat(2, 1fr), end, center);
+  background: $article-grey-bg-color;
+  padding-right: 2.2rem;
+}
+
+.article-list-link > * {
+  margin-top: 1rem;
+
+  @media #{$lg} {
+    display: none;
+  }
+}
+
+.article-list-link::after {
+  content: "";
+  @include mixin.absolute-container(100%, 0, $left: 0);
+  display: block;
+  border-top: 12px solid $article-grey-bg-color;
+  border-right: 12px solid transparent;
+}
+
+.article-list-link img {
+  width: 1.2rem;
+  height: 1.2rem;
+  transform: rotate(180deg);
+}
+
+.article-list-link p {
+  @include mixin.text($size: 14px, $weight: 800, $color: $white-text);
+  white-space: nowrap;
+  font-stretch: condensed;
+}

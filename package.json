@@ -1,0 +1,16 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch:scss",
+    "watch:scss": "sass --watch scss/main.scss:css/main.css scss/pages/home/home.scss:css/pages/home/home.css scss/pages/category/category.scss:css/pages/category/category.css scss/pages/news/article.scss:css/pages/news/article.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.54.5"
+  }
+}

@@ -1,0 +1,181 @@
+@use  '../../../base/mixin';
+@use  '../mixin' as home-mixin;
+@use '../../../base/variables' as *;
+
+.your-agents-section {
+  position: relative;
+  @include mixin.grid-column($justify-items: center, $justify-content: center);
+}
+
+.your-agents-section::after {
+  content: "";
+  align-self: center;
+  @include mixin.absolute-container($width: 100%, $height: 100%, $z-index: 100);
+  border-left: 1px solid rgba(236,232,225,.6);
+}
+
+.your-agents-main-bg-wrapper {
+  position: relative;
+  width: 100vw;
+}
+
+.your-agents-main-bg-wrapper::before {
+  content: "";
+  @include mixin.absolute-container(-3.4rem, $left: 0, $z-index: 100);
+  border-left: 1px solid #FE4755;
+	border-right: 9.2rem solid transparent;
+	border-bottom: 3.5rem solid #FE4755;
+
+  @media #{$lg} {
+    display: none;
+  }
+}
+
+.your-agents-main-bg-wrapper::after {
+  content: "";
+  @include mixin.absolute-container(-0.35rem, 0, $width: 9.05rem, $height: 0.4rem);
+  background: $red-bg;
+
+  @media #{$lg} {
+    display: none;
+  }
+}
+
+.your-agents-main-bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 54.1rem;
+}
+
+.your-agents-background-container {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  width: 100vw;
+  height: max-content;
+  margin-top: 5.5rem;
+  padding-left: 4.75rem;
+  padding-bottom: 10.35rem;
+
+  @media #{$md} {
+    display: none;
+  }
+}
+
+
+.left-bg-sprite {
+  background-repeat: no-repeat;
+  background-image: url(../../assets/background-sprite-left.png);
+  width: 2.33rem;
+  height: 33rem;
+  z-index: 100;
+}
+
+.main-bg-sprite {
+  display: grid;
+  grid-template-columns: 100%;
+  margin-top: 1.25rem;
+  margin-left: 2.15rem;
+}
+
+.bg-sprite-top {
+  display: flex;
+  width: 20rem;
+  height: 1.8rem;
+  background: url(./assets/background-sprite-top.png);
+}
+
+.bg-sprite-middle {
+  margin-top: -0.45rem;
+  width: 1200px;
+}
+
+.right-bg-sprite {
+  width: 2rem;
+  height: 33rem;
+  margin-top: 2.49rem;
+  margin-left: auto;
+  margin-right: 1.75rem;
+  overflow: hidden;
+}
+
+.right-bg-sprite img {
+  margin-left: -7.7rem;
+}
+
+#your-agents-content-container {
+  @include mixin.absolute-container(-1px, 0, $width: 31rem);
+  @include mixin.flex-column($align-items: flex-start);
+  margin-top: 6.3rem;
+  border-top: 1px solid rgba(236,232,225,.4);
+  padding-top: 5.8rem;
+
+  @media #{$xl} {
+    width: 29rem;
+  }
+
+  @media #{$lg} {
+    width: 100%;
+  }
+
+  @media #{$md} {
+    @include mixin.flex-column($align-items: center);
+    margin-top: 5rem;
+  }
+}
+
+#your-agents-content-container h1 {
+  @include mixin.scaled-text('Teko', 8rem, $color: $white-text, $scale: (0.9, 1.2), $margin-left: -1.5rem);
+  line-height: 6rem;
+  margin-bottom: 4rem;
+
+  @media #{$xl} {
+    font-size: 6rem;
+    line-height: 4.5rem;
+  }
+
+  @media #{$lg} {
+    font-size: 4rem;
+    margin-left: -1rem;
+    margin-bottom: 0;
+  }
+
+  @media #{$md} {
+    font-size: 3rem;
+  }
+}
+
+#your-agents-content-container h5 {
+  @include home-mixin.your-content-container-h5($white-text, 5.4rem);
+
+  @media #{$lg} {
+    margin-top: 1.5rem;
+  }
+
+  @media #{$sm} {
+    font-size: 0.9rem;
+  }
+}
+
+#your-agents-content-container p {
+  @include home-mixin.your-content-container-p($white-text);
+}
+
+#view-all-agents-button-wrapper {
+  margin-top: 3rem;
+
+  @media #{$lg} {
+    align-self: center;
+  }
+}
+
+#view-all-agents-button {
+  color: $black-text;
+  background: $white-bg;
+}
+
+#view-all-agents-button::before {
+  background: $white-bg;
+}

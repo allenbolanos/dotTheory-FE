@@ -1,0 +1,70 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixin';
+@use '../article-mixin';
+
+.intro-container strong {
+  @include mixin.text($weight: 600, $color: $black-text);
+}
+
+.about-fade-container {
+  @include mixin.flex-column($align-items: flex-start);
+}
+
+.about-fade-container h2 {
+  align-self: flex-start;
+}
+
+.fade-pic {
+  width: 100%;
+  padding-block: 2.5rem;
+}
+
+.looks {
+  text-align: center;
+  @include mixin.text($size: 0.6rem, $weight: 600);
+  width: 26rem;
+  margin-bottom: 0.5rem;
+
+  @media #{$lg} {
+    font-size: 0.7rem;
+    width: 100%;
+  }
+}
+
+.fade-pic:hover {
+  cursor: pointer;
+  background: $red-bg;
+}
+
+.fade-gif-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.fade-prowlers {
+  width: 100%;
+  padding-block: 2.5rem;
+}
+
+.fade-prowlers:hover {
+  cursor: pointer;
+  background: $red-bg;
+}
+
+.core-gameplay-loop-img {
+  @include article-mixin.paragraph-link($link-size: 1rem, $link-weight: 600);
+}
+
+.core-gameplay-loop-img:hover {
+  background: $red-bg;
+  color: $white-text;
+}
+
+.fade-design-container h2 {
+  width: 20rem;
+}
+
+.fade-design-container s {
+  font-weight: 600;
+}

@@ -1,0 +1,23 @@
+.container-sections h2 {
+  font-size: 1.1rem !important;
+}
+
+.summary-container {
+  position: relative;
+  padding-block: 2.5rem;
+}
+
+.summary-container::before {
+  position: absolute;
+  content: "///";
+  font-weight: 700;
+  font-size: 1.5rem;
+  top: 12rem;
+  left: -10rem;
+  color: #768079;
+}
+
+.lucky-number-seven-container span {
+  font-weight: 600;
+  color: #0f1923;
+}

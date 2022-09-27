@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Teko:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial';
+}
+
+body {
+  background: #EDE9E1;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  overflow: hidden;
+}
+
+.main-section {
+  width: 80.9%;
+  border-left: 1px solid rgba(9,9,9,.4);
+}
+
+.shared-bg-outline-text {
+  font-family: 'Teko';
+  font-size: 21rem;
+  color: transparent;
+  transform: scale(1.2, 1);
+  opacity: .1;
+  -webkit-text-stroke: 1px #292929;
+}
+
+.shared-button-wrapper {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18rem;
+  height: 4.25rem;
+}
+
+.shared-button-wrapper span:first-child {
+  border: 1px solid rgba(236,232,225,.5);
+  border-bottom: none;
+  width: 100%;
+  height: 1.87rem;
+}
+
+.shared-button-wrapper span:nth-child(3) {
+  border: 1px solid rgba(236,232,225,.5);
+  border-top: none;
+  width: 100%;
+  height: 1.85rem;
+}
+
+.shared-button {
+  cursor: pointer;
+  position: absolute;
+  top: 0.55rem;
+  left: 0.4rem;
+  align-self: center;
+  font-family: 'Roboto';
+  font-weight: 600;
+  color: #ece8e1;
+  background: #ff4655;
+  width: 17.15rem;
+  height: 3.3rem;
+  z-index: 40;
+}
+
+.shared-button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: 0;
+  width: 16.99rem;
+  height: 2.5px;
+  background: #ff4655;
+  z-index: 50;
+}
+
+.shared-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 4px;
+  height: 4px;
+  background: #0f1923;
+  z-index: 50;
+}
+
+.shared-your-content-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 31rem;
+}
+
+.shared-your-content-container h1 {
+  font-family: 'Teko';
+  font-size: 6.5rem;
+  transform: scale(1, 1.5);
+  line-height: 5rem;
+}
+
+.shared-your-content-container h5 {
+  font-family: 'Roboto';
+  font-size: 1.1rem;
+  margin-bottom: 1.6rem;
+  transform: scale(1, 1.1);
+  letter-spacing: 1px;
+}
+
+.shared-your-content-container p {
+  font-family: 'Roboto';
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  width: 23.3rem;
+}
+
+@media screen and (max-width: 1023px) {
+
+  .main-section {
+    width: 90%;
+  }
+
+}

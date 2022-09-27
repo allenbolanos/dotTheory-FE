@@ -1,0 +1,327 @@
+@use '../base/variables' as *;
+@use '../base/mixin';
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+  width: 100%;
+  padding: 0.5rem;
+  padding-inline: 0.5rem;
+  background: $nav-footer-bg-color;
+  z-index: 1000;
+
+  @media #{lg} {
+    padding-inline: 1rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.riot-games-button-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.rg-logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 1px;
+  margin-left: 4px;
+}
+
+.rg-logo img:first-child {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(30deg) brightness(113%) contrast(116%);
+
+  @media #{lg} {
+    width: 6rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.rg-logo img:nth-child(2) {
+  filter: invert(55%) sepia(8%) saturate(48%) hue-rotate(251deg) brightness(89%) contrast(85%);
+  margin-left: 2px;
+  margin-bottom: 1px;
+  
+  @media #{lg} {
+    width: 0.7rem;
+  }
+}
+
+.rg-logo:hover img {
+  filter: invert(13%) sepia(93%) saturate(7315%) hue-rotate(347deg) brightness(91%) contrast(103%);
+}
+
+.riot-games-button-container a:nth-child(2) {
+  text-align: center;
+  margin-left: 2px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  width: 75px;
+  height: 26px;
+}
+
+.riot-games-button-container a:nth-child(2) img {
+  @media #{$lg} {
+    width: 2.5rem;
+  }
+}
+
+.navbar-links-container {
+  display: flex;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3.2px;
+  @include mixin.text($size: 12px, $weight: 600, );
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  overflow: hidden;
+  background: $nav-footer-bg-color;
+
+  @media #{$lg} {
+    display: none;
+  }
+}
+
+.navbar-links-lg-background {
+  display: none;
+}
+
+.with-dropdown {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  height: 100%;
+
+  @media #{$lg} {
+    @include mixin.flex-column();
+    padding-inline: 1rem;
+  }
+}
+
+.with-dropdown-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  padding-inline: 1rem;
+  white-space: nowrap;
+
+  @media #{$lg} {
+    cursor: pointer;
+    justify-content: space-between;
+    gap: 16.5rem;
+    width: 100%;
+  }
+
+  @media #{$sm} {
+    gap: 0;
+  }
+}
+
+.with-dropdown-title:hover {
+  @media #{$lg} {
+    background: $burger-dropdown-link-hover-bg !important;
+  }
+}
+
+.with-dropdown:hover .with-dropdown-title {
+  border-radius: 5px;
+  background: $burger-dropdown-link-hover-bg;
+
+  @media #{$lg} {
+    background: none;
+  }
+}
+
+.with-dropdown-title img {
+  filter: invert(55%) sepia(8%) saturate(48%) hue-rotate(251deg) brightness(89%) contrast(85%);
+
+  @media #{$lg} {
+    width: 0.8rem;
+  }
+}
+
+.with-dropdown:hover .dropdown-elements {
+  display: flex;
+
+  @media #{$lg} {
+    display: none;
+  }
+}
+
+#game-info-dropdown {
+  @include mixin.navbar-dropdown-position(11.6rem);
+}
+
+#support-dropdown {
+  @include mixin.navbar-dropdown-position(40.2rem);
+}
+
+#our-socials-dropdown {
+  @include mixin.navbar-dropdown-position(47.9rem);
+}
+
+#browse-dropdown {
+  @include mixin.navbar-dropdown-position(73.4rem);
+}
+
+.dropdown-elements {
+  display: none;
+  flex-direction: column;
+  background: $secondary-black-bg;
+  border-top: 4px solid $red-bg;
+  border-radius: 2px;
+  width: 12.5rem;
+  padding: 0.7rem 0.4rem;
+
+  @media #{$lg} {
+    position: relative;
+    top: 0;
+    left: 0;
+    border-top: none;
+    background: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.dropdown-elements:hover {
+  display: flex;
+}
+
+.dropdown-elements a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  @include mixin.text($size: 12px, $weight: 600, $color: $dropdown-link-color);
+  letter-spacing: 1px;
+  margin: 0.3rem 0.6rem;
+  padding: 0.7rem;
+  padding-left: 1.2rem;
+
+  @media #{$lg} {
+    font-size: 0.8rem;
+    padding-right: 1.2rem;
+    padding-block: 1rem;
+    margin-inline: 0;
+  }
+}
+
+.dropdown-elements a:hover {
+  border-radius: 6px;
+  background: $dropdown-link-hover-bg;
+  color: $dropdown-link-hover-color;
+
+  @media #{$lg} {
+    border-radius: 5px;
+    @media #{$lg} {
+      background: $burger-dropdown-link-hover-bg;
+    }
+  }
+}
+
+.dropdown-elements a img {
+  height: 7px;
+  width: 7px;
+}
+
+.browse {
+  width: max-content;
+}
+
+.red-underline {
+  display: none;
+  @include mixin.absolute-container(2.65rem, $left: 0, $width: 100%, $height: 4px, $z-index: 200);
+  background: $red-bg;
+  border-radius: 2px;
+}
+
+div:hover > .red-underline {
+  display: block;
+}
+
+.with-red-underline {
+  cursor: pointer;
+  position: relative;
+  @include mixin.flex-column();
+  padding: 8px;
+  padding-inline: 1rem;
+}
+
+.with-red-underline:hover {
+  border-radius: 5px;
+  background: $dropdown-link-hover-bg;
+
+  @media #{$lg} {
+    background: $burger-dropdown-link-hover-bg;
+  }
+}
+
+.with-red-underline a {
+  color: white;
+  text-decoration: none;
+}
+
+.play-now-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding: 1rem 0.3rem;
+
+  @media #{$lg} {
+    padding: 0;
+  }
+}
+
+.play-now-container img {
+  cursor: pointer;
+  padding: 8px;
+  margin-right: 5px;
+}
+
+.burger-menu-container {
+  display: none;
+}
+
+.play-now-container img:hover {
+  border-radius: 5px;
+  background: $secondary-black-bg;
+}
+
+.play-now-container button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 1rem;
+  padding-block: 1rem;
+  padding-inline: 1.05rem;
+  margin-right: 1px;
+  border-radius: 12px;
+  @include mixin.text($size: 0.75rem, $weight: 600);
+  letter-spacing: 2px;
+  white-space: nowrap;
+  background: $play-now-button-bg;
+
+  @media #{$lg} {
+    display: none;
+  }
+}
+
+.play-now-container img[alt="Language Globe"] {
+  @media #{$lg} {
+    width: 3.1rem;
+    padding: 0.8rem;
+  }
+}

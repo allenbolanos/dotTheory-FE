@@ -1,0 +1,147 @@
+@use  '../../../base/mixin';
+@use  '../mixin' as home-mixin;
+@use '../../../base/variables' as *;
+
+.your-maps-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.your-maps-bg-wrapper {
+  position: relative;
+  width: 100vw;
+  padding-bottom: 50rem;
+}
+
+.split-bg {
+  @include mixin.absolute-container(-5rem, -8.3rem, $z-index: 50);
+
+  @media #{$xl} {
+    right: -15rem;
+  }
+
+  @media #{$lg} {
+    right: -39rem;
+  }
+
+  @media #{$md} {
+    right: -56rem;
+  }
+
+  @media #{$sm} {
+    right: -60rem;
+  }
+}
+
+.your-maps-bg-outline-text {
+  align-self: flex-start;
+  @include mixin.absolute-container(2.5rem, $left: -2.9rem);
+  @include home-mixin.shared-bg-outline-text;
+  font-size: 22rem;
+  letter-spacing: 0.5rem;
+}
+
+.birds-bg {
+  @include mixin.absolute-container(10rem, $left: 26rem, $z-index: 40);
+}
+
+.your-maps-left-bg-sprite {
+  @include mixin.absolute-container(4.9rem, $left: -4.2rem, $width: 1.85rem, $height: 15rem);
+  object-fit: cover;
+  overflow: hidden;
+
+  @media #{$lg} {
+    display: none;
+  }
+}
+
+.your-maps-left-bg-sprite img {
+  margin-top: -6.4rem;
+  margin-left: -2.2rem;
+}
+
+.your-maps-left-bg-sprite-2 {
+  @include mixin.absolute-container(36.1rem, $left: -4.2rem, $width: 3.5rem, $height: 6.3rem);
+  object-fit: cover;
+  overflow: hidden;
+
+  @media #{$lg} {
+    display: none;
+  }
+}
+
+.your-maps-left-bg-sprite-2 img {
+  margin-left: -2.2rem;
+}
+
+.your-maps-title-description-wrapper {
+  position: absolute;
+  width: $default-width;
+}
+
+#your-maps-content-container {
+  place-content: flex-start;
+  @include mixin.absolute-container(8.75rem, $left: 6.59rem, $z-index: 60);
+  @include mixin.flex-column($align-items: flex-start);
+  border-top: 1px solid rgba(15,25,35,.4);
+  padding-top: 4.5rem;
+
+  @media #{$lg} {
+    top: 7rem;
+    left: 0;
+    width: 124%;
+  }
+
+  @media #{$md} {
+    align-items: center;
+  }
+}
+
+#your-maps-content-container h1 {
+  @include mixin.scaled-text('Teko', 8rem, $color: $black-text, $scale: (0.9, 1.2), $margin-left: -1.8rem);
+
+  @media #{$xl} {
+    font-size: 6rem;
+    margin-left: -1rem;
+  }
+
+  @media #{$lg} {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+
+  @media #{$md} {
+    font-size: 3rem;
+  }
+}
+
+#your-maps-content-container h5 {
+  @include home-mixin.your-content-container-h5($black-text, 4rem);
+
+  @media #{$lg} {
+    margin-top: 0.9rem;
+  }
+}
+
+#your-maps-content-container p {
+  @include home-mixin.your-content-container-p($secondary-grey);
+}
+
+#view-all-maps-button-wrapper {
+  margin-top: 3.7rem;
+
+  @media #{$lg} {
+    align-self: center;
+  }
+}
+
+#view-all-maps-button-wrapper span:first-child {
+  border: 1px solid $tertiary-grey-border-color;
+  border-bottom: none;
+}
+
+#view-all-maps-button-wrapper span:nth-child(3) {
+  border: 1px solid $tertiary-grey-border-color;
+  border-top: none;
+}

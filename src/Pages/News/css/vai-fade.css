@@ -1,0 +1,80 @@
+.intro-container strong {
+  font-weight: 600;
+  color: #0F1822;
+}
+
+.about-fade-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-fade-container h2 {
+  align-self: flex-start;
+}
+
+.fade-pic {
+  width: 100%;
+  padding-block: 2.5rem;
+}
+
+.looks {
+  text-align: center;
+  width: 26rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.fade-pic:hover {
+  cursor: pointer;
+  background: #FF4655;
+}
+
+.fade-gif-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.fade-prowlers {
+  width: 100%;
+  padding-block: 2.5rem;
+}
+
+.fade-prowlers:hover {
+  cursor: pointer;
+  background: #FF4655;
+}
+
+.core-gameplay-loop-img {
+  font-size: 1rem;
+  font-family: 'Arial';
+  font-weight: 600;
+  color: #FE4755;
+  align-self: flex-start;
+  text-decoration: underline;
+  margin-bottom: 2.5rem;
+}
+
+.core-gameplay-loop-img:hover {
+  background: #FE4755;
+  color: #ECE8E1;
+}
+
+.fade-design-container h2 {
+  width: 20rem;
+}
+
+.fade-design-container s {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .looks {
+    font-size: 0.7rem;
+    width: 100%;
+  }
+
+}

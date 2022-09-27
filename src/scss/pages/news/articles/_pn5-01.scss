@@ -1,0 +1,45 @@
+@use '../../../base/variables' as *;
+@use '../article-mixin';
+
+.agent-updates h2 {
+  font-size: 1.1rem;
+}
+
+.agent-updates-container {
+  @include article-mixin.relative-container();
+}
+
+.agent-updates-container::before {
+  @include article-mixin.three-lines(29rem);
+}
+
+.agent-banner {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 5.5rem;
+}
+
+.agent-skills-update {
+  padding-block: 1rem;
+}
+
+.skill {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  border: 1px solid $tertiary-grey-border-color;
+}
+
+.middle-skill {
+  border-top: none;
+  border-bottom: none;
+}
+
+.bugs-container ul {
+  margin-bottom: 2rem;
+}
+
+.bug-fix {
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}

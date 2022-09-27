@@ -1,0 +1,114 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixin';
+
+.tags-container {
+  grid-area: tagsSection;
+  @include mixin.flex-column($align-items: center);
+  gap: 2.5rem;
+  width: 100%;
+  padding-top: 4rem;
+
+  @media #{$lg} {
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #938F8A;
+    overflow: hidden;
+  }
+
+  @media #{$md} {
+    gap: 1rem;
+  }
+}
+
+.tags-links-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 7rem;
+  width: 705px;
+
+  @media #{$lg} {
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  @media #{$md} {
+    gap: 1rem;
+  }
+}
+
+.tags-title-styling {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.tags-title-default {
+  margin-right: 1rem;
+
+  @media #{$md} {
+    display: none;
+  }
+}
+
+.tags-links-container a {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  @include mixin.text($size: 0.8rem, $weight: 600, $color: $white-text);
+  background: $grey;
+  width: 7.5rem;
+  padding: 0.8rem;
+  margin-left: 1rem;
+  margin-bottom: 0.8rem;
+
+  @media #{$md} {
+    margin: 0;
+  }
+}
+
+.tags-links-container a:hover {
+  background: $article-grey-bg-color;
+}
+
+.tags-links-container a::after {
+  content: "";
+  @include mixin.absolute-container($right: 0, $bottom: 0, $width: 4px, $height: 4px);
+  background: $red-bg;
+}
+
+.tags-links-container a:hover::after {
+  background: $grey;
+}
+
+.tags-title-lg {
+  display: none;
+
+  @media #{$md} {
+    display: block;
+    align-self: flex-start;
+  }
+}
+
+.tags-news-link {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 7rem;
+  width: 705px;
+  gap: 1rem;
+
+  @media #{$lg} {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.tags-news-link a {
+  @include mixin.text('Teko', $color: $red-text);
+}
+
+.tags-news-link img {
+  transform: rotate(180deg);
+}

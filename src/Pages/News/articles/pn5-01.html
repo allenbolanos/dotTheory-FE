@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../css/main.css" />
+    <link rel="stylesheet" href="../../../css/pages/news/article.css" />
+    <script type="text/javascript" src="../js/renderRelatedContent.js" defer></script>
+    <title>dotTheory-FE</title>
+  </head>
+  <body>
+    <nav>
+      <div class="riot-games-button-container">
+        <a class="rg-logo">
+          <img src="../assets/navbar/riot-games-logo.svg" alt="Riot Games Logo" />
+          <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+        </a>
+        <a href="https://playvalorant.com/en-us/">
+          <img src="../assets/navbar/valorant-logo.svg" alt="Valorant Logo" />
+        </a> 
+      </div>
+      <div class="navbar-links-container">
+        <div class="with-dropdown">
+          <div class="with-dropdown-title">
+            <p>GAME INFO</p>
+            <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+          </div>
+          <div id="game-info-dropdown" class="dropdown-elements">
+            <a href="https://playvalorant.com/en-us/agents/">AGENTS</a>
+            <a href="https://playvalorant.com/en-us/maps/">MAPS</a>
+            <a href="https://playvalorant.com/en-us/arsenal/">ARSENAL</a>
+          </div>
+        </div>
+        <div class="with-red-underline">
+          <a href="https://playvalorant.com/en-us/media/">MEDIA</a>
+          <div class="red-underline"></div>
+        </div>
+        <div class="with-red-underline">
+          <a href="https://playvalorant.com/en-us/news/">NEWS</a>
+          <div class="red-underline"></div>
+        </div>
+        <div class="with-red-underline">
+          <a href="https://playvalorant.com/en-us/leaderboards/">LEADERBOARDS</a>
+          <div class="red-underline"></div>
+        </div>
+        <div class="with-dropdown">
+          <div class="with-dropdown-title">
+            <p>SUPPORT</p>
+            <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+          </div>
+          <div id="support-dropdown" class="dropdown-elements">
+            <a href="https://playvalorant.com/en-us/specs/" target="_blank">
+              SPECS
+              <img src="../assets/navbar/external-arrow.svg" alt="External Arrow" />
+            </a>
+            <a href="https://support-valorant.riotgames.com/hc/en-us/" target="_blank">
+              SUPPORT
+              <img src="../assets/navbar/external-arrow.svg" alt="External Arrow" />
+            </a>
+            <a href="https://playvalorant.com/en-us/news/announcements/valorant-community-code/" target="_blank">
+              COMMUNITY CODE
+              <img src="../assets/navbar/external-arrow.svg" alt="External Arrow" />
+            </a>
+          </div>
+        </div>
+        <div class="with-dropdown">
+          <div class="with-dropdown-title">
+            <p>OUR SOCIALS</p>
+            <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+          </div>
+          <div id="our-socials-dropdown" class="dropdown-elements">
+            <a href="https://twitter.com/playvalorant" target="_blank">
+              Twitter
+              <img src="../assets/navbar/external-arrow.svg" alt="External Arrow" />
+            </a>
+            <a href="https://www.youtube.com/PlayValorant" target="_blank">
+              Youtube
+              <img src="../assets/navbar/external-arrow.svg" alt="External Arrow" />
+            </a>
+            <a href="https://www.instagram.com/playvalorantofficial/" target="_blank">
+              Instagram
+              <img src="../assets/navbar/external-arrow.svg" alt="External Arrow" />
+            </a>
+            <a href="https://www.facebook.com/PlayVALORANT/" target="_blank">
+              Facebook
+              <img src="../assets/navbar/external-arrow.svg" alt="External Arrow" />
+            </a>
+            <a href="https://discord.com/invite/valorant" target="_blank">
+              Discord
+              <img src="../assets/navbar/external-arrow.svg" alt="External Arrow" />
+            </a>
+          </div>
+        </div>
+        <div class="with-red-underline">
+          <div class="esports">
+            <a href="https://valorantesports.com/" target="_blank">ESPORTS</a>
+            <img src="../assets/navbar/external-arrow.svg" alt="External Arrow" />
+          </div>
+          <div class="red-underline"></div>
+        </div>
+        <div class="with-red-underline">
+          <a href="https://playvalorant.com/en-us/pbe/">PBE SIGNUP</a>
+          <div class="red-underline"></div>
+        </div>
+        <div class="with-dropdown">
+          <div class="with-dropdown-title ">
+            <p>BROWSE</p>
+            <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+          </div>
+          <div id="browse-dropdown" class="dropdown-elements browse">
+            <a href="./pn5-01.html">Valorant Patch Notes 5.01</a>
+            <a href="./ep5act1.html">What's New In Valorant Episode 5 Act I</a>
+            <a href="./pn5-0.html">Valorant Patch Notes 5.0</a>
+            <a href="./mpc-061722.html">Valorant Map Pool Changes</a>
+            <a href="./pn4-11.html">Valorant Patch Notes 4.11</a>
+            <a href="./vai-fade.html">Valorant Agent Insights: Fade</a>
+          </div>
+        </div>
+      </div>
+      <input type="checkbox" id="burger-menu-dropdown">
+      <div class="navbar-links-lg-background">
+        <div class="navbar-links-lg-wrapper">
+          <div class="navbar-links-lg-content-container">
+            <div class="close-burger-menu-container">
+              <img class="close-burger-menu-valorant-logo" src="../assets/navbar/valorant-logo.svg" alt="Valorant Logo" /> 
+              <label class="close-burger-menu-icon" for="burger-menu-dropdown">
+                <img  src="../assets/navbar/nav-close-icon.svg" alt="Navbar Close Icon">
+              </label>
+            </div>
+            <div class="with-dropdown">
+              <label for="game-info-toggle-dropdown" class="with-dropdown-title shared-title-styling">
+                <p>GAME INFO</p>
+                <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+              </label>
+              <input type="checkbox" id="game-info-toggle-dropdown">
+              <div class="dropdown-elements">
+                <a href="https://playvalorant.com/en-us/agents/">AGENTS</a>
+                <a href="https://playvalorant.com/en-us/maps/">MAPS</a>
+                <a href="https://playvalorant.com/en-us/arsenal/">ARSENAL</a>
+              </div>
+            </div>
+            <a class="with-red-underline shared-title-styling" href="https://playvalorant.com/en-us/media/">MEDIA</a>
+            <a class="with-red-underline shared-title-styling" href="https://playvalorant.com/en-us/news/">NEWS</a>
+            <a class="with-red-underline shared-title-styling" href="https://playvalorant.com/en-us/leaderboards/">LEADERBOARDS</a>
+            <div class="with-dropdown">
+              <label for="support-toggle-dropdown" class="with-dropdown-title shared-title-styling">
+                <p>SUPPORT</p>
+                <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+              </label>
+              <input type="checkbox" id="support-toggle-dropdown">
+              <div class="dropdown-elements">
+                <a href="https://playvalorant.com/en-us/specs/" target="_blank">
+                  SPECS
+                </a>
+                <a href="https://support-valorant.riotgames.com/hc/en-us/" target="_blank">
+                  SUPPORT
+                </a>
+                <a href="https://playvalorant.com/en-us/news/announcements/valorant-community-code/" target="_blank">
+                  COMMUNITY CODE
+                </a>
+              </div>
+            </div>
+            <div class="with-dropdown">
+              <label for="our-socials-toggle-dropdown" class="with-dropdown-title shared-title-styling">
+                <p>OUR SOCIALS</p>
+                <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+              </label>
+              <input type="checkbox" id="our-socials-toggle-dropdown">
+              <div class="dropdown-elements">
+                <a href="https://twitter.com/playvalorant" target="_blank">
+                  Twitter
+                </a>
+                <a href="https://www.youtube.com/PlayValorant" target="_blank">
+                  Youtube
+                </a>
+                <a href="https://www.instagram.com/playvalorantofficial/" target="_blank">
+                  Instagram
+                </a>
+                <a href="https://www.facebook.com/PlayVALORANT/" target="_blank">
+                  Facebook
+                </a>
+                <a href="https://discord.com/invite/valorant" target="_blank">
+                  Discord
+                </a>
+              </div>
+            </div>
+            <div class="with-red-underline shared-title-styling">
+              <div class="esports">
+                <a href="https://valorantesports.com/" target="_blank">ESPORTS</a>
+                <img src="../assets/navbar/external-arrow.svg" alt="External Arrow" />
+              </div>
+            </div>
+            <a class="with-red-underline shared-title-styling" href="https://playvalorant.com/en-us/pbe/">PBE SIGNUP</a>
+            <div class="with-dropdown">
+              <label for="browse-toggle-dropdown" class="with-dropdown-title shared-title-styling">
+                <p>BROWSE</p>
+                <img src="../assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+              </label>
+              <input type="checkbox" id="browse-toggle-dropdown">
+              <div class="dropdown-elements browse">
+                <a href="../News/articles/pn5-01.html">Valorant Patch Notes 5.01</a>
+                <a href="../News/articles/ep5act1.html">What's New In Valorant Episode 5 Act I</a>
+                <a href="../News/articles/pn5-0.html">Valorant Patch Notes 5.0</a>
+                <a href="../News/articles/mpc-061722.html">Valorant Map Pool Changes</a>
+                <a href="../News/articles/pn4-11.html">Valorant Patch Notes 4.11</a>
+                <a href="../News/articles/vai-fade.html">Valorant Agent Insights: Fade</a>
+              </div>
+            </div>
+            <div class="navbar-links-play-now">
+              <button>
+                <p>PLAY NOW</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="play-now-container">
+        <img src="../assets/navbar/language-globe.svg" alt="Language Globe" />
+        <label for="burger-menu-dropdown" class="burger-menu-container">
+          <img src="../assets/navbar/burger-menu.svg" alt="Burger Menu">
+        </label>
+        <button>
+          <p>PLAY NOW</p>
+        </button>
+      </div>
+    </nav>
+    <section class="article-banner">
+      <img src="../assets/articles/pn5-01/valorant-article-banner.jpg" alt="Valorant Article Banner">
+      <div class="white-lines"></div>
+      <a class="article-list-link">
+        <img src="../assets/common/article-list-arrow.svg" alt="Article List Link Arrow">
+        <p>GO TO ARTICLE LIST</p>
+      </a>
+    </section>
+    <main>
+      <article>
+        <aside class="default-share-links">
+          <p>SHARE:</p>
+          <a href=""><img src="../assets/common/facebook-icon.svg" alt="Facebook Icon"></a>
+          <a href=""><img src="../assets/common/twitter-icon.svg" alt="Twitter Icon"></a>
+          <a href=""><img src="../assets/common/reddit-icon.svg" alt="Reddit Icon"></a>
+          <a href=""><img src="../assets/common/copy-link-icon.svg" alt="Copy Link Icon"></a>
+        </aside>
+        <section class="title-container">
+          <div class="title-upper-content-container">
+            <div class="upper-content">
+              <p>06/22/22</p>
+              <a href="https://playvalorant.com/en-us/news/game-updates/">GAME UPDATES</a>
+            </div>
+            <div class="upper-content">
+              <p>CATEGORY</p>
+              <a href="../../Category/categories/patch_notes.html">PATCH NOTES</a>
+            </div>
+          </div>
+          <p class="title">VALORANT PATCH NOTES 5.01</p>
+          <div class="lg-share-links">
+            <p>SHARE:</p>
+            <a href=""><img src="../assets/common/facebook-icon.svg" alt="Facebook Icon"></a>
+            <a href=""><img src="../assets/common/twitter-icon.svg" alt="Twitter Icon"></a>
+            <a href=""><img src="../assets/common/reddit-icon.svg" alt="Reddit Icon"></a>
+            <a href=""><img src="../assets/common/copy-link-icon.svg" alt="Copy Link Icon"></a>
+          </div>
+        </section>
+        <section class="content-container">
+          <div class="agent-updates-container container-sections">
+            <h2>AGENT UPDATES</h2>
+            <section class="agent-updates">
+              <img class="agent-banner" src="../assets/articles/pn5-01/phoenix-banner.png" alt="Phoenix Banner">
+              <h2>PHOENIX</h2>
+              <p class="description"><i>We believe Phoenix's Curveball is the cornerstone of his kit, and as we explored adjustment options it became clear that Curveball being more powerful unlocks his kit as a whole. So we wanted to assess Phoenix in a world where Curveball is more competitive with the rest of the ecosystem to get a sense for the impact of the changes. We view Phoenix as an aggressive entry Agent, so the additional Run It Back and Blaze changes are intended to support his proactive intentions when taking space or fights early on into rounds.</i></p>
+              <div class="agent-skills-update">
+                <div class="skill">
+                  <h3>Curveball (Q)</h3>
+                  <p class="description"><strong>Flash Max duration increased 1.1s >>> 1.5s</strong></p>
+                  <p class="description"><strong>Flash Windup decreased .7s >>> .5s</strong></p>
+                </div>
+                <div class="skill middle-skill">
+                  <h3>Blaze (C)</h3>
+                  <p class="description">Phoenix will now equip his weapon earlier if he stops bending his wall</p>
+                </div>
+                <div class="skill">
+                  <h3>Run it Back (X)</h3>
+                  <p class="description">Phoenix will now spawn at the marker with the amount of shields he had when the ability was cast</p>
+                </div>
+              </div>
+            </section>
+            <section class="agent-updates">
+              <img class="agent-banner" src="../assets/articles/pn5-01/yoru-banner.jpg" alt="Yoru Banner">
+              <h2>Yoru</h2>
+              <p class="description"><i>We’ve noticed you Yoru players having a bit of friction achieving the dream of setting up a master plan while in ultimate. We’re hoping these changes will reduce a bit of that problem, rewarding you for using your flash during ultimate, while still preventing unhealthy play patterns that leave enemies without counterplay.</i></p>
+              <div class="agent-skills-update">
+                <div class="skill">
+                  <h3>Dimensional Drift (X)</h3>
+                  <p class="description"><strong>Increased duration of ultimate 10s >>> 12s</strong></p>
+                  <p class="description"><strong>Reduced unequip time 1.2s >>> 0.8s</strong></p>
+                </div>
+              </div>
+            </section>
+            <section class="agent-updates">
+              <img class="agent-banner" src="../assets/articles/pn5-01/kayo-banner.png" alt="Kayo Banner">
+              <h2>KAY/O</h2>
+              <p class="description"><i>KAY/O hasn’t had much of a quality of life pass since we’ve last had some changes so we wanted to reduce some pain and help you access more parts of the kit that haven’t felt as accessible.</i></p>
+              <div class="agent-skills-update">
+                <div class="skill">
+                  <h3>FRAG/ment (C)</h3>
+                  <p class="description"><strong>Zone diameter reduced 10m >>> 8m</strong></p>
+                  <p class="description"><strong>Damage now applies without needing line of sight</strong></p>
+                  <p class="description indent"><strong>We’ve noticed a lot of inconsistencies with how the FRAG/ment is communicating the actual damage zone on the ability. We wanted to be consistent with how the visuals were showing the damage zone, so we’ve removed the line of sight requirement to apply damage.</strong></p>
+                </div>
+                <div class="skill">
+                  <h3>NULL/cmd (X)</h3>
+                  <p class="description"><strong>Now, only allies will hear the full channel audio of reviving KAY/O, while downed</strong></p>
+                  <p class="description indent"><strong>Enemies will only hear a short audio cue when the revive has started, matching a similar gameplay pattern to playing around ultimate orbs or tapping the bomb</strong></p>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="gameplay-systems-container container-sections">
+            <h2>GAMEPLAY SYSTEMS</h2>
+            <ul>
+              <li class="description">New Smurf Detection functionality (North America)</li>
+              <li class="description indent">This addition to our smurf detection systems is designed to make sure that new players (that means all new accounts) are matched up with players of the correct skill level, much faster than before.</li>
+              <li class="description indent">We’re testing this change in North America first, to make sure everything is working correctly before a global rollout.</li>
+              <li class="description indent">Testing begins the week of July 11th, 2022</li>
+              <li class="description">Improved collision behavior when walking next to or behind another player.</li>
+              <li class="description indent">This should heavily reduce the amount of jitteriness experienced when moving close to your allies (rushing a site as a group or moving out of spawn should feel better!).</li>
+            </ul>
+          </div>
+          <div class="game-modes-container container-sections">
+            <h2>GAME MODES</h2>
+            <p class="description">Twin Hunters in Spike Rush will now damage destructible walls</p>
+          </div>
+          <div class="bugs-container container-sections">
+            <h2>BUGS</h2>
+            <section class="bug-fix">
+              <h3>PERFORMANCE</h3>
+              <p class="description">Fixed an issue where having the Raw Input Buffer setting enabled caused scrolling in chat or friends list to go directly to the top or bottom</p>
+            </section>
+            <section class="bug-fix">
+              <h3>YORU</h3>
+              <p class="description">Fixed a bug with Dimensional Drift where the invulnerability kicked in later than intended after it was cast</p>
+            </section>
+            <section class="bug-fix">
+              <h3>SOVA</h3>
+              <p class="description">Fixed issue with Sova’s Shock Bolt not damaging enemy traps and other game objects (other than players)</p>
+            </section>
+            <section class="bug-fix">
+              <h3>FADE</h3>
+              <p class="description">Fixed issue where Fade’s Haunt would sometimes reveal enemies that were on the other side of a thin wall</p>
+            </section>
+          </div>
+        </section>
+        <section class="author-container">
+          <div>
+            <img src="../assets/common/valorant-logo-v.jpg" alt="Valorant Logo V">
+            <p>JEFF LANDA</p>
+            <p>// Comms Strategist</p>
+            <p>Bylines in ink, waves, and digital—but always on deadline. The hum of retro consoles, obscure pro-wrestling memorabilia, and period correct cars fill his time between keyboard key clicks. Developing an FPS style that's not long on guts and short on brains.</p>
+          </div>
+        </section>
+        <section class="tags-container">
+          <p class="tags-title-lg tags-title-styling">TAGS:</p>
+          <div class="tags-links-container">
+            <p class="tags-title-default tags-title-styling">TAGS:</p>
+            <a href="https://playvalorant.com/en-us/news/tags/patch-notes/">PATCH NOTES</a>
+            <a href="https://playvalorant.com/en-us/news/tags/yoru/">YORU</a>
+            <a href="https://playvalorant.com/en-us/news/tags/kay/o/">KAY/O</a>
+            <a href="https://playvalorant.com/en-us/news/tags/phoenix/">PHOENIX</a>
+          </div>
+          <div class="tags-news-link">
+            <a href="https://playvalorant.com/en-us/news/">GO TO ARTICLE LIST</a>
+            <img src="../assets/common/tags-article-list-arrow.svg" alt="Tags Article List Arrow">
+          </div>
+        </section>
+        <section class="related-content-container">
+          <span class="related-content-background">
+            <p>WE ARE</p>
+            <P>WAITING</P>
+          </span>
+          <div class="related-content-upper">
+            <p class="related-content-title">RELATED CONTENT</p>
+            <div class="related-content-tabs">
+              <button></button>
+              <button></button>
+              <button></button>
+            </div>
+            <div class="defy-the-limits">
+              <p>DEFY THE</p>
+              <p>LIMITS</p>
+            </div>
+          </div>
+          <div class="related-content-cards-container"></div>
+        </section>
+      </article>
+      <section class="comments-container">
+        <form class="comment-form">
+          <h1>Comments</h1>
+          <input type="text" placeholder="Enter a comment...">
+        </form>
+      </section>
+      <footer>
+        <div class="download-links">
+          <a href="https://playvalorant.com/en-us/download/">DOWNLOAD GAME CLIENT</a>
+          <a href="https://play.google.com/store/apps/details?id=com.riotgames.mobile.leagueconnect&referrer=singular_click_id%3D57f1824f-6d53-43c9-8e10-2c12b6c3e131">DOWNLOAD RIOT MOBILE COMPANION APP</a>
+        </div>
+        <div class="actual-footer">
+          <div class="footer-social-media">
+            <a href="https://twitter.com/playvalorant"><img src="../assets/footer/twitter-icon.svg" alt="Twitter Icon"></a>
+            <a href="https://www.youtube.com/PlayValorant"><img src="../assets/footer/youtube-icon.svg" alt="Youtube Icon"></a>
+            <a href="https://www.instagram.com/playvalorantofficial/"><img src="../assets/footer/instagram-icon.svg" alt="Instagram Icon"></a>
+            <a href="https://www.facebook.com/PlayVALORANT/"><img src="../assets/footer/footer-fb-icon.svg" alt="Facebook Icon"></a>
+            <a href="https://discord.com/invite/valorant"><img src="../assets/footer/discord-icon.svg" alt="Discord Icon"></a>
+          </div>
+          <a href="https://www.riotgames.com/en"><img class="footer-rg-logo" src="../assets/footer/riot-games-logo.svg" alt="Riot Games Logo" /></a>
+          <p class="copyright-text">© 2022 Riot Games, Inc. Riot Games, VALORANT, and any associated logos are trademarks, service marks, and/or registered trademarks of Riot Games, Inc.</p>
+          <div class="download-links other-dl-links">
+            <a href="hhttps://www.riotgames.com/en/privacy-notice">PRIVACY NOTICE</a>
+            <a href="https://www.riotgames.com/en/terms-of-service">TERMS OF SERVICE</a>
+            <a href="">COOKIE PREFERENCES</a>
+          </div>
+          <div class="esrb-rating">
+            <a href="https://discord.com/invite/valorant"><img src="../assets/footer/esrb-rating.png" alt="Discord Icon"></a>
+            <ul>
+              <li>Blood</li>
+              <li>Language</li>
+              <li>Violence</li>
+              <li>Users Interact</li>
+              <li>In-game Purchases</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

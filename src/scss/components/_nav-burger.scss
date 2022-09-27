@@ -1,0 +1,123 @@
+@use '../base/variables' as *;
+@use '../base/mixin';
+
+@media #{$lg} {
+  .navbar-links-lg-background {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+  }
+  
+  .navbar-links-lg-wrapper {
+    @include mixin.absolute-container(0, 0, $width: 485px, $height: 100vh);
+    background: $burger-bg;
+    overflow-y: auto;
+
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+  
+  .navbar-links-lg-content-container {
+    @include mixin.absolute-container(0, 0, $width: 100%);
+    @include mixin.flex-column();
+  }
+  
+  .close-burger-menu-container {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1.3rem;
+    width: 100%;
+  }
+  
+  .close-burger-menu-valorant-logo {
+    width: 2.2rem;
+  }
+  
+  .close-burger-menu-icon img {
+    width: 3rem;
+  }
+  
+  #game-info-toggle-dropdown:checked + div {
+    display: flex;
+  }
+  
+  #support-toggle-dropdown:checked + div {
+    display: flex;
+  }
+  
+  #our-socials-toggle-dropdown:checked + div {
+    display: flex;
+  }
+  
+  #browse-toggle-dropdown:checked + div {
+    display: flex;
+  }
+  
+  .shared-title-styling {
+    @include mixin.text($size: 1.1rem, $color: $secondary-white-text);
+    padding-inline: 1.2rem;
+    padding-block: 0.9rem;
+    margin-inline: 1rem;
+  }
+  
+  .esports {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    gap: 16.5rem;
+    width: 100%;
+  }
+  
+  .esports img {
+    width: 0.9rem;
+  }
+  
+  .navbar-links-play-now {
+    width: 100%;
+    padding-inline: 1.5rem;
+  }
+  
+  .navbar-links-play-now button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    width: 100%;
+    height: 3rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    padding: 1rem;
+    @include mixin.text($size: 1rem, $weight: 600);
+    letter-spacing: 2px;
+    background: $play-now-button-bg;
+  }
+  
+  .burger-menu-container {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .burger-menu-container img {
+    display: block;
+    width: 100%;
+    height: 4rem;
+  }
+  
+  .burger-menu-container img:hover {
+    background: none;
+  }
+  
+  #burger-menu-dropdown:checked + div {
+    display: flex;
+  }
+  
+}

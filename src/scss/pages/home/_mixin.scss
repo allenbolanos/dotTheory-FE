@@ -1,0 +1,28 @@
+@use '../../base/mixin' as *;
+@use '../../base/variables';
+
+/// Default styling of Home Page's Featured Content and Your Maps sections' background text.
+@mixin shared-bg-outline-text() {
+  font-family: 'Teko';
+  font-size: 21rem;
+  color: transparent;
+  transform: scale(1.2, 1);
+  opacity: .1;
+  -webkit-text-stroke: 1px #292929;
+}
+
+@mixin your-content-container-h5($h5-color: null, $margin-top: null) {
+  @include scaled-text('Roboto', 1.1rem, $color: $h5-color, $scale: (1, 1.1));
+  letter-spacing: 1px;
+  margin-bottom: 1.6rem;
+}
+
+@mixin your-content-container-p($p-color: null) {
+  @include text('Roboto', 0.95rem, 400, $p-color);
+  line-height: 1.5rem;
+  width: 23.3rem;
+
+  @media #{variables.$lg} {
+    width: 70%;
+  }
+}
