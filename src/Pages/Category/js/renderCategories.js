@@ -3,7 +3,7 @@ async function renderCategories() {
   const $episodeUpdates = document.querySelector('.episode-updates');
   const $agentInsights = document.querySelector('.agent-insights');
 
-  const response = await fetch('../data/articles.json');
+  const response = await fetch('./data/articles.json');
   const data = await response.json();
 
   const { articles } = data;
@@ -12,12 +12,12 @@ async function renderCategories() {
     {$patchNotes 
       ? $patchNotes.innerHTML += `
           ${e.type === 'Patch_Notes' 
-            ? `<a href="${e.content_link}" class="article-card">
-                <img src="${e.image_src}">
-                <div class="article-card-details">
-                  <p>0${e.number}</p>
-                  <p>${e.date}</p>
-                  <p>${e.title}</p>
+            ? `<a class="article-card" href="${e.content_link}">
+                <img class="article-card__image" src="${e.image_src}">
+                <div class="article-card__details">
+                  <p class="article-card__number">0${e.number}</p>
+                  <p class="article-card__date">${e.date}</p>
+                  <p class="article-card__title">${e.title}</p>
                 </div>
               </a>`
             : ''
@@ -26,13 +26,13 @@ async function renderCategories() {
       : $episodeUpdates ? 
         $episodeUpdates.innerHTML += `
           ${e.type === 'Episode_Updates' 
-            ? `<a href="${e.content_link}">
+            ? `<a class="article-card" href="${e.content_link}">
                 <div class="article-card">
-                  <img src="${e.image_src}">
-                  <div class="article-card-details">
-                    <p>0${e.number}</p>
-                    <p>${e.date}</p>
-                    <p>${e.title}</p>
+                  <img class="article-card__image" src="${e.image_src}">
+                  <div class="article-card__details">
+                    <p class="article-card__number">0${e.number}</p>
+                    <p class="article-card__date">${e.date}</p>
+                    <p class="article-card__title">${e.title}</p>
                   </div>
                 </div>
               </a>`
@@ -42,13 +42,13 @@ async function renderCategories() {
       : $agentInsights ? 
         $agentInsights.innerHTML += `
           ${e.type === 'Agent_Insights' 
-            ? `<a href="${e.content_link}">
+            ? `<a class="article-card" href="${e.content_link}">
                 <div class="article-card">
-                  <img src="${e.image_src}">
-                  <div class="article-card-details">
-                    <p>0${e.number}</p>
-                    <p>${e.date}</p>
-                    <p>${e.title}</p>
+                  <img class="article-card__image" src="${e.image_src}">
+                  <div class="article-card__details">
+                    <p class="article-card__number">0${e.number}</p>
+                    <p class="article-card__date">${e.date}</p>
+                    <p class="article-card__title">${e.title}</p>
                   </div>
                 </div>
               </a>`

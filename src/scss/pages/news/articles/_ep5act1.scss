@@ -2,11 +2,19 @@
 @use '../../../base/mixin';
 @use '../article-mixin';
 
-.content-container-1 {
-  grid-area: contentSection;
+%paragraph-styling {
+  align-self: flex-start;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+
+  @media #{$lg} {
+    margin-bottom: 1rem;
+  }
 }
 
-.content-container-1 div {
+.ep5act1-content-section {
+  grid-area: contentSection;
+
   @include mixin.grid-column($justify-items: flex-start);
   width: 705px;
   margin-left: 7rem;
@@ -16,53 +24,52 @@
     margin-left: 0;
     width: 100%;
   }
-}
 
-.content-container-1 div p {
-  align-self: flex-start;
-  @include mixin.text($size: 0.95rem, $color: $secondary-grey-text);
-  line-height: 1.5rem;
-  margin-bottom: 2rem;
-
-  @media #{$lg} {
-    margin-bottom: 1rem;
+  &__subtitle {
+    @extend %paragraph-styling;
+    @include mixin.text($size: 0.9rem, $weight: 600, $color: var(--black));
+  
+    @media #{$lg} {
+      font-size: 1rem;
+    }
   }
-}
 
-.content-container-1 div p:first-child {
-  align-self: flex-start;
-  @include mixin.text($size: 0.9rem, $weight: 600, $color: $black-text);
-
-  @media #{$lg} {
-    font-size: 1rem;
+  iframe {
+    width: 100%;
+    height: 25rem;
+    margin-bottom: 2rem;
   }
-}
 
-.add-desc {
-  margin-top: -1.5rem;
-}
+  &__description {
+    @extend %paragraph-styling;
+    @include mixin.text($size: 0.95rem, $color: var(--secondary-grey));
 
-.content-container-1 div a {
-  @include article-mixin.paragraph-link(0.9rem, 600);
-}
-
-.content-container-1 div a:hover {
-  background: $red-bg;
-  color: $white-text;
-}
-
-.content-container-1 div iframe {
-  width: 100%;
-  height: 25rem;
-  margin-bottom: 2rem;
-}
-
-.content-container-1 div img {
-  width: 100%;
-  height: 6rem;
-  margin-block: 1.2rem;
-
-  @media #{$sm} {
-    height: 42px;
+    &--additional {
+      margin-top: -1.5rem;
+    }
   }
+
+  &__link {
+    @include article-mixin.paragraph-link(0.9rem, 600);
+
+    &:hover {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    &--optional {
+      font-weight: 400;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 6rem;
+    margin-block: 1.2rem;
+  
+    @media #{$sm} {
+      height: 42px;
+    }
+  }
+
 }

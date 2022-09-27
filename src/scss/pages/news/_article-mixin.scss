@@ -13,7 +13,7 @@
 
 @mixin paragraph-link($link-size: null, $link-weight: null) {
   align-self: flex-start;
-  @include mixin.text($size: $link-size, $weight: $link-weight, $color: $red-text);
+  @include mixin.text($size: $link-size, $weight: $link-weight, $color: var(--red), $text-transform: capitalize);
   text-decoration: underline;
   margin-bottom: 2.5rem;
 }
@@ -21,4 +21,59 @@
 @mixin relative-container() {
   position: relative;
   padding-block: 2.5rem;
+}
+
+@mixin content-container() {
+  grid-area: contentSection;
+  @include mixin.grid-column($justify-items: flex-start);
+  margin-left: 7rem;
+  width: 705px;
+
+  @media #{$lg} {
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-left: 0;
+    padding: 0;
+  }
+}
+
+@mixin container-sections() {
+  padding-bottom: 2.5rem;
+}
+
+@mixin container-sections-h2 {
+  @include mixin.text('Roboto', 1.4rem);
+  margin-bottom: 1.5rem;
+}
+
+@mixin container-sections-h3 {
+  @include mixin.text('Roboto', 1rem);
+  margin-bottom: 1.5rem;
+}
+
+@mixin description {
+  @include mixin.text('Roboto', 1rem, 500, var(--secondary-grey));
+  line-height: 1.6rem;
+
+  &--marker {
+    &::before {
+      content: "\B7   /";
+      font-weight: 700;
+      color: var(--black);
+      margin-right: 0.5rem;
+    }
+  }
+
+  &--indent {
+    margin-left: 1rem;
+  }
+
+  i {
+    font-family: 'Roboto';
+    font-weight: 500;
+  }
+}
+
+@mixin span() {
+  @include mixin.text($weight: 600, $color: var(--black));
 }

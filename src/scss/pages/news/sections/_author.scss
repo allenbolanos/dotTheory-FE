@@ -1,15 +1,13 @@
 @use '../../../base/variables' as *;
 @use '../../../base/mixin';
 
-.author-container {
+.author-section {
   grid-area: authorSection;
-  display: flex;
+/*   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 100%; */
   padding-top: 2rem;
-}
 
-.author-container div:first-child {
   @include mixin.grid-column(auto auto);
   grid-template-rows: repeat(3, auto);
   column-gap: 2rem;
@@ -23,46 +21,46 @@
     width: 100%;
     margin-left: 0;
   }
-}
 
-.author-container div:first-child img {
-  grid-row: 1 / span 3;
-  height: 140px;
-}
+  &__image {
+    grid-row: 1 / span 3;
+    height: 140px;
+  }
 
-.author-container div p:nth-child(2) {
-  @include mixin.text($size: 1.2rem, $weight: 600, $color: $grey-text);
+  &__name {
+    @include mixin.text($size: 1.2rem, $weight: 600, $color: var(--grey), $text-transform: uppercase);
 
-  @media #{$lg} {
+    @media #{$lg} {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__position {
+    @include mixin.text($size: 0.7rem, $weight: 600, $color: var(--grey), $text-transform: capitalize);
     margin-bottom: 1rem;
-  }
-}
-
-.author-container div p:nth-child(3) {
-  @include mixin.text($size: 0.7rem, $weight: 600, $color: $grey-text);
-  margin-bottom: 1rem;
-
-  @media #{$lg} {
-    font-size: 1rem;
-  }
-
-  @media #{$sm} {
-    font-size: 0.95rem;
-  }
-}
-
-.author-container div p:nth-child(4) {
-  @include mixin.text($size: 0.7rem, $color: $secondary-grey-text);
-  line-height: 1.1rem;
-  width: 75%;
-
-  @media #{$lg} {
-    font-size: 1rem;
-    line-height: 1.5rem;
+  
+    @media #{$lg} {
+      font-size: 1rem;
+    }
+  
+    @media #{$sm} {
+      font-size: 0.95rem;
+    }
   }
 
-  @media #{$md} {
-    grid-column: 1 / span 2;
-    grid-row-start: 4;
+  &__quote {
+    @include mixin.text($size: 0.7rem, $color: var(--secondary-grey));
+    line-height: 1.1rem;
+    width: 75%;
+  
+    @media #{$lg} {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  
+    @media #{$md} {
+      grid-column: 1 / span 2;
+      grid-row-start: 4;
+    }
   }
 }

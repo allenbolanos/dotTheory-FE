@@ -1,21 +1,19 @@
 async function renderRelatedContentData() {
-  const $relatedContent = document.querySelector('.related-content-cards-container');
+  const $relatedContent = document.querySelector('.related-content-section__cards-container');
 
-  const response = await fetch('../data/related-content.json');
+  const response = await fetch('./data/related-content.json');
   const data = await response.json();
 
   const { relatedContent } = data;
 
   relatedContent.forEach(e => {
     $relatedContent.innerHTML += `
-      <a href="${e.contentLink}">
-        <div id="related-content-card" class="article-card">
-          <img src="${e.imageSrc}">
-          <div class="article-card-details">
-            <p>0${e.id}</p>
-            <p>${e.date}</p>
-            <p>${e.title}</p>
-          </div>
+      <a class="article-card article-card--related-content" href="${e.contentLink}">
+        <img class="article-card__image" src="${e.imageSrc}">
+        <div class="article-card__details">
+          <p class="article-card__number">0${e.number}</p>
+          <p class="article-card__date">${e.date}</p>
+          <p class="article-card__title">${e.title}</p>
         </div>
       </a>
     `

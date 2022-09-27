@@ -4,7 +4,7 @@
 main {
   @include mixin.absolute-container($z-index: 30);
   @include mixin.main($mt: 38%);
-  background: $secondary-white-bg;
+  background: var(--secondary-white);
 }
 
 article {
@@ -17,9 +17,9 @@ article {
   "tagsSection           aside"
   "relatedContentSection aside";
   background: inherit;
-  width: $default-width;
+  width: var(--default-width);
   height: 100%;
-  border-left: 1px solid $article-grey-border-color;
+  border-left: 1px solid var(--article-grey-border-color);
 
   @media #{$lg} {
     grid-template-columns: auto;

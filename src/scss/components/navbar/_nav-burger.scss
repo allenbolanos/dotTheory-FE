@@ -1,0 +1,96 @@
+@use '../../base/variables' as *;
+@use '../../base/mixin';
+@use '../mixin' as nav-mixin;
+
+.nav-burger-menu-background {
+  display: none;
+
+  @media #{$lg} {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+  }
+}
+
+@media #{$lg} {
+
+  .nav-burger-menu {
+    @include mixin.absolute-container(0, 0, $width: 485px, $height: 100vh);
+    background: var(--burger-bg);
+    overflow-y: auto;
+
+    @media #{$sm} {
+      width: 100%;
+    }
+
+    &__content {
+      @include mixin.flex-column();
+      padding-bottom: 1.5rem;
+    }
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      padding-inline: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 1.3rem;
+      width: 100%;
+    }
+
+    &__valorant-logo {
+      @include nav-mixin.nav-valorant-logo($width: 2rem, $hasHover: false);
+    }
+
+    &__toggle-button-icon {
+      @include nav-mixin.nav-burger-toggle-icon();
+    }
+  }
+  
+  #game-info-toggle-dropdown:checked + div {
+    display: flex;
+  }
+  
+  #support-toggle-dropdown:checked + div {
+    display: flex;
+  }
+  
+  #our-socials-toggle-dropdown:checked + div {
+    display: flex;
+  }
+  
+  #browse-toggle-dropdown:checked + div {
+    display: flex;
+  }
+  
+  .esports {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    gap: 16.5rem;
+    width: 100%;
+  }
+  
+  .esports img {
+    width: 0.9rem;
+  }
+  
+  .nav-link__play-now-button-container {
+    width: 100%;
+    padding-inline: 1.5rem;
+  }
+  
+  .nav-link__play-now-button {
+    @include nav-mixin.play-now-button();
+  }
+  
+  #burger-menu-dropdown:checked + div {
+    display: flex;
+  }
+  
+}
+

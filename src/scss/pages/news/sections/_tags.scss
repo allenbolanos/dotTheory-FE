@@ -1,7 +1,7 @@
 @use '../../../base/variables' as *;
 @use '../../../base/mixin';
 
-.tags-container {
+.tags-section {
   grid-area: tagsSection;
   @include mixin.flex-column($align-items: center);
   gap: 2.5rem;
@@ -17,98 +17,97 @@
   @media #{$md} {
     gap: 1rem;
   }
-}
 
-.tags-links-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 7rem;
-  width: 705px;
+  &__title {
+    @include mixin.text($size: 1.2rem, $weight: 600, $text-transform: uppercase);
 
-  @media #{$lg} {
-    flex-wrap: wrap;
-    width: 100%;
-    margin-left: 0;
+    &--default {
+      margin-right: 1rem;
+
+      @media #{$md} {
+        display: none;
+      }
+    }
+
+    &--secondary {
+      display: none;
+
+      @media #{$md} {
+        display: block;
+        align-self: flex-start;
+      }
+    }
   }
 
-  @media #{$md} {
+  &__tags-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 7rem;
+    width: 705px;
+  
+    @media #{$lg} {
+      flex-wrap: wrap;
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    @media #{$md} {
+      gap: 1rem;
+    }
+  }
+
+  &__tag {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    @include mixin.text($size: 0.8rem, $weight: 600, $color: var(--white), $text-transform: uppercase);
+    background: var(--grey);
+    width: 7.5rem;
+    padding: 0.8rem;
+    margin-left: 1rem;
+    margin-bottom: 0.8rem;
+  
+    @media #{$md} {
+      margin: 0;
+    }
+
+    &:hover {
+      background: var(--article-grey-bg-color);
+    }
+
+    &::after {
+      content: "";
+      @include mixin.absolute-container($right: 0, $bottom: 0, $width: 4px, $height: 4px);
+      background: var(--red);
+    }
+
+    &:hover::after {
+      background: var(--grey);
+    }
+  }
+
+  &__article-list-link-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 7rem;
+    width: 705px;
     gap: 1rem;
+  
+    @media #{$lg} {
+      width: 100%;
+      margin-left: 0;
+    }
   }
-}
 
-.tags-title-styling {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.tags-title-default {
-  margin-right: 1rem;
-
-  @media #{$md} {
-    display: none;
+  &__article-list-link {
+    @include mixin.text('Teko', $color: var(--red));
   }
-}
 
-.tags-links-container a {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  @include mixin.text($size: 0.8rem, $weight: 600, $color: $white-text);
-  background: $grey;
-  width: 7.5rem;
-  padding: 0.8rem;
-  margin-left: 1rem;
-  margin-bottom: 0.8rem;
-
-  @media #{$md} {
-    margin: 0;
+  &__article-list-image {
+    transform: rotate(180deg);
   }
-}
-
-.tags-links-container a:hover {
-  background: $article-grey-bg-color;
-}
-
-.tags-links-container a::after {
-  content: "";
-  @include mixin.absolute-container($right: 0, $bottom: 0, $width: 4px, $height: 4px);
-  background: $red-bg;
-}
-
-.tags-links-container a:hover::after {
-  background: $grey;
-}
-
-.tags-title-lg {
-  display: none;
-
-  @media #{$md} {
-    display: block;
-    align-self: flex-start;
-  }
-}
-
-.tags-news-link {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: center;
-  margin-left: 7rem;
-  width: 705px;
-  gap: 1rem;
-
-  @media #{$lg} {
-    width: 100%;
-    margin-left: 0;
-  }
-}
-
-.tags-news-link a {
-  @include mixin.text('Teko', $color: $red-text);
-}
-
-.tags-news-link img {
-  transform: rotate(180deg);
 }

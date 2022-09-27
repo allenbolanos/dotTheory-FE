@@ -30,7 +30,7 @@
 }
 
 .description {
-  @include mixin.text('Roboto', 1rem, 500, $secondary-grey-text);
+  @include mixin.text('Roboto', 1rem, 500, var(--secondary-grey));
   line-height: 1.6rem;
 }
 
@@ -41,7 +41,7 @@
 .description::before {
   content: "\B7   /";
   font-weight: 700;
-  color: $black-text;
+  color: var(--black);
   margin-right: 0.5rem;
 }
 

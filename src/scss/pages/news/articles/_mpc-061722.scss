@@ -2,18 +2,40 @@
 @use '../../../base/mixin';
 @use '../article-mixin';
 
-.container-sections h2 {
-  font-size: 1.1rem !important;
-}
+.mpc-content-section {
+  @include article-mixin.content-container();
 
-.summary-container {
-  @include article-mixin.relative-container();
-}
+  &__description {
+    @include article-mixin.description();
+  }
 
-.summary-container::before {
-  @include article-mixin.three-lines(12rem);
-}
+  &__section-title-h2 {
+    font-size: 1.1rem !important;
+    @include article-mixin.container-sections-h2();
+  }
 
-.lucky-number-seven-container span {
-  @include mixin.text($weight: 600, $color: $black-text);
+  &__section-title-h3 {
+    @include article-mixin.container-sections-h3();
+  }
+
+  &__span {
+    @include article-mixin.span();
+  }
+
+  &__summary {
+    @include article-mixin.relative-container();
+    @include article-mixin.container-sections();
+
+    &::before {
+      @include article-mixin.three-lines(12rem);
+    }
+  }
+
+  &__lucky-number-seven {
+    @include article-mixin.container-sections();
+  }
+
+  &__why-split {
+    @include article-mixin.container-sections();
+  }
 }

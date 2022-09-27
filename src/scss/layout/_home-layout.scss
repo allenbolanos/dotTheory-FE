@@ -6,7 +6,7 @@ main {
 }
 
 .main-section {
-  width: $default-width;
+  width: var(--default-width);
   border-left: 1px solid rgba(9,9,9,.4);
 
   @media #{$lg} {

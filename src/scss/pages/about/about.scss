@@ -1,426 +1,322 @@
 @use '../../base/variables' as *;
 @use '../../base/mixin';
+@use '../about/animations';
+
+%about-heading-two {
+  @include mixin.text('Roboto', 8rem, 300, var(--white));
+
+  @media #{$lg} {
+    font-size: 6rem;
+  }
+
+  @media #{$md} {
+    font-size: 4rem;
+  }
+
+  @media #{$sm} {
+    font-size: 3rem;
+  }
+}
+
+%dotTheory-title {
+  @include mixin.absolute-container($bottom: -4rem, $z-index: 30);
+  opacity: 0;
+
+  @media #{$lg} {
+    bottom: -3rem;
+  }
+
+  @media #{$md} {
+    bottom: -2rem;
+  }
+
+  @media #{$sm} {
+    bottom: -1.5rem;
+  }
+}
 
 main {
   @include mixin.grid-column($justify-items: center, $align-items: center);
 }
 
-h1 {
+.about-title {
   text-align: center;
   @include mixin.scaled-text('Teko', 10rem, $scale: (0.7, 1));
   line-height: 0;
+
+  @media #{$lg} {
+    font-size: 8rem;
+  }
 
   @media #{$md} {
     font-size: 6rem;
   }
 }
 
-h2 {
-  @include mixin.text('Roboto', 8rem, 300)
-}
-
-.dotTheory-section {
+.dotTheory-banner {
   position: relative;
   @include mixin.flex-column(center, center);
   width: 100%;
   transition: 0.5s ease-in;
-}
 
-.dot-rectangle {
-  @include mixin.absolute-container($height: 16rem, $z-index: 10);
-  background: black;
-}
-
-.dot-circle {
-  @include mixin.absolute-container($z-index: 20);
-  background: black;
-  border-radius: 50%;
-}
-
-@keyframes dot-circle-grow {
-  0% {
-    width: 0;
-    height: 0;
+  &__rectangle {
+    @include mixin.absolute-container($height: 16rem, $z-index: 10);
+    background: black;
+  
+    @media #{$lg} {
+      height: 14rem;
+    }
+  
+    @media #{$md} {
+      height: 10rem;
+    }
+    
+    @media #{$sm} {
+      height: 8rem;
+    }
   }
 
-  40% {
-    width: 16rem;
-    height: 16rem;
+  &__circle {
+    @include mixin.absolute-container($z-index: 20);
+    background: black;
+    border-radius: 50%;
   }
 
-  50% {
-    width: 3rem;
-    height: 3.5rem;
+  &__first-dot-text {
+    @extend %dotTheory-title;
+    @extend %about-heading-two;
   }
-
-  90% {
-    width: 3rem;
-    height: 3.5rem;
+  
+  &__second-dot-text {
+    @extend %dotTheory-title;
+    @extend %about-heading-two;
   }
-
-  100% {
-    width: 16rem;
-    height: 16rem;
+  
+  &__theory-text {
+    @extend %dotTheory-title;
+    @extend %about-heading-two;
   }
-}
-
-@keyframes dot-circle-shrink {
-  0% {
-    width: 16rem;
-    height: 16rem;
+  
+  &__subtext  {
+    @include mixin.absolute-container($z-index: 30);
+    @include mixin.text($size: 1.3rem, $color: var(--white));
+  
+    @media #{$lg} {
+      bottom: 0.5rem;
+    }
+  
+    @media #{$md} {
+      bottom: 2rem;
+      font-size: 0.9rem;
+    }
+  
+    @media #{$sm} {
+      bottom: 2.7rem;
+      font-size: 0.9rem;
+    }
   }
-
-  100% {
-    width: 0;
-    height: 0;
-  }
-}
-
-%dotTheory-title {
-  @include mixin.absolute-container($bottom: -4rem, $z-index: 30);
-  color: $white-text;
-}
-
-.dot-text {
-  @extend %dotTheory-title;
-}
-
-.theory-text {
-  @extend %dotTheory-title;
-  opacity: 0;
-}
-
-.dotTheory-desc {
-  @include mixin.absolute-container($z-index: 30);
-  @include mixin.text($size: 1.3rem, $color: $white-text);
 }
 
 .dotTheory-content {
   position: relative;
   width: 50%;
-  @include mixin.grid-column($justify-items: center);
+  @include mixin.grid-column($justify-items: center, $justify-content: center);
   gap: 2rem;
   opacity: 0;
-}
 
-%paragraph-styling {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-}
+  @media #{$lg} {
+    width: 60%;
+  }
 
-.dotTheory-content > p {
-  @extend %paragraph-styling;
-}
+  @media #{$md} {
+    width: 70%;
+  }
 
-.frontEnd-section {
-  position: relative;
-  @include mixin.flex-column(center, center);
-  width: 100%;
-  transition: 0.5s ease-in;
-}
-
-.frontEnd-rectangle {
-  @include mixin.absolute-container($height: 16rem, $z-index: 10);
-  background: black;
-  width: 100%;
-}
-
-.frontEnd-text {
-  @include mixin.absolute-container($bottom: -4rem, $z-index: 30);
-  color: $white-text;
+  &__paragraph {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  
+    @media #{$lg} {
+      font-size: 1.4rem;
+    }
+  
+    @media #{$md} {
+      font-size: 0.9rem;
+    }
+  }
 }
 
 %frontEnd-subtext {
   @include mixin.absolute-container($bottom: -6.5rem, $z-index: 30);
-  @include mixin.text($size: 2rem, $color: $white-text);
+  @include mixin.text($size: 2rem, $color: var(--white));
+
+  @media #{$lg} {
+    bottom: -5rem;
+  }
+
+  @media #{$md} {
+    bottom: -4rem;
+    font-size: 1.5rem;
+  }
 }
 
-.training-desc-text {
-  @include mixin.absolute-container($bottom: -6.5rem, $z-index: 30);
-  @include mixin.text($size: 2rem, $color: $white-text);
+.frontEnd-banner {
+  position: relative;
+  @include mixin.flex-column(center, center);
+  width: 100%;
+  height: max-content;
+  transition: 0.5s ease-in;
+
+  &__rectangle {
+    @include mixin.absolute-container($height: 16rem, $z-index: 10);
+    background: black;
+    width: 100%;
+  
+    @media #{$lg} {
+      height: 14rem;
+    }
+  
+    @media #{$md} {
+      height: 10rem;
+    }
+    
+    @media #{$sm} {
+      height: 8rem;
+    }
+  }
+  
+  &__title {
+    @extend %dotTheory-title;
+    @extend %about-heading-two;
+  }
+  
+  &__training-subtext {
+    @extend %frontEnd-subtext;
+  }
+  
+  &__track-subtext {
+    @extend %frontEnd-subtext;
+  }
 }
 
-.track-desc-text {
-  @include mixin.absolute-container($bottom: -6.5rem, $z-index: 30);
-  @include mixin.text($size: 2rem, $color: $white-text);
+@mixin svgSize($width: 4rem, $height: 4rem) {
+  width: $width;
+  height: $height;
+
+  @media #{$lg} {
+    width: calc($width - 1rem);
+    height: calc($height - 1rem);
+  }
 }
 
 .frontEnd-content {
   position: relative;
   @include mixin.grid-column(auto, center, center);
   opacity: 1;
-}
+  height: 60rem;
+  margin-top: 2rem;
 
-.video-click-svg {
-  @include mixin.absolute-container(-5rem, $width: 60rem, $height: 60rem, $z-index: 10);
+  &__tablet-svg {
+    @include mixin.absolute-container(-5rem, $width: 60rem, $height: 60rem, $z-index: 10);
+  
+    @media #{$about-breakpoint} {
+      width: 48rem;
+      height: 48rem;
+    }
+  
+    @media #{$lg} {
+      width: 32rem;
+      height: 32rem;
+    }
+  
+    @media #{$sm} {
+      width: 22rem;
+      height: 22rem;
+    }
 
-  @media #{$about-breakpoint} {
-    width: 48rem;
-    height: 48rem;
-  }
-}
-
-.video-click-hand, .play-button {
-  transform-origin: center;
-}
-
-@keyframes handClick {
-  0% {
-    transform: scale(1);
-  }
-
-  30% {
-    transform: scale(0.9);
-  }
-
-  35% {
-    transform: scale(1);
+    .video-click-hand, .play-button {
+      transform-origin: center;
+    }
   }
 
-  50% {
-    opacity: 1;
+  &__topic-list {
+    @include mixin.absolute-container(6rem, $left: -16rem, $z-index: 30);
+    @include mixin.grid-column(auto, start);
+    gap: 2rem;
+    white-space: nowrap;
+  
+    @media #{$about-breakpoint} {
+      top: 4rem;
+    }
+  
+    @media #{$lg} {
+      gap: 1rem;
+      top: 0rem;
+      left: -11rem;
+    }
   }
-
-  100% {
+  
+  &__topic {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3.5rem;
+    width: 100%;
+    @include mixin.text($size: 1.3rem);
     opacity: 0;
   }
-}
-
-@keyframes buttonClick {
-  0% {
-    transform: scale(1);
+  
+  &__topic-title {
+    top: 2rem;
+  
+    @media #{$lg} {
+      font-size: 0.9rem;
+    }
   }
 
-  30% {
-    transform: scale(1.015);
+  &__first-topic-svg {
+    @include svgSize();
   }
 
-  35% {
-    transform: scale(1);
+  &__second-topic-svg {
+    position: relative;
+    left: 0.5rem;
+    @include svgSize();
+
+    .grid-svg, .flex-svg {
+      @include mixin.absolute-container($z-index: 30);
+      @include svgSize(3rem, 3rem);
+    }
   }
 
-  50% {
-    opacity: 1;
+  &__third-topic-svg {
+    @include svgSize();
   }
 
-  100% {
-    opacity: 0;
-  }
-}
+  &__fourth-topic-svg {
+    position: relative;
+    overflow: hidden;
+    @include svgSize();
 
-.frontEnd-p-container {
-  @include mixin.absolute-container(6rem, $left: -16rem, $z-index: 30);
-  @include mixin.grid-column(auto, start);
-  gap: 2rem;
-  white-space: nowrap;
-
-  @media #{$about-breakpoint} {
-    top: 4rem;
-  }
-}
-
-.frontEnd-p-container > p {
-  top: 2rem;
-}
-
-%p-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 3.5rem;
-  width: 100%;
-  @include mixin.text($size: 1.3rem);
-  opacity: 0;
-}
-
-.frontEnd-p1-container {
-  @extend %p-container;
-}
-
-.frontEnd-p2-container {
-  @extend %p-container;
-}
-
-.frontEnd-p3-container {
-  @extend %p-container;
-}
-
-.frontEnd-p4-container {
-  @extend %p-container;
-}
-
-@mixin svgSize($width: 4rem, $height: 4rem) {
-  width: $width;
-  height: $height;
-}
-
-.tetris-svg {
-  @include svgSize();
-}
-
-.svg-layout-wrapper {
-  position: relative;
-  left: 0.5rem;
-  @include svgSize();
-}
-
-.grid-svg, .flex-svg {
-  @include mixin.absolute-container($z-index: 30);
-  @include svgSize(3rem, 3rem);
-}
-
-.sass-svg {
-  @include svgSize();
-}
-
-.orbit-svg-wrapper {
-  position: relative;
-  overflow: hidden;
-  @include svgSize();
-}
-
-.orbit-svg {
-  @include mixin.absolute-container(0.5rem, $left: 0.5rem);
-  @include svgSize(3rem, 3rem);
-  transform-origin: center;
-}
-
-.orbit-earth, .orbit-moon, .orbit-sun {
-  transform-origin: center;
-}
-
-.orbit-sun circle {
-  fill: #FFFE9F;
-}
-
-.flower-svg {
-  @include mixin.absolute-container(0.5rem, $left: 0.5rem);
-  @include svgSize(3rem, 3rem);
-  transform-origin: center;
-  transform: scale(0);
-}
-
-@keyframes LBlockDown {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(9.6rem);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes swapLayout {
-  0% {
-    z-index: 20;
-    transform: translateY(0);
-  }
-
-  49% {
-    z-index: 20;
-  }
-
-  50% {
-    z-index: 40;
-    transform: translateX(3.2rem);
-  }
-
-  100% {
-    z-index: 40;
-    transform: translateY(0);
-  }
-}
-
-@keyframes beat {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.05);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes orbitZoomIn {
-  0% {
-    transform: scale(1);
-  }
-
-  60% {
-    transform: scale(1) ;
-  }
-
-  70% {
-    transform: scale(12) ;
-  }
-
-  85% {
-    transform: scale(12);
-  }
-
-  100% {
-    transform: scale(1) ;
-  }
-}
-
-@keyframes flowerScale {
-  0% {
-    transform: scale(0);
-  }
-
-  60% {
-    transform: scale(0);
-  }
-
-  70% {
-    transform: scale(0.8);
-  }
-
-  85% {
-    transform: scale(0.8);
-  }
-
-  100% {
-    transform: scale(0) rotate(360deg);
-  }
-}
-
-@keyframes toWhite {
-  0% {
-    fill: #FFFE9F;
-  }
-
-  60% {
-    fill: #FFFE9F;
-  }
-
-  70% {
-    fill: #FDFEFF;
-  }
-
-  90% {
-    fill: #FDFEFF;
-  }
-
-  100% {
-    fill: #FFFE9F;
+    .orbit-svg {
+      @include mixin.absolute-container(0.5rem, $left: 0.5rem);
+      @include svgSize(3rem, 3rem);
+      transform-origin: center;
+    }
+    
+    .orbit-earth, .orbit-moon, .orbit-sun {
+      transform-origin: center;
+    }
+    
+    .orbit-sun circle {
+      fill: #FFFE9F;
+    }
+    
+    .flower-svg {
+      @include mixin.absolute-container(0.5rem, $left: 0.5rem);
+      @include svgSize(3rem, 3rem);
+      transform-origin: center;
+      transform: scale(0);
+    }
   }
 }

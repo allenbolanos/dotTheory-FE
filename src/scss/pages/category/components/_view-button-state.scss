@@ -2,11 +2,11 @@
 @use '../../../base/mixin';
 @use '../mixin' as category-mixin;
 
-#change-view:checked ~ .grid-view-button-wrapper {
+#change-view:checked ~ .grid-view {
   @include category-mixin.hide-button();
 }
 
-#change-view:checked ~ .list-view-button-wrapper, .grid-view-button-wrapper {
+#change-view:checked ~ .list-view, .grid-view {
   @include category-mixin.show-button(); 
 
   @media #{$md} {

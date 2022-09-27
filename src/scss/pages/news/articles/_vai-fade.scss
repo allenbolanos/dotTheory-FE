@@ -2,69 +2,82 @@
 @use '../../../base/mixin';
 @use '../article-mixin';
 
-.intro-container strong {
-  @include mixin.text($weight: 600, $color: $black-text);
-}
+.vai-fade-content-section {
+  @include article-mixin.content-container();
 
-.about-fade-container {
-  @include mixin.flex-column($align-items: flex-start);
-}
+  &__description {
+    @include article-mixin.description();
+  }
 
-.about-fade-container h2 {
-  align-self: flex-start;
-}
+  &__section-title-h2 {
+    @include article-mixin.container-sections-h2();
 
-.fade-pic {
-  width: 100%;
-  padding-block: 2.5rem;
-}
+    &--about-fade-h2 {
+      align-self: flex-start;
+    }
 
-.looks {
-  text-align: center;
-  @include mixin.text($size: 0.6rem, $weight: 600);
-  width: 26rem;
-  margin-bottom: 0.5rem;
+    &--fade-design {
+      width: 20rem;
+    }
+  }
 
-  @media #{$lg} {
-    font-size: 0.7rem;
+  &__section-title-h3 {
+    @include article-mixin.container-sections-h3();
+  }
+
+  &__container-section {
+    @include article-mixin.container-sections();
+
+    &--about-fade {
+      @include mixin.flex-column($align-items: flex-start);
+    }
+  }
+
+  &__strong {
+    @include mixin.text($weight: 600, $color: var(--black));
+  }
+
+  &__image {
+    width: 100%;
+    padding-top: 0.6rem;
+    padding-bottom: 0.9rem;
+
+    &:hover {
+      cursor: pointer;
+      background: var(--red);
+    }
+  }
+
+  &__image-subtext {
+    text-align: center;
+    @include mixin.text($size: 0.6rem, $weight: 600);
+    width: 26rem;
+    margin-bottom: 0.5rem;
+  
+    @media #{$lg} {
+      font-size: 0.7rem;
+      width: 100%;
+    }
+  }
+
+  &__fade-gif-wrapper {
+    display: flex;
+    justify-content: center;
     width: 100%;
   }
-}
 
-.fade-pic:hover {
-  cursor: pointer;
-  background: $red-bg;
-}
+  &__paragraph-link {
+    @include article-mixin.paragraph-link($link-size: 1rem, $link-weight: 600);
+    font-weight: 400 !important;
 
-.fade-gif-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
+    &:hover {
+      background: var(--red);
+      color: var(--white);
+    }
+  }
 
-.fade-prowlers {
-  width: 100%;
-  padding-block: 2.5rem;
-}
+  &__line-through {
+    font-weight: 600;
+  }
 
-.fade-prowlers:hover {
-  cursor: pointer;
-  background: $red-bg;
-}
-
-.core-gameplay-loop-img {
-  @include article-mixin.paragraph-link($link-size: 1rem, $link-weight: 600);
-}
-
-.core-gameplay-loop-img:hover {
-  background: $red-bg;
-  color: $white-text;
-}
-
-.fade-design-container h2 {
-  width: 20rem;
-}
-
-.fade-design-container s {
-  font-weight: 600;
 }

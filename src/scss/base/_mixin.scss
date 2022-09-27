@@ -35,11 +35,12 @@
 /// @param {length} $size - text's font size.
 /// @param {number} $weight - text's font weight.
 /// @param {hex-code} $color - text's color.
-@mixin text($family: null, $size: null, $weight: null, $color: null) {
+@mixin text($family: null, $size: null, $weight: null, $color: null, $text-transform: null) {
   font-family: $family;
   font-size: $size;
   font-weight: $weight;
   color: $color;
+  text-transform: $text-transform;
 }
 
 /// Defines the styling of a scaled text
@@ -49,10 +50,11 @@
 /// @param {hex-code} $color - text's color.
 /// @param {values} $scale - text's X and Y scale.
 /// @param {length} $margin-left - text's left margin.
-@mixin scaled-text($family: null, $size: null, $weight: null, $color: null, $scale, $margin-left: null) {
+@mixin scaled-text($family: null, $size: null, $weight: null, $color: null, $scale, $margin-left: null, $text-transform: null) {
   @include text($family, $size, $weight, $color);
   transform: scale($scale);
   margin-left: $margin-left;
+  text-transform: $text-transform;
 }
 
 /// Defines the styling of a container with a column flex layout.
@@ -65,6 +67,11 @@
   align-items: $align-items;
 }
 
+/// Defines the grid layout used in most containers from the different pages.
+/// @param {template} $columns-template - number and size of columns
+/// @param {alignment} $justify-items - alignment on the row axis
+/// @param {alignment} $align-items - alignment on the column axis
+/// @param {alignment} $justify-content - alignment of the grid
 @mixin grid-column($columns-template: auto, $justify-items: null, $align-items: null, $justify-content: null) {
   display: grid;
   grid-template-columns: $columns-template;
@@ -73,16 +80,12 @@
   justify-content: $justify-content;
 }
 
-@mixin navbar-dropdown-position($left: null) {
-  position: fixed;
-  top: 4rem;
-  left: $left;
-}
-
+/// Defines the transition of article card's animation
 @mixin card-transition() {
   transition: 0.5s ease-in-out;
 }
 
+/// Animation for the arrows on the home page and article pages
 @mixin arrow-sway() {
   animation-name: sway;
   animation-delay: 0.1s;
@@ -90,6 +93,7 @@
   animation-iteration-count: infinite;
 }
 
+/// Keyframes for the arrow-sway animation
 @mixin arrow-sway-keyframes($rotate: null) {
   @keyframes sway {
     0% {
@@ -105,4 +109,3 @@
     }
   }
 }
-

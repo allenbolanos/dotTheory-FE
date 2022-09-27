@@ -1,6 +1,6 @@
 @use './base/base';
-@use './components/navbar';
-@use './components/nav-burger';
+@use './components/navbar/navbar';
+@use './components/navbar/nav-burger';
 @use './components/article-card';
 @use './layout/footer';
 

@@ -1,20 +1,19 @@
 @use '../../../base/variables' as *;
 @use '../../../base/mixin';
 
-aside img {
-  transform: rotate(270deg);
+@mixin icon($transform: rotate(270deg)) {
+  transform: $transform;
   width: 1.3rem;
   filter: invert(36%) sepia(65%) saturate(2139%) hue-rotate(331deg) brightness(104%) contrast(99%);
+
+  &:hover {
+    filter: invert(0%) sepia(1%) saturate(5%) hue-rotate(304deg) brightness(97%) contrast(103%);
+  }
 }
 
-aside img:hover {
-  filter: invert(0%) sepia(1%) saturate(5%) hue-rotate(304deg) brightness(97%) contrast(103%);
-}
-
-.default-share-links {
+.share-links {
   grid-area: aside;
   @include mixin.absolute-container(10rem, -3rem, $width: 100px, $z-index: 50);
-  @include mixin.text('Teko', 0.75rem, 900);
   display: flex;
   align-self: flex-end;
   gap: 2rem;
@@ -24,25 +23,32 @@ aside img:hover {
   @media #{$lg} {
     display: none;
   }
+
+  &__title {
+    @include mixin.text('Teko', 1rem, 600, $text-transform: uppercase);
+  }
+
+  &__icon {
+    @include icon();
+  }
 }
 
-.lg-share-links {
+.secondary-share-links {
   display: none;
 
   @media #{$lg} {
     display: flex;
     gap: 2rem;
-    font-family: 'Teko';
-    font-size: 0.75rem;
-    font-weight: 900;
     margin-top: 4rem;
   }
-}
 
-.lg-share-links img {
-  @media #{$lg} {
-    transform: none;
-    width: 1.3rem;
-    filter: invert(36%) sepia(65%) saturate(2139%) hue-rotate(331deg) brightness(104%) contrast(99%);
+  &__title {
+    @include mixin.text('Teko', 1.1rem, 600, $text-transform: uppercase);
+  }
+
+  &__image {
+    @media #{$lg} {
+      @include icon(none);
+    }
   }
 }

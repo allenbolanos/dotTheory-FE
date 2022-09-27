@@ -11,247 +11,380 @@
 </head>
 <body>
   <nav>
-    <div class="riot-games-button-container">
-      <a class="rg-logo">
-        <img src="./assets/navbar/riot-games-logo.svg" alt="Riot Games Logo" />
-        <img src="./assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
-      </a>
-      <a href="https://playvalorant.com/en-us/">
-        <img src="./assets/navbar/valorant-logo.svg" alt="Valorant Logo" />
+    
+    <div class="nav-left">
+      <label for="left-nav-dropdown">
+        <a class="nav-left__riot-games-logo-container">
+          <img class="nav-left__riot-games-logo" src="../../assets/component_assets/navbar/riot-games-logo.svg" alt="Riot Games Logo" />
+          <img class="nav-left__riot-games-arrow" src="../../assets/component_assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+        </a>
+      </label>
+      <a class="nav-left__valorant-logo-container" href="https://playvalorant.com/en-us/">
+        <img class="nav-left__valorant-logo" src="../../assets/component_assets/navbar/valorant-logo.svg" alt="Valorant Logo" />
       </a> 
     </div>
-    <div class="navbar-links-container">
-      <div class="with-dropdown">
-        <div class="with-dropdown-title">
-          <p>GAME INFO</p>
-          <img src="./assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+
+    <input type="checkbox" id="left-nav-dropdown">
+    <div class="nav-left-dropdown">
+      <div class="nav-left-dropdown__upper">
+        <div class="nav-left-dropdown__logo-container">
+          <label for="left-nav-dropdown">
+            <img class="nav-left-dropdown__inverted-logo" src="../../assets/component_assets/navbar/riot-games-logo.svg" alt="Riot Games Logo" />
+            <img class="nav-left-dropdown__logo-arrow" src="../../assets/component_assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+          </label>
         </div>
-        <div id="game-info-dropdown" class="dropdown-elements">
-          <a href="https://playvalorant.com/en-us/agents/">AGENTS</a>
-          <a href="https://playvalorant.com/en-us/maps/">MAPS</a>
-          <a href="https://playvalorant.com/en-us/arsenal/">ARSENAL</a>
+        <label for="left-nav-dropdown">
+          <img class="nav-left-dropdown__close-icon" src="../../assets/component_assets/navbar/nav-close-icon.svg" alt="Nav Close Icon" />
+        </label>
+      </div>
+      <div class="nav-left-dropdown__lists-container">
+        <div class="nav-left-dropdown__items-container">
+          <ul>
+            <li class="nav-left-dropdown__item nav-left-dropdown__item--title">GAMES</li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">LEAGUE OF LEGENDS</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">VALORANT</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">TEAMFIGHT TACTICS</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">LEGENDS OF RUNETERRA</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">LOL: WILD RIFT</a>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div class="with-red-underline">
-        <a href="https://playvalorant.com/en-us/media/">MEDIA</a>
-        <div class="red-underline"></div>
-      </div>
-      <div class="with-red-underline">
-        <a href="https://playvalorant.com/en-us/news/">NEWS</a>
-        <div class="red-underline"></div>
-      </div>
-      <div class="with-red-underline">
-        <a href="https://playvalorant.com/en-us/leaderboards/">LEADERBOARDS</a>
-        <div class="red-underline"></div>
-      </div>
-      <div class="with-dropdown">
-        <div class="with-dropdown-title">
-          <p>SUPPORT</p>
-          <img src="./assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+        <div class="nav-left-dropdown__items-container">
+          <ul>
+            <li class="nav-left-dropdown__item nav-left-dropdown__item--title">FORGE</li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">HEXTECH MAYHEM</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">RUINED KING</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">CONV/RGENCE</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">SONG OF NUNU</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">RIOT FORGE GAMES</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="nav-left-dropdown__item nav-left-dropdown__item--title">ESPORTS</li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">LOL ESPORTS</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">VALORANT ESPORTS</a>
+            </li>
+          </ul>
         </div>
-        <div id="support-dropdown" class="dropdown-elements">
-          <a href="https://playvalorant.com/en-us/specs/" target="_blank">
-            SPECS
-            <img src="./assets/navbar/external-arrow.svg" alt="External Arrow" />
-          </a>
-          <a href="https://support-valorant.riotgames.com/hc/en-us/" target="_blank">
-            SUPPORT
-            <img src="./assets/navbar/external-arrow.svg" alt="External Arrow" />
-          </a>
-          <a href="https://playvalorant.com/en-us/news/announcements/valorant-community-code/" target="_blank">
-            COMMUNITY CODE
-            <img src="./assets/navbar/external-arrow.svg" alt="External Arrow" />
-          </a>
-        </div>
-      </div>
-      <div class="with-dropdown">
-        <div class="with-dropdown-title">
-          <p>OUR SOCIALS</p>
-          <img src="./assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
-        </div>
-        <div id="our-socials-dropdown" class="dropdown-elements">
-          <a href="https://twitter.com/playvalorant" target="_blank">
-            Twitter
-            <img src="./assets/navbar/external-arrow.svg" alt="External Arrow" />
-          </a>
-          <a href="https://www.youtube.com/PlayValorant" target="_blank">
-            Youtube
-            <img src="./assets/navbar/external-arrow.svg" alt="External Arrow" />
-          </a>
-          <a href="https://www.instagram.com/playvalorantofficial/" target="_blank">
-            Instagram
-            <img src="./assets/navbar/external-arrow.svg" alt="External Arrow" />
-          </a>
-          <a href="https://www.facebook.com/PlayVALORANT/" target="_blank">
-            Facebook
-            <img src="./assets/navbar/external-arrow.svg" alt="External Arrow" />
-          </a>
-          <a href="https://discord.com/invite/valorant" target="_blank">
-            Discord
-            <img src="./assets/navbar/external-arrow.svg" alt="External Arrow" />
-          </a>
-        </div>
-      </div>
-      <div class="with-red-underline">
-        <div class="esports">
-          <a href="https://valorantesports.com/" target="_blank">ESPORTS</a>
-          <img src="./assets/navbar/external-arrow.svg" alt="External Arrow" />
-        </div>
-        <div class="red-underline"></div>
-      </div>
-      <div class="with-red-underline">
-        <a href="https://playvalorant.com/en-us/pbe/">PBE SIGNUP</a>
-        <div class="red-underline"></div>
-      </div>
-      <div class="with-dropdown">
-        <div class="with-dropdown-title ">
-          <p>BROWSE</p>
-          <img src="./assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
-        </div>
-        <div id="browse-dropdown" class="dropdown-elements browse">
-          <a href="../News/articles/pn5-01.html">Valorant Patch Notes 5.01</a>
-          <a href="../News/articles/ep5act1.html">What's New In Valorant Episode 5 Act I</a>
-          <a href="../News/articles/pn5-0.html">Valorant Patch Notes 5.0</a>
-          <a href="../News/articles/mpc-061722.html">Valorant Map Pool Changes</a>
-          <a href="../News/articles/pn4-11.html">Valorant Patch Notes 4.11</a>
-          <a href="../News/articles/vai-fade.html">Valorant Agent Insights: Fade</a>
+        <div class="nav-left-dropdown__items-container">
+          <ul>
+            <li class="nav-left-dropdown__item nav-left-dropdown__item--title">ENTERTAINMENT</li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">ARCANE</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">UNIVERSE</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">RIOT GAMES MUSIC</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="nav-left-dropdown__item nav-left-dropdown__item--title">BUSINESS</li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">RIOT GAMES</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">RIOT MERCH</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">RIOT MOBILE</a>
+            </li>
+            <li class="nav-left-dropdown__item">
+              <a class="nav-left-dropdown__item-link" href="">RIOT SUPPORT</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-    
+
+
+    <div class="nav-link">
+      <div class="nav-link__item">
+        <div class="nav-link__item-title-container">
+          <h4 class="nav-link__item-title">game info</h4>
+          <img class="nav-link__item-image nav-link__item-image--dropdown-arrow" src="../../assets/component_assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+        </div>
+        <div id="game-info-dropdown" class="nav-link__dropdown">
+          <a class="nav-link__dropdown-item" href="https://playvalorant.com/en-us/agents/">agents</a>
+          <a class="nav-link__dropdown-item" href="https://playvalorant.com/en-us/maps/">maps</a>
+          <a class="nav-link__dropdown-item" href="https://playvalorant.com/en-us/arsenal/">arsenal</a>
+        </div>
+      </div>
+      
+      <div class="nav-link__item nav-link__item--no-dropdown">
+        <div class="nav-link__item-title-container">
+          <a class="nav-link__item-title" href="https://playvalorant.com/en-us/media/">media</a>
+        </div>
+        <div class="nav-link__underline"></div>
+      </div>
+      
+      <div class="nav-link__item nav-link__item--no-dropdown">
+        <div class="nav-link__item-title-container">
+          <a class="nav-link__item-title" href="https://playvalorant.com/en-us/news/">news</a>
+        </div>
+        <div class="nav-link__underline"></div>
+      </div>
+
+      <div class="nav-link__item nav-link__item--no-dropdown">
+        <div class="nav-link__item-title-container">
+          <a class="nav-link__item-title" href="https://playvalorant.com/en-us/leaderboards/">LEADERBOARDS</a>
+        </div>
+        <div class="nav-link__underline"></div>
+      </div>
+
+      <div class="nav-link__item">
+        <div class="nav-link__item-title-container">
+          <h4 class="nav-link__item-title">SUPPORT</ph4>
+          <img class="nav-link__item-image nav-link__item-image--dropdown-arrow" src="../../assets/component_assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+        </div>
+        <div id="support-dropdown" class="nav-link__dropdown">
+          <a class="nav-link__dropdown-item" href="https://playvalorant.com/en-us/specs/" target="_blank">
+            SPECS
+            <img class="nav-link__item-image nav-link__item-image--external-arrow" src="../../assets/component_assets/navbar/external-arrow.svg" alt="External Arrow" />
+          </a>
+          <a class="nav-link__dropdown-item" href="https://support-valorant.riotgames.com/hc/en-us/" target="_blank">
+            SUPPORT
+            <img class="nav-link__item-image nav-link__item-image--external-arrow" src="../../assets/component_assets/navbar/external-arrow.svg" alt="External Arrow" />
+          </a>
+          <a class="nav-link__dropdown-item" href="https://playvalorant.com/en-us/news/announcements/valorant-community-code/" target="_blank">
+            COMMUNITY CODE
+            <img class="nav-link__item-image nav-link__item-image--external-arrow" src="../../assets/component_assets/navbar/external-arrow.svg" alt="External Arrow" />
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-link__item">
+        <div class="nav-link__item-title-container">
+          <p class="nav-link__item-title">OUR SOCIALS</p>
+          <img class="nav-link__item-image nav-link__item-image--dropdown-arrow"  src="../../assets/component_assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+        </div>
+        <div id="our-socials-dropdown" class="nav-link__dropdown">
+          <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="https://twitter.com/playvalorant" target="_blank">
+            Twitter
+            <img class="nav-link__item-image nav-link__item-image--external-arrow" src="../../assets/component_assets/navbar/external-arrow.svg" alt="External Arrow" />
+          </a>
+          <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="https://www.youtube.com/PlayValorant" target="_blank">
+            Youtube
+            <img class="nav-link__item-image nav-link__item-image--external-arrow" src="../../assets/component_assets/navbar/external-arrow.svg" alt="External Arrow" />
+          </a>
+          <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="https://www.instagram.com/playvalorantofficial/" target="_blank">
+            Instagram
+            <img class="nav-link__item-image nav-link__item-image--external-arrow" src="../../assets/component_assets/navbar/external-arrow.svg" alt="External Arrow" />
+          </a>
+          <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="https://www.facebook.com/PlayVALORANT/" target="_blank">
+            Facebook
+            <img class="nav-link__item-image nav-link__item-image--external-arrow" src="../../assets/component_assets/navbar/external-arrow.svg" alt="External Arrow" />
+          </a>
+          <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="https://discord.com/invite/valorant" target="_blank">
+            Discord
+            <img class="nav-link__item-image nav-link__item-image--external-arrow" src="../../assets/component_assets/navbar/external-arrow.svg" alt="External Arrow" />
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-link__item nav-link__item--no-dropdown">
+        <div class="nav-link__item-title-container">
+          <a class="nav-link__item-title" href="https://valorantesports.com/" target="_blank">ESPORTS</a>
+          <img class="nav-link__item-image nav-link__item-image--external-arrow-big" src="../../assets/component_assets/navbar/external-arrow.svg" alt="External Arrow" />
+        </div>
+        <div class="nav-link__underline"></div>
+      </div>
+
+      <div class="nav-link__item nav-link__item--no-dropdown">
+        <div class="nav-link__item-title-container">
+          <a class="nav-link__item-title" href="https://playvalorant.com/en-us/pbe/">PBE SIGNUP</a>
+        </div>
+        <div class="nav-link__underline"></div>
+      </div>
+
+      <div class="nav-link__item">
+        <div class="nav-link__item-title-container">
+          <p class="nav-link__item-title">BROWSE</p>
+          <img class="nav-link__item-image nav-link__item-image--dropdown-arrow" src="../../assets/component_assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+        </div>
+        <div id="browse-dropdown"  class="nav-link__dropdown">
+          <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="../News/ep5act1.html">Valorant Patch Notes 5.01</a>
+          <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="../News/ep5act1.html">What's New In Valorant Episode 5 Act I</a>
+          <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="../News/pn5-0.html">Valorant Patch Notes 5.0</a>
+          <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="../News/mpc-061722.html">Valorant Map Pool Changes</a>
+          <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="../News/pn4-11.html">Valorant Patch Notes 4.11</a>
+          <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="../News/vai-fade.html">Valorant Agent Insights: Fade</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <img class="nav-right__globe-logo" src="../../assets/component_assets/navbar/language-globe.svg" alt="Language Globe" />
+      <button class="nav-right__play-now-button">PLAY NOW</button>
+      <label for="burger-menu-dropdown" class="nav-right__toggle-button">
+        <img class="nav-right__toggle-button-icon" src="../../assets/component_assets/navbar/burger-menu.svg" alt="Burger Menu">
+      </label>
+    </div>
+
     <input type="checkbox" id="burger-menu-dropdown">
-    <div class="navbar-links-lg-background">
-      <div class="navbar-links-lg-wrapper">
-        <div class="navbar-links-lg-content-container">
-          <div class="close-burger-menu-container">
-            <img class="close-burger-menu-valorant-logo" src="./assets/navbar/valorant-logo.svg" alt="Valorant Logo" /> 
-            <label class="close-burger-menu-icon" for="burger-menu-dropdown">
-              <img  src="./assets/navbar/nav-close-icon.svg" alt="Navbar Close Icon">
+    <div class="nav-burger-menu-background">
+      <div class="nav-burger-menu">
+        <div class="nav-burger-menu__content">
+          <div class="nav-burger-menu__top">
+            <img class="nav-burger-menu__valorant-logo" src="../../assets/component_assets/navbar/valorant-logo.svg" alt="Valorant Logo" /> 
+
+            <label class="nav-burger-menu__toggle-button" for="burger-menu-dropdown">
+              <img class="nav-burger-menu__toggle-button-icon" src="../../assets/component_assets/navbar/nav-close-icon.svg" alt="Navbar Close Icon">
             </label>
           </div>
-
-
-          <div class="with-dropdown">
-            <label for="game-info-toggle-dropdown" class="with-dropdown-title shared-title-styling">
-              <p>GAME INFO</p>
-              <img src="./assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+          <div class="nav-link__item">
+            <label for="game-info-toggle-dropdown" class="nav-link__item-title-container">
+              <h4 class="nav-link__item-title nav-link__item-title--secondary">game info</h4>
+              <img class="nav-link__item-image--dropdown-arrow" src="../../assets/component_assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
             </label>
             <input type="checkbox" id="game-info-toggle-dropdown">
-            <div class="dropdown-elements">
-              <a href="https://playvalorant.com/en-us/agents/">AGENTS</a>
-              <a href="https://playvalorant.com/en-us/maps/">MAPS</a>
-              <a href="https://playvalorant.com/en-us/arsenal/">ARSENAL</a>
+            <div class="nav-link__dropdown">
+              <a class="nav-link__dropdown-item" href="https://playvalorant.com/en-us/agents/">AGENTS</a>
+              <a class="nav-link__dropdown-item" href="https://playvalorant.com/en-us/maps/">MAPS</a>
+              <a class="nav-link__dropdown-item" href="https://playvalorant.com/en-us/arsenal/">ARSENAL</a>
             </div>
           </div>
-
-          
-          <a class="with-red-underline shared-title-styling" href="https://playvalorant.com/en-us/media/">MEDIA</a>
-          <a class="with-red-underline shared-title-styling" href="https://playvalorant.com/en-us/news/">NEWS</a>
-          <a class="with-red-underline shared-title-styling" href="https://playvalorant.com/en-us/leaderboards/">LEADERBOARDS</a>
-          <div class="with-dropdown">
-            <label for="support-toggle-dropdown" class="with-dropdown-title shared-title-styling">
-              <p>SUPPORT</p>
-              <img src="./assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+          <div class="nav-link__item nav-link__item--no-dropdown">
+            <div class="nav-link__item-title-container">
+              <a class="nav-link__item-title nav-link__item-title--secondary" href="https://playvalorant.com/en-us/media/">media</a>
+            </div>
+          </div>
+          <div class="nav-link__item nav-link__item--no-dropdown">
+            <div class="nav-link__item-title-container">
+              <a class="nav-link__item-title nav-link__item-title--secondary" href="https://playvalorant.com/en-us/news/">news</a>
+            </div>
+          </div>
+          <div class="nav-link__item nav-link__item--no-dropdown">
+            <div class="nav-link__item-title-container">
+              <a class="nav-link__item-title nav-link__item-title--secondary" href="https://playvalorant.com/en-us/leaderboards/">leaderboards</a>
+            </div>
+          </div>
+          <div class="nav-link__item">
+            <label for="support-toggle-dropdown" class="nav-link__item-title-container">
+              <h4 class="nav-link__item-title nav-link__item-title--secondary">support</h4>
+              <img class="nav-link__item-image--dropdown-arrow" src="../../assets/component_assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
             </label>
             <input type="checkbox" id="support-toggle-dropdown">
-            <div class="dropdown-elements">
-              <a href="https://playvalorant.com/en-us/specs/" target="_blank">
+            <div class="nav-link__dropdown">
+
+              <a class="nav-link__dropdown-item" href="https://playvalorant.com/en-us/specs/" target="_blank">
                 SPECS
               </a>
-              <a href="https://support-valorant.riotgames.com/hc/en-us/" target="_blank">
+              <a class="nav-link__dropdown-item" href="https://support-valorant.riotgames.com/hc/en-us/" target="_blank">
                 SUPPORT
               </a>
-              <a href="https://playvalorant.com/en-us/news/announcements/valorant-community-code/" target="_blank">
+              <a class="nav-link__dropdown-item" href="https://playvalorant.com/en-us/news/announcements/valorant-community-code/" target="_blank">
                 COMMUNITY CODE
               </a>
             </div>
           </div>
-          <div class="with-dropdown">
-            <label for="our-socials-toggle-dropdown" class="with-dropdown-title shared-title-styling">
-              <p>OUR SOCIALS</p>
-              <img src="./assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+          <div class="nav-link__item">
+            <label for="our-socials-toggle-dropdown" class="nav-link__item-title-container">
+              <h4 class="nav-link__item-title nav-link__item-title--secondary">our socials</h4>
+              <img class="nav-link__item-image--dropdown-arrow" src="../../assets/component_assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
             </label>
             <input type="checkbox" id="our-socials-toggle-dropdown">
-            <div class="dropdown-elements">
-              <a href="https://twitter.com/playvalorant" target="_blank">
-                Twitter
+            <div class="nav-link__dropdown">
+              <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize"  href="https://twitter.com/playvalorant" target="_blank">
+                twitter
               </a>
-              <a href="https://www.youtube.com/PlayValorant" target="_blank">
-                Youtube
+              <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize"  href="https://www.youtube.com/PlayValorant" target="_blank">
+                youtube
               </a>
-              <a href="https://www.instagram.com/playvalorantofficial/" target="_blank">
-                Instagram
+              <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize"  href="https://www.instagram.com/playvalorantofficial/" target="_blank">
+                instagram
               </a>
-              <a href="https://www.facebook.com/PlayVALORANT/" target="_blank">
-                Facebook
+              <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize"  href="https://www.facebook.com/PlayVALORANT/" target="_blank">
+                facebook
               </a>
-              <a href="https://discord.com/invite/valorant" target="_blank">
-                Discord
+              <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize"  href="https://discord.com/invite/valorant" target="_blank">
+                discord
               </a>
             </div>
           </div>
-          <div class="with-red-underline shared-title-styling">
-            <div class="esports">
-              <a href="https://valorantesports.com/" target="_blank">ESPORTS</a>
-              <img src="./assets/navbar/external-arrow.svg" alt="External Arrow" />
+          <div class="nav-link__item nav-link__item--no-dropdown">
+            <div class="nav-link__item-title-container">
+              <a class="nav-link__item-title nav-link__item-title--secondary" href="https://valorantesports.com/">esports</a>
+              <img class="nav-link__item-image nav-link__item-image--external-arrow-big" src="../../assets/component_assets/navbar/external-arrow.svg" alt="External Arrow" />
             </div>
           </div>
-          <a class="with-red-underline shared-title-styling" href="https://playvalorant.com/en-us/pbe/">PBE SIGNUP</a>
-          <div class="with-dropdown">
-            <label for="browse-toggle-dropdown" class="with-dropdown-title shared-title-styling">
-              <p>BROWSE</p>
-              <img src="./assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
+          <div class="nav-link__item nav-link__item--no-dropdown">
+            <div class="nav-link__item-title-container">
+              <a class="nav-link__item-title nav-link__item-title--secondary" href="https://playvalorant.com/en-us/pbe/">pbe signup</a>
+            </div>
+          </div>
+          <div class="nav-link__item">
+            <label for="browse-toggle-dropdown" class="nav-link__item-title-container">
+              <h4 class="nav-link__item-title nav-link__item-title--secondary">browse</h4>
+              <img class="nav-link__item-image--dropdown-arrow" src="../../assets/component_assets/navbar/nav-arrow.svg" alt="Dropdown Arrow" />
             </label>
             <input type="checkbox" id="browse-toggle-dropdown">
-            <div class="dropdown-elements browse">
-              <a href="../News/articles/pn5-01.html">Valorant Patch Notes 5.01</a>
-              <a href="../News/articles/ep5act1.html">What's New In Valorant Episode 5 Act I</a>
-              <a href="../News/articles/pn5-0.html">Valorant Patch Notes 5.0</a>
-              <a href="../News/articles/mpc-061722.html">Valorant Map Pool Changes</a>
-              <a href="../News/articles/pn4-11.html">Valorant Patch Notes 4.11</a>
-              <a href="../News/articles/vai-fade.html">Valorant Agent Insights: Fade</a>
+            <div class="nav-link__dropdown">
+              <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="../News/articles/pn5-01.html">Valorant Patch Notes 5.01</a>
+              <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="../News/articles/ep5act1.html">What's New In Valorant Episode 5 Act I</a>
+              <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="../News/articles/pn5-0.html">Valorant Patch Notes 5.0</a>
+              <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="../News/articles/mpc-061722.html">Valorant Map Pool Changes</a>
+              <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="../News/articles/pn4-11.html">Valorant Patch Notes 4.11</a>
+              <a class="nav-link__dropdown-item nav-link__dropdown-item--capitalize" href="../News/articles/vai-fade.html">Valorant Agent Insights: Fade</a>
             </div>
           </div>
-          <div class="navbar-links-play-now">
-            <button>
-              <p>PLAY NOW</p>
-            </button>
+          <div class="nav-link__play-now-button-container">
+            <button class="nav-link__play-now-button">PLAY NOW</button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="play-now-container">
-      <img src="./assets/navbar/language-globe.svg" alt="Language Globe" />
-      <label for="burger-menu-dropdown" class="burger-menu-container">
-        <img src="./assets/navbar/burger-menu.svg" alt="Burger Menu">
-      </label>
-      <button>
-        <p>PLAY NOW</p>
-      </button>
-    </div>
   </nav>
-  <main class="main">
+
+  <main>
     <h1 class="about-title">ABOUT</h1>
-    <section class="dotTheory-section">
-      <div class="dot-rectangle"></div>
-      <div class="dot-circle"></div>
-      <h2 class="dot-text">dot</h2>
-      <h2 class="theory-text">Theory</h2>
-      <p class="dotTheory-desc">The official training program of Code & Theory - Manila</p>
+
+    <section class="dotTheory-banner">
+      <div class="dotTheory-banner__rectangle"></div>
+      <div class="dotTheory-banner__circle"></div>
+      <h2 class="dotTheory-banner__first-dot-text">dot</h2>
+      <h2 class="dotTheory-banner__second-dot-text">dot</h2>
+      <h2 class="dotTheory-banner__theory-text">Theory</h2>
+      <p class="dotTheory-banner__subtext">The official training program of Code & Theory - Manila</p>
     </section>
+
     <section class="dotTheory-content">
-      <p>dotTheory offers different training tracks for technologies that are commonly used by the software applications that are being developed/maintained by Code & Theory - Manila.</p>
-      <p>It allows developers to train on a specific technology under the guidance of a manager, giving them the opportunity to easily transition from one project to another.</p>
+      <p class="dotTheory-content__paragraph">dotTheory offers different training tracks for technologies that are commonly used by the software applications that are being developed/maintained by Code & Theory - Manila.</p>
+      <p class="dotTheory-content__paragraph">It allows developers to train on a specific technology under the guidance of a manager, giving them the opportunity to easily transition from one project to another.</p>
     </section>
-    <section class="frontEnd-section">
-      <div class="frontEnd-rectangle"></div>
-      <h2 class="frontEnd-text">Front-End</h2>
-      <p class="training-desc-text">Training</p>
-      <p class="track-desc-text">Track</p>
+
+    <section class="frontEnd-banner">
+      <div class="frontEnd-banner__rectangle"></div>
+      <h2 class="frontEnd-banner__title">Front-End</h2>
+      <p class="frontEnd-banner__training-subtext">Training</p>
+      <p class="frontEnd-banner__track-subtext">Track</p>
     </section>
+
     <section class="frontEnd-content">
-      <svg class="video-click-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <svg class="frontEnd-content__tablet-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
         <g data-name="22_Video Player" id="_22_Video_Player">
           <path d="M59,48H5a3,3,0,0,1-3-3V5A3,3,0,0,1,5,2H59a3,3,0,0,1,3,3V45A3,3,0,0,1,59,48Z" style="fill:#0455bf"/>
           <path d="M53,44H8a2,2,0,0,1-2-2V8A2,2,0,0,1,8,6H52a2,2,0,0,1,2,2V43A1,1,0,0,1,53,44Z" style="fill:#fdfeff"/>
@@ -273,9 +406,10 @@
           </path>
         </g>
       </svg>
-      <div class="frontEnd-p-container">
-        <div class="frontEnd-p1-container">
-          <svg version="1.1" class="tetris-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+
+      <ul class="frontEnd-content__topic-list">
+        <li class="frontEnd-content__first-topic frontEnd-content__topic">
+          <svg version="1.1" class="frontEnd-content__first-topic-svg tetris-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 503.467 503.467" style="enable-background:new 0 0 503.467 503.467;" xml:space="preserve">
             <g transform="translate(5 1)">
               <polygon style="fill:#80D6FA;" points="289.4,327.533 289.4,412.867 289.4,498.2 460.067,498.2 460.067,327.533"/>
@@ -308,10 +442,11 @@
             c-2.56,0-4.267-1.707-4.267-4.267v-46.933h-76.8V294.4c0,2.56-1.707,4.267-4.267,4.267s-4.267-1.707-4.267-4.267v-46.933h-76.8v76.8
             h80.213h0.853h84.48C379.733,324.267,379.733,324.267,380.587,324.267z"/>
           </svg>
-          <p class="frontEnd-p1">CSS Fundamentals and Concepts</p>
-        </div>
-        <div class="frontEnd-p2-container">
-          <div class="svg-layout-wrapper">
+          <p class="frontEnd-content__topic-title">CSS Fundamentals and Concepts</p>
+        </li>
+
+        <li class="frontEnd-content__second-topic frontEnd-content__topic">
+          <div class="frontEnd-content__second-topic-svg">
             <svg version="1.1" class="grid-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
               <rect x="10.199" y="256" style="fill:#FFCA12;" width="245.801" height="245.801"/>
               <rect x="256" y="256" style="fill:#6ED3FF;" width="245.801" height="245.801"/>
@@ -337,16 +472,18 @@
                 v2.04C458.964,54.588,463.53,59.155,469.163,59.155z"/>
             </svg>
           </div>
-          <p class="frontEnd-p2">Flex and Grid Layouts</p>
-        </div>
-        <div class="frontEnd-p3-container">
-          <svg class="sass-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <p class="frontEnd-content__topic-title">Flex and Grid Layouts</p>
+        </li>
+
+        <li class="frontEnd-content__third-topic frontEnd-content__topic">
+          <svg class="frontEnd-content__third-topic-svg sass-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <path d="M16,2A14,14,0,1,1,2,16,14,14,0,0,1,16,2Z" style="fill:#c69;fill-rule:evenodd"/><path d="M24.782,7.992c-.634-2.486-4.757-3.3-8.659-1.918A19.605,19.605,0,0,0,9.479,9.885c-2.149,2.01-2.492,3.76-2.351,4.491.5,2.58,4.033,4.266,5.486,5.517V19.9c-.428.211-3.564,1.8-4.3,3.42-.774,1.712.123,2.94.718,3.105A4.4,4.4,0,0,0,13.78,24.5a4.824,4.824,0,0,0,.472-4.288,5.639,5.639,0,0,1,2.143-.123c2.456.287,2.938,1.82,2.846,2.462a1.62,1.62,0,0,1-.779,1.1c-.172.107-.225.143-.21.223.021.115.1.111.247.086a1.915,1.915,0,0,0,1.336-1.707c.059-1.5-1.382-3.186-3.934-3.143a6.736,6.736,0,0,0-2.189.3c-.035-.04-.071-.08-.108-.12-1.578-1.683-4.494-2.874-4.371-5.137.045-.823.331-2.989,5.6-5.617,4.32-2.153,7.778-1.56,8.376-.247.854,1.876-1.848,5.361-6.334,5.864a3.37,3.37,0,0,1-2.833-.718c-.236-.26-.271-.271-.359-.223-.143.079-.052.309,0,.445a2.659,2.659,0,0,0,1.621,1.274,8.592,8.592,0,0,0,5.258-.52C23.283,13.362,25.405,10.437,24.782,7.992ZM13.218,20.663a3.584,3.584,0,0,1-.029,2.092q-.035.106-.077.21t-.091.2a3.911,3.911,0,0,1-.647.943c-.813.887-1.95,1.223-2.437.94-.526-.305-.263-1.556.68-2.553a9.478,9.478,0,0,1,2.474-1.762l0,0Z" style="fill:#fff"/>
           </svg>
-          <p class="frontEnd-p3">Introduction to SASS</p>
-        </div>
-        <div class="frontEnd-p4-container">
-          <div class="orbit-svg-wrapper">
+          <p class="frontEnd-content__topic-title">Introduction to SASS</p>
+        </li>
+
+        <li class="frontEnd-content__fourth-topic frontEnd-content__topic">
+          <div class="frontEnd-content__fourth-topic-svg orbit-svg-wrapper">
             <svg version="1.1" class="orbit-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
               <g class="orbit-earth">
                 <circle style="fill:#4A7DBA;" cx="82.939" cy="82.939" r="44.513"/>
@@ -526,42 +663,66 @@
               </g>
             </svg>
           </div>
-          <p class="frontEnd-p4">CSS and SVG animations</p>
-        </div>
-      </div>
+          <p class="frontEnd-content__topic-title">CSS and SVG animations</p>
+        </li>
+        
+      </ul>
     </section>
   </main>
-  <!-- <footer>
-    <div class="download-links">
-      <a href="https://playvalorant.com/en-us/download/">DOWNLOAD GAME CLIENT</a>
-      <a href="https://play.google.com/store/apps/details?id=com.riotgames.mobile.leagueconnect&referrer=singular_click_id%3D57f1824f-6d53-43c9-8e10-2c12b6c3e131">DOWNLOAD RIOT MOBILE COMPANION APP</a>
+
+  <footer>
+    <div class="footer-upper">
+      <a class="footer-upper__download-link" href="https://playvalorant.com/en-us/download/">DOWNLOAD GAME CLIENT</a>
+      <a class="footer-upper__download-link" href="https://play.google.com/store/apps/details?id=com.riotgames.mobile.leagueconnect&referrer=singular_click_id%3D57f1824f-6d53-43c9-8e10-2c12b6c3e131">DOWNLOAD RIOT MOBILE COMPANION APP</a>
     </div>
-    <div class="actual-footer">
-      <div class="footer-social-media">
-        <a href="https://twitter.com/playvalorant"><img src="./assets/footer/twitter-icon.svg" alt="Twitter Icon"></a>
-        <a href="https://www.youtube.com/PlayValorant"><img src="./assets/footer/youtube-icon.svg" alt="Youtube Icon"></a>
-        <a href="https://www.instagram.com/playvalorantofficial/"><img src="./assets/footer/instagram-icon.svg" alt="Instagram Icon"></a>
-        <a href="https://www.facebook.com/PlayVALORANT/"><img src="./assets/footer/footer-fb-icon.svg" alt="Facebook Icon"></a>
-        <a href="https://discord.com/invite/valorant"><img src="./assets/footer/discord-icon.svg" alt="Discord Icon"></a>
+    <div class="footer-lower">
+      <div class="footer-lower__social-media">
+
+        <a class="footer-lower__social-media-item" href="https://twitter.com/playvalorant">
+          <img class="footer-lower__social-media-icon" src="../../assets/component_assets/footer/twitter-icon.svg" alt="Twitter Icon">
+        </a>
+
+        <a class="footer-lower__social-media-item" href="https://www.youtube.com/PlayValorant">
+          <img class="footer-lower__social-media-icon" src="../../assets/component_assets/footer/youtube-icon.svg" alt="Youtube Icon">
+        </a>
+
+        <a class="footer-lower__social-media-item" href="https://www.instagram.com/playvalorantofficial/">
+          <img class="footer-lower__social-media-icon" src="../../assets/component_assets/footer/instagram-icon.svg" alt="Instagram Icon">
+        </a>
+
+        <a class="footer-lower__social-media-item" href="https://www.facebook.com/PlayVALORANT/">
+          <img class="footer-lower__social-media-icon" src="../../assets/component_assets/footer/footer-fb-icon.svg" alt="Facebook Icon">
+        </a>
+
+        <a class="footer-lower__social-media-item" href="https://discord.com/invite/valorant">
+          <img class="footer-lower__social-media-icon" src="../../assets/component_assets/footer/discord-icon.svg" alt="Discord Icon">
+        </a>
+
       </div>
-      <a href="https://www.riotgames.com/en"><img class="footer-rg-logo" src="./assets/footer/riot-games-logo.svg" alt="Riot Games Logo" /></a>
-      <p class="copyright-text">© 2022 Riot Games, Inc. Riot Games, VALORANT, and any associated logos are trademarks, service marks, and/or registered trademarks of Riot Games, Inc.</p>
-      <div class="download-links other-dl-links">
-        <a href="hhttps://www.riotgames.com/en/privacy-notice">PRIVACY NOTICE</a>
-        <a href="https://www.riotgames.com/en/terms-of-service">TERMS OF SERVICE</a>
-        <a href="">COOKIE PREFERENCES</a>
+
+      <a href="https://www.riotgames.com/en">
+        <img class="footer-lower__riot-games-logo" src="../../assets/component_assets/footer/riot-games-logo.svg" alt="Riot Games Logo" />
+      </a>
+
+      <p class="footer-lower__copyright-text">© 2022 Riot Games, Inc. Riot Games, VALORANT, and any associated logos are trademarks, service marks, and/or registered trademarks of Riot Games, Inc.</p>
+
+      <div class="footer-lower__other-links-container">
+        <a class="footer-lower__other-link" href="hhttps://www.riotgames.com/en/privacy-notice">PRIVACY NOTICE</a>
+        <a class="footer-lower__other-link" href="https://www.riotgames.com/en/terms-of-service">TERMS OF SERVICE</a>
+        <a class="footer-lower__other-link" href="">COOKIE PREFERENCES</a>
       </div>
-      <div class="esrb-rating">
-        <a href="https://discord.com/invite/valorant"><img src="./assets/footer/esrb-rating.png" alt="Discord Icon"></a>
-        <ul>
-          <li>Blood</li>
-          <li>Language</li>
-          <li>Violence</li>
-          <li>Users Interact</li>
-          <li>In-game Purchases</li>
+
+      <div class="footer-lower__esrb-rating">
+        <a class="footer-lower__esrb-rating-image" href="https://discord.com/invite/valorant"><img src="../../assets/component_assets/footer/esrb-rating.png" alt="Discord Icon"></a>
+        <ul class="footer-lower__esrb-contains-list">
+          <li class="footer-lower__esrb-contains-item">Blood</li>
+          <li class="footer-lower__esrb-contains-item">Language</li>
+          <li class="footer-lower__esrb-contains-item">Violence</li>
+          <li class="footer-lower__esrb-contains-item">Users Interact</li>
+          <li class="footer-lower__esrb-contains-item">In-game Purchases</li>
         </ul>
       </div>
     </div>
-  </footer> -->
+  </footer>
 </body>
 </html>

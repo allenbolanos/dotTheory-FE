@@ -15,235 +15,239 @@
   @media #{$sm} {
     padding-bottom: 4rem;
   }
-}
 
-.latest-news-bg-text {
-  white-space: nowrap;
-  line-height: 15rem;
-  width: 100%;
-}
-
-.latest-news-bg-text p {
-  @include home-mixin.shared-bg-outline-text;
-}
-
-.latest-news-bg-text p:nth-child(2) {
-  transform: translateX(28rem);
-  margin-top: 2rem;
-}
-
-.latest-news-content {
-  @include mixin.absolute-container($width: 100%, $z-index: 10);
-
-  @media #{$lg} {
-    position: relative;
-    margin-top: -33.5rem;
-  }
-}
-
-.red-detail-boxes {
-  @include mixin.absolute-container(2.2rem, $left: 50%);
-}
-
-.red-detail-boxes::before {
-  content: "";
-  @include mixin.absolute-container(0, $left: 0, $width: 8px, $height: 8px);
-  background: $red-bg;
-}
-
-.red-detail-boxes::after {
-  content: "";
-  @include mixin.absolute-container(0, $left: 3rem, $width: 8px, $height: 8px);
-  background: $red-bg;
-}
-
-.latest-news-title-container {
-  @include mixin.absolute-container($width: 100%);
-  display: flex;
-  justify-content: space-between;
-  margin-top: 9.5rem;
-
-  @media #{$lg} {
-    margin-top: 7.5rem;
+  &__background {
+    white-space: nowrap;
+    line-height: 15rem;
+    width: 100%;
   }
 
-  @media #{$md} {
-    margin-left: -0.2rem;
+  &__background-text {
+    @include home-mixin.shared-bg-outline-text;
+
+    &--second-text {
+      transform: translateX(28rem);
+      margin-top: 2rem;
+    }
   }
 
-  @media #{$sm} {
-    margin-top: 6rem;
-  }
-}
+  &__content {
+    @include mixin.absolute-container($width: 100%, $z-index: 10);
 
-.latest-news-title-container p {
-  @include mixin.scaled-text('Teko', 6rem, 900, $red-text, (0.9, 1.4), -2.5rem);
-
-  @media #{$lg} {
-    font-size: 5rem;
-    margin-left: -2.1rem;
+    @media #{$lg} {
+      position: relative;
+      margin-top: -33.5rem;
+    }
   }
 
-  @media #{$md} {
-    font-size: 2.5rem;
-    margin-left: -0.9rem;
+  &__red-detail-boxes {
+    @include mixin.absolute-container(2.2rem, $left: 50%);
+
+    &::before {
+      content: "";
+      @include mixin.absolute-container(0, $left: 0, $width: 8px, $height: 8px);
+      background: var(--red);
+    }
+
+    &::after {
+      content: "";
+      @include mixin.absolute-container(0, $left: 3rem, $width: 8px, $height: 8px);
+      background: var(--red);
+    }
   }
-}
 
-.latest-news-title-container a {
-  @media #{$lg} {
-    font-size: 0.8rem;
-    margin-bottom: 2rem;
-  }
-
-  @media #{$md} {
-    margin-bottom: 5rem;
-  }
-
-  @media #{$sm} {
-    margin-bottom: 0;
-    margin-left: 0;
-  }
-}
-
-.news-page-link {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  @include mixin.scaled-text($size: 0.8rem, $weight: 600, $color: $red-text, $scale: (0.95, 0.95), $margin-left: auto);
-  margin-right: -6px;
-  margin-bottom: 5rem;
-  text-decoration: none;
-  transition: 0.2s ease-in-out;
-
-  @media #{$lg} {
-    display: none;
-  }
-}
-
-.news-page-link:hover {
-  transform: scale(1.02);
-}
-
-img[alt="News Page Arrow Icon"] {
-  @include mixin.arrow-sway();
-  @include mixin.arrow-sway-keyframes();
-}
-
-.news-page-link-lower {
-  display: none;
-
-  @media #{$lg} {
+  &__title-container {
+    @include mixin.absolute-container($width: 100%);
     display: flex;
-    font-size: 0.9rem;
-    margin-top: 1.5rem;
-    margin-left: -2.5%;
-    margin-bottom: 0;
+    justify-content: space-between;
+    margin-top: 9.5rem;
+  
+    @media #{$lg} {
+      margin-top: 7.5rem;
+    }
+  
+    @media #{$md} {
+      margin-left: -0.2rem;
+    }
+  
+    @media #{$sm} {
+      margin-top: 6rem;
+    }
   }
 
-  @media #{$sm} {
-    margin-top: 0;
-  }
-}
+  &__title {
+    @include mixin.scaled-text('Teko', 6rem, 900, var(--red), (0.9, 1.4), -2.5rem);
 
-.news-cards-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  width: 100%;
-  margin-top: 15.19rem;
-
-  @media #{$lg} {
-    width: max-content;
-    margin-top: 12.3rem;
+    @media #{$lg} {
+      font-size: 5rem;
+      margin-left: -2.1rem;
+    }
+  
+    @media #{$md} {
+      font-size: 2.5rem;
+      margin-left: -0.9rem;
+    }
   }
 
-  @media #{$md} {
-    margin-top: 10rem;
+  &__link {
+    @media #{$lg} {
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+    }
+  
+    @media #{$md} {
+      margin-bottom: 5rem;
+    }
+  
+    @media #{$sm} {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+
+    &--news-page {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      @include mixin.scaled-text($size: 0.8rem, $weight: 600, $color: var(--red), $scale: (0.95, 0.95), $margin-left: auto);
+      margin-right: -6px;
+      margin-bottom: 5rem;
+      text-decoration: none;
+      transition: 0.2s ease-in-out;
+    
+      @media #{$lg} {
+        display: none;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    &--secondary-news-page-link {
+      display: none;
+
+      @media #{$lg} {
+        display: flex;
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+        margin-left: -2.5%;
+        margin-bottom: 0;
+      }
+    
+      @media #{$sm} {
+        margin-top: 0;
+      }
+    }
   }
 
-  @media #{$sm} {
-    margin-top: 8.5rem;
-  }
-}
-
-.news-card {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 24.4rem;
-  @include mixin.card-transition();
-
-  @media #{$lg} {
-    width: 55rem;
+  &__image {
+    &--news-page-arrow {
+      @include mixin.arrow-sway();
+      @include mixin.arrow-sway-keyframes();
+    }
   }
 
-  @media #{$md} {
-    width: 34rem;
+  &__cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 15.19rem;
+  
+    @media #{$lg} {
+      width: max-content;
+      margin-top: 12.3rem;
+    }
+  
+    @media #{$md} {
+      margin-top: 10rem;
+    }
+  
+    @media #{$sm} {
+      margin-top: 8.5rem;
+    }
   }
 
-  @media #{$sm} {
-    width: 19rem;
+  &__card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 24.4rem;
+    @include mixin.card-transition();
+  
+    @media #{$lg} {
+      width: 55rem;
+    }
+  
+    @media #{$md} {
+      width: 34rem;
+    }
+  
+    @media #{$sm} {
+      width: 19rem;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+
+      .latest-news-section__card-image {
+        filter: drop-shadow(var(--card-hover-black-color));
+      }
+    }
+
+    &:active {
+      .latest-news-section__card-image {
+        transition: none !important;
+        filter: drop-shadow(var(--card-hover-red-color));
+      }
+    }
   }
-}
 
-.news-card:hover {
-  transform: scale(1.02);
-}
-
-.news-card-date-and-category {
-  display: flex;
-  gap: 0.5rem;
-  @include mixin.text('Roboto', 0.7rem, 600);
-  width: 100%;
-
-  @media #{$lg} {
-    font-size: 0.8rem;
+  &__card-image {
+    width: 100%;
+    @include mixin.card-transition();
   }
-}
 
-.news-card-date-and-category p {
-  color: $black-text;
-  letter-spacing: 1px;
-}
-
-.news-card-date-and-category p:nth-child(2) {
-  position: relative;
-  display: flex;
-  align-items: end;
-  color: $red-text;
-}
-
-.news-card-date-and-category p:nth-child(2)::before {
-  content: "";
-  margin-right: 0.5rem;
-  margin-bottom: 4px;
-  width: 1px;
-  height: 1px;
-  background: black;
-
-  @media #{$lg} {
-    width: 3px;
-    height: 3px;
+  &__card-upper {
+    display: flex;
+    gap: 0.5rem;
+    @include mixin.text('Roboto', 0.7rem, 600);
+    width: 100%;
+  
+    @media #{$lg} {
+      font-size: 0.8rem;
+    }
   }
-}
 
-.news-card img {
-  width: 100%;
-  @include mixin.card-transition();
-}
+  &__card-upper-text {
+    color: var(--black);
+    letter-spacing: 1px;
 
-.news-card:hover img {
-  filter: drop-shadow($card-hover-black-color);
-}
+    &--second {
+      position: relative;
+      display: flex;
+      align-items: end;
+      color: var(--red);
 
-.news-card:active img {
-  transition: none !important;
-  filter: drop-shadow($card-hover-red-color);
-}
+      &::before {
+        content: "";
+        margin-right: 0.5rem;
+        margin-bottom: 4px;
+        width: 1px;
+        height: 1px;
+        background: black;
+      
+        @media #{$lg} {
+          width: 3px;
+          height: 3px;
+        }
+      }
+    }
+  }
 
-.news-card-title {
-  @include mixin.text($size: 1.2rem, $weight: 600, $color: $grey-text);
-  width: 100%;
+  &__card-title {
+    @include mixin.text($size: 1.2rem, $weight: 600, $color: var(--grey));
+    width: 100%;
+  }
 }

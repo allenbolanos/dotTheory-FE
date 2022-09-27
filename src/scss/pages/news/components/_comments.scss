@@ -1,72 +1,76 @@
 @use '../../../base/variables' as *;
 @use '../../../base/mixin';
 
-.comments-container {
+.comments-section {
   @include mixin.flex-column(flex-start, center);
   width: 100%;
   height: 50rem;
   background: #a52b34;
-  color: $white-text;
+  color: var(--white);
   padding-top: 1.5rem;
-}
 
-.comment-form {
-  @include mixin.flex-column($align-items: flex-start);
-  gap: 2rem;
-  width: 80.9%;
-}
+  &__form {
+    @include mixin.flex-column($align-items: flex-start);
+    gap: 2rem;
+    width: 80.9%;
+  }
 
-.comment-form h1 {
-  @include mixin.scaled-text('Teko', 3rem, $scale: (0.7, 1), $margin-left: -1.9rem);
-}
+  &__title {
+    @include mixin.scaled-text('Teko', 3rem, $scale: (0.7, 1), $margin-left: -1.9rem, $text-transform: capitalize);
+  }
 
-.comment-form input {
-  width: 100%;
-  height: 2rem;
-  background: none;
-  border-bottom: 1px solid $white;;
-  font-size: 1rem;
-  color: $white-text;
-}
+  &__input {
+    width: 100%;
+    height: 2rem;
+    background: none;
+    border-bottom: 1px solid var(--white);;
+    font-size: 1rem;
+    color: var(--white);
 
-.comment-form input::placeholder {
-  @include mixin.text($size: 1rem, $color: $white-text);
-  opacity: .8;
-}
+    &:focus {
+      outline: none;
+      caret-color: var(--white);
+    }
 
-.comment-form input:focus {
-  outline: none;
-  caret-color: $white;
-}
+    &:focus::placeholder {
+      color: transparent;
+    }
 
-.comment-form input:focus::placeholder {
-  color: transparent;
-}
+    &::placeholder {
+      @include mixin.text($size: 1rem, $color: var(--white));
+      opacity: .8;
+    }
+  }
 
-.comment-box-container {
-  overflow: auto;
-  margin-block: 2rem;
-}
+  &__comment-boxes-container {
+    width: 80.9%;
+  }
 
-.comment-box-container::-webkit-scrollbar {
-  width: 30px;
-}
+  &__comment-box {
+    overflow: auto;
+    margin-block: 2rem;
 
-.comment-box {
-  @include mixin.flex-column(space-between);
-  gap: 1rem;
-  width: 1232px;
-  margin-block: 2rem;
-  border-left: 3px solid $white;
-  padding-left: 1rem;
-}
+    &::-webkit-scrollbar {
+      width: 30px;
+    }
+  }
 
-.comment-text {
-  font-size: 1.2rem;
-}
+  &__comment-content {
+    @include mixin.flex-column(space-between);
+    gap: 1rem;
+    width: 1232px;
+    margin-block: 2rem;
+    border-left: 3px solid var(--white);
+    padding-left: 1rem;
+  }
 
-.comment-date-time {
-  font-size: 0.8rem;
-  white-space: nowrap;
-  align-self: flex-start;
+  &__comment-date-time {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+
+  &__comment-text {
+    font-size: 1.2rem;
+  }
 }

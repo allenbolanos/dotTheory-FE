@@ -1,59 +1,69 @@
 @use '../../../base/variables' as *;
 @use '../article-mixin';
 
-.content-container div img {
-  width: 100%;
-}
+.pn5-0-content-section {
+  @include article-mixin.content-container();
 
-.content-container div img:first-child {
-  padding-block: 2.5rem;
-}
+  &__image {
+    width: 100%;
 
-.content-container div img:first-child:hover {
-  cursor: pointer;
-  background: $red-bg;
-}
+    &--highlights {
+      padding-block: 2.5rem;
 
-.container-sections h2 {
-  margin-bottom: 2rem !important;
-}
+      &:hover {
+        cursor: pointer;
+        background: var(--red);
+      }
+    }
 
-.map-updates-container {
-  @include article-mixin.relative-container();
-}
+    &--pearl {
+      padding-top: 2rem;
+      padding-bottom: 5.5rem;
+    }
 
-.map-updates-container::before {
-  @include article-mixin.three-lines(29rem);
-}
+    &--split {
+      padding-top: 3rem;
+      padding-bottom: 5.5rem;
+    }
+  }
 
-.pearl-banner {
-  padding-top: 2rem;
-  padding-bottom: 5.5rem;
-}
+  &__description {
+    @include article-mixin.description();
+  }
 
-.split-banner {
-  padding-top: 3rem;
-  padding-bottom: 5.5rem;
-}
+  &__section-title-h2 {
+    @include article-mixin.container-sections-h2();
+    margin-bottom: 2rem !important;
+  }
 
-.map-pool-changes-link {
-  @include article-mixin.paragraph-link(1rem);
-}
+  &__section-title-h3 {
+    @include article-mixin.container-sections-h3();
+    font-size: 1rem !important;
+  }
 
-.map-pool-changes-link:hover {
-  background: $red-bg;
-  color: $white-text;
-}
+  &__container-section {
+    @include article-mixin.container-sections();
+    
+    &--map-updates {
+      @include article-mixin.relative-container();
 
-.shoutout-link {
-  @include article-mixin.paragraph-link(1rem);
-}
+      &::before {
+        @include article-mixin.three-lines(29rem);
+      }
+    }
+  }
 
-.shoutout-link:hover {
-  background: $red-bg;
-  color: $white-text;
-}
+  &__bugs-ul {
+    margin-bottom: 2rem;
+  }
 
-.bugs-container ul {
-  margin-bottom: 2rem;
+  &__link {
+    @include article-mixin.paragraph-link(1rem);
+
+    &:hover {
+      background: var(--red);
+      color: var(--white);
+    }
+  }
+
 }

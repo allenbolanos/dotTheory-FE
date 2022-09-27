@@ -1,318 +1,316 @@
 @use  '../../../base/mixin';
 @use '../../../base/variables' as *;
+@use '../components/section-button';
 
 .we-are-valorant-section {
   position: relative;
   @include mixin.grid-column($justify-items: end);
-}
 
-.we-are-valorant-section::before {
-  content: "";
-  @include mixin.absolute-container(18.35rem, $left: 0, $width: 0.4rem, $height: 0.43rem);
-  background: $red-bg;
-
-  @media #{$lg} {
-    display: none;
+  &::before {
+    content: "";
+    @include mixin.absolute-container(18.35rem, $left: 0, $width: 0.4rem, $height: 0.43rem);
+    background: var(--red);
+  
+    @media #{$lg} {
+      display: none;
+    }
   }
-}
 
-.we-are-valorant-section::after {
-  content: "";
-  @include mixin.absolute-container($bottom: 5.85rem, $left: 0, $width: 0.6rem, $height: 0.69rem);
-  background: $red-bg;
-
-  @media #{$lg} {
-    display: none;
+  &::after {
+    content: "";
+    @include mixin.absolute-container($bottom: 5.85rem, $left: 0, $width: 0.6rem, $height: 0.69rem);
+    background: var(--red);
+  
+    @media #{$lg} {
+      display: none;
+    }
   }
-}
 
-.we-are-valorant-title-container {
-  position: relative;
-  align-self: flex-end;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 92%;
-  margin-top: 3.1rem;
-  border-top: 1px solid rgba(15,25,35,.2);
-  padding-top: 2.3rem;
+  &__title-container {
+    position: relative;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 92%;
+    margin-top: 3.1rem;
+    border-top: 1px solid rgba(15,25,35,.2);
+    padding-top: 2.3rem;
+  
+    @media #{$lg} {
+      width: 100%;
+    }
+  
+    @media #{$md} {
+      justify-content: center;
+    }
 
-  @media #{$lg} {
+    &::after {
+      content: "";
+      @include mixin.absolute-container(0.8rem, 21%, $width: 0.9rem, $height: 0.9rem);
+      background: var(--red);
+    
+      @media #{$md} {
+        width: 0.4rem;
+        height: 0.45rem;
+      }
+    }
+  }
+
+  &__title {
+    @include mixin.scaled-text('Teko', 8.8rem, $color: var(--black), $scale: (0.9, 1.2), $margin-left: -2.6rem);
+    letter-spacing: -2px;
+  
+    @media #{$xl} {
+      font-size: 6rem;
+    }
+  
+    @media #{$lg} {
+      font-size: 4rem;
+      margin-left: -1.4rem;
+    }
+  
+    @media #{$md} {
+      font-size: 3rem;
+      margin-left: 0;
+    }
+  }
+
+  &__title-details {
+    position: relative;
+    margin-top: 2.8rem;
+    margin-left: 4rem;
+    letter-spacing: 1.6px;
+  
+    @media #{$xl} {
+      margin-top: 0.5rem;
+      margin-left: 0;
+    }
+  
+    @media #{$lg} {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      @include mixin.absolute-container($right: 0, $bottom: -0.7rem, $width: 10rem, $height: 4px);
+      background: var(--red);
+    }
+  }
+
+  &__detail-text {
+    @include mixin.scaled-text('Teko', 0.6rem, 600, var(--red), (-1, 1), -2.6rem);
+
+    &--first-text {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__content {
+    place-self: flex-end;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
     width: 100%;
+    margin-top: 3rem;
+    padding-bottom: 13.3rem;
+
+    @media #{$lg} {
+      padding-bottom: 40rem;
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    @media #{$md} {
+      padding-bottom: 26rem;
+    }
+
+    @media #{$sm} {
+      padding-bottom: 18rem;
+    }
+
+    &::before {
+      content: "";
+      @include mixin.absolute-container(16.3rem, $left: 6.5rem, $width: 0.45rem, $height: 0.4rem);
+      background: var(--red);
+
+      @media #{$lg} {
+        display: none;
+      }
+    }
   }
 
-  @media #{$md} {
+  &__description-container {
+    width: 17.6rem;
+    font-family: 'Roboto';
+    margin-left: 13rem;
+  
+    @media #{$xl} {
+      @include mixin.grid-column($justify-items: flex-start);
+      width: 12.4rem;
+      margin-left: 8rem;
+    }
+  
+    @media #{$lg} {
+      align-items: flex-start;
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    @media #{$md} {
+      justify-items: center;
+    }
+
+    &::after {
+      content: "00.";
+      @include mixin.absolute-container($bottom: 4.35rem, $left: 6.45rem, $width: 3rem);
+      @include mixin.scaled-text('Teko', 2.8rem, $color: var(--tertiary-white), $scale: (1, 1.2));
+      border-top: 0.3rem solid;
+    
+      @media #{$lg} {
+        display: none;
+      }
+    }
+  }
+
+  &__description-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.7rem;
+    color: var(--grey);
+  }
+
+  &__description {
+    @include mixin.text('Roboto', 0.95rem, $color: var(--secondary-grey));
+    line-height: 1.5rem;
+  
+    @media #{$lg} {
+      text-align: none;
+      width: 79%;
+    }
+  }
+
+  &__button-wrapper {
+    @include section-button.button-wrapper();
+    margin-top: 3.2rem;
+  }
+
+  &__button {
+    @include section-button.button();
+
+    @media #{$lg} {
+      place-self: center;
+    }
+  }
+
+  &__button-span {
+    @include section-button.button-span();
+    border: 1px solid var(--tertiary-grey);
+  }
+
+  &__video-wrapper {
+    @include mixin.absolute-container(2.15rem, -6.5rem, $width: 705.5px, $height: 396px);
+    margin-left: auto;
+  
+    @media #{$xl} {
+      top: 9rem;
+      width: 550px;
+      height: auto;
+    }
+  
+    @media #{$lg} {
+      top: 35%;
+      right: 0;
+      width: 100%;
+      height: auto;
+    }
+  
+    @media #{$md} {
+      top: 50%;
+    }
+  
+    @media #{$sm} {
+      top: 28rem;
+    }
+
+    &::before {
+      content: "";
+      @include mixin.absolute-container(-2.5rem, $left: 0, $width: 8px, $height: 8px);
+      background: var(--red);
+
+      @media #{$lg} {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: "";
+      @include mixin.absolute-container(-2.5rem, $left: 3rem, $width: 8px, $height: 8px);
+      background: var(--red);
+
+      @media #{$lg} {
+        display: none;
+      }
+    }
+  }
+
+  &__video {
+    width: 100%;  
+  }
+
+  &__video-detail {
+    display: flex;
     justify-content: center;
-  }
-}
-
-.we-are-valorant-title-container::after {
-  content: "";
-  @include mixin.absolute-container(0.8rem, 21%, $width: 0.9rem, $height: 0.9rem);
-  background: $red-bg;
-
-  @media #{$md} {
-    width: 0.4rem;
-    height: 0.45rem;
-  }
-}
-
-.we-are-valorant-title-container h1 {
-  @include mixin.scaled-text('Teko', 8.8rem, $color: $black-text, $scale: (0.9, 1.2), $margin-left: -2.6rem);
-  letter-spacing: -2px;
-
-  @media #{$xl} {
-    font-size: 6rem;
+    align-items: center;
+    @include mixin.absolute-container(1.25rem, $left: -1.25rem, $width: 6.55rem, $height: 1.55rem, $z-index: 50);
+    @include mixin.text($size: 0.9rem, $weight: 600, $color: white);
+    background: var(--red);
   }
 
-  @media #{$lg} {
-    font-size: 4rem;
-    margin-left: -1.4rem;
+  &__video-button {
+    @include mixin.absolute-container(10.25rem, $left: 19.82rem, $width: 4.35rem, $height: 4.4rem);
+    background: rgba(255,70,85,.3);
+    border: 1px solid white;
+  
+    @media #{$xl} {
+      top: 8rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  
+    @media #{$lg} {
+      top: 14rem;
+    }
+  
+    @media #{$md} {
+      top: 8rem;
+    }
+  
+    @media #{$sm} {
+      top: 4rem;
+    }
+
+    &::after {
+      content: "";
+      @include mixin.absolute-container($right: 0, $bottom: 0, $width: 4px, $height: 4px);
+      background: white;
+    }
   }
 
-  @media #{$md} {
-    font-size: 3rem;
-    margin-left: 0;
-  }
-}
-
-.protocol-text {
-  position: relative;
-  @include mixin.scaled-text('Teko', 0.6rem, 600, $red-text, (-1, 1), -2.6rem);
-  margin-top: 2.8rem;
-  margin-left: 4rem;
-  letter-spacing: 1.6px;
-
-  @media #{$xl} {
-    margin-top: 0.5rem;
-    margin-left: 0;
+  &__button-image {
+    @include mixin.absolute-container(0, 0, $width: 4.24rem);
   }
 
-  @media #{$lg} {
-    display: none;
+  &__button-detail {
+    content: "";
+    @include mixin.absolute-container($bottom: -0.2rem, $left: 0, $width: 6.6rem, $height: 0.2rem, $z-index: 50);
+    background: var(--red);
+  
+    @media #{$xl} {
+      bottom: 0;
+    }
   }
-}
-
-.protocol-text p:first-child {
-  margin-bottom: 2px;
-}
-
-.protocol-text::after {
-  content: "";
-  @include mixin.absolute-container($right: -3.1rem, $bottom: -0.7rem, $width: 10rem, $height: 4px);
-  background: $red-bg;
-}
-
-.we-are-valorant-content-container {
-  place-self: flex-end;
-  position: relative;
-  width: 100%;
-  margin-top: 3rem;
-
-  @media #{$lg} {
-    margin-top: 1rem;
-  }
-}
-
-.we-are-valorant-content-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: 4rem;
-  padding-bottom: 13.3rem;
-
-  @media #{$lg} {
-    padding-bottom: 40rem;
-    width: 100%;
-  }
-
-  @media #{$md} {
-    padding-bottom: 26rem;
-  }
-
-  @media #{$sm} {
-    padding-bottom: 18rem;
-  }
-}
-
-.we-are-valorant-content-wrapper::before {
-  content: "";
-  @include mixin.absolute-container(16.3rem, $left: 6.5rem, $width: 0.45rem, $height: 0.4rem);
-  background: $red-bg;
-
-  @media #{$lg} {
-    display: none;
-  }
-}
-
-.description-container {
-  width: 17.6rem;
-  font-family: 'Roboto';
-  margin-left: 13rem;
-
-  @media #{$xl} {
-    @include mixin.grid-column($justify-items: flex-start);
-    width: 12.4rem;
-    margin-left: 8rem;
-  }
-
-  @media #{$lg} {
-    align-items: flex-start;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  @media #{$md} {
-    justify-items: center;
-  }
-}
-
-.description-container::after {
-  content: "00.";
-  @include mixin.absolute-container($bottom: 4.35rem, $left: 6.45rem, $width: 3rem);
-  @include mixin.scaled-text('Teko', 2.8rem, $color: $tertiary-white-text, $scale: (1, 1.2));
-  border-top: 0.3rem solid;
-
-  @media #{$lg} {
-    display: none;
-  }
-}
-
-.description-container h5 {
-  font-size: 1.2rem;
-  margin-bottom: 1.7rem;
-  color: $grey-text;
-}
-
-.description-container p {
-  @include mixin.text('Roboto', 0.95rem, $color: $secondary-grey-text);
-  line-height: 1.5rem;
-
-  @media #{$lg} {
-    text-align: none;
-    width: 79%;
-  }
-}
-
-#we-are-valorant-button {
-  margin-top: 3.2rem;
-
-  @media #{$lg} {
-    place-self: center;
-  }
-}
-
-#we-are-valorant-button span:first-child {
-  border: 1px solid $tertiary-grey-border-color;
-  border-bottom: none;
-}
-
-#we-are-valorant-button span:nth-child(3) {
-  border: 1px solid $tertiary-grey-border-color;
-  border-top: none;
-}
-
-.we-are-valorant-video-wrapper {
-  @include mixin.absolute-container(2.15rem, -6.5rem, $width: 705.5px, $height: 396px);
-  margin-left: auto;
-
-  @media #{$xl} {
-    top: 9rem;
-    width: 550px;
-    height: auto;
-  }
-
-  @media #{$lg} {
-    top: 35%;
-    right: 0;
-    width: 100%;
-    height: auto;
-  }
-
-  @media #{$md} {
-    top: 50%;
-  }
-
-  @media #{$sm} {
-    top: 28rem;
-  }
-}
-
-.we-are-valorant-video-wrapper video {
-  width: 100%;  
-}
-
-.we-are-valorant-video-wrapper::before {
-  content: "";
-  @include mixin.absolute-container(-2.5rem, $left: 0, $width: 8px, $height: 8px);
-  background: $red-bg;
-
-  @media #{$lg} {
-    display: none;
-  }
-}
-
-.we-are-valorant-video-wrapper::after {
-  content: "";
-  @include mixin.absolute-container(-2.5rem, $left: 3rem, $width: 8px, $height: 8px);
-  background: $red-bg;
-
-  @media #{$lg} {
-    display: none;
-  }
-}
-
-.gameplay-detail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @include mixin.absolute-container(1.25rem, $left: -1.25rem, $width: 6.55rem, $height: 1.55rem, $z-index: 50);
-  @include mixin.text($size: 0.9rem, $weight: 600, $color: white);
-  background: $red-bg;
-}
-
-.underline-detail {
-  content: "";
-  @include mixin.absolute-container($bottom: -0.2rem, $left: 0, $width: 6.6rem, $height: 0.2rem, $z-index: 50);
-  background: $red-bg;
-
-  @media #{$xl} {
-    bottom: 0;
-  }
-}
-
-.we-are-valorant-video-button-wrapper {
-  @include mixin.absolute-container(10.25rem, $left: 19.82rem, $width: 4.35rem, $height: 4.4rem);
-  background: rgba(255,70,85,.3);
-  border: 1px solid white;
-
-  @media #{$xl} {
-    top: 8rem;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
-
-  @media #{$lg} {
-    top: 14rem;
-  }
-
-  @media #{$md} {
-    top: 8rem;
-  }
-
-  @media #{$sm} {
-    top: 4rem;
-  }
-}
-
-.we-are-valorant-video-button-wrapper::after {
-  content: "";
-  @include mixin.absolute-container($right: 0, $bottom: 0, $width: 4px, $height: 4px);
-  background: white;
-}
-
-.we-are-valorant-video-button-wrapper button img {
-  @include mixin.absolute-container(0, 0, $width: 4.24rem);
+  
 }

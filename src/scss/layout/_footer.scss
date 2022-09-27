@@ -1,17 +1,28 @@
 @use '../base/variables' as *;
 @use '../base/mixin';
 
-footer {
-  @include mixin.flex-column();
-  width: 100%;
+%shared-link-styling {
+  cursor: pointer;
+  color: var(--secondary-white);
+  padding: 0.5rem 1.1rem;
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--footer-download-links-hover-bg);
+  }
 }
 
-.download-links {
+footer {
+  @include mixin.flex-column();
+  width: 100%; 
+}
+
+.footer-upper {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-items: center;
-  background: $secondary-black-bg;
+  background: var(--secondary-black);
   @include mixin.text('Teko', 0.8rem, 600);
   letter-spacing: 1px;
   padding: 1.5rem;
@@ -21,110 +32,106 @@ footer {
     font-size: 0.7rem;
     padding-inline: 0;
   }
+
+  &__download-link {
+    @extend %shared-link-styling;
+  }
 }
 
-.download-links a {
-  cursor: pointer;
-  text-decoration: none;
-  color: $secondary-white-text;
-  padding: 0.5rem 1.1rem;
-  border-radius: 4px;
-}
-
-.download-links a:hover {
-  background: $footer-download-links-hover-bg;
-}
-
-.actual-footer {
+.footer-lower {
   @include mixin.flex-column($align-items: center);
   gap: 1.5rem;
   height: 100%;
-  background: $nav-footer-bg-color;
+  background: var(--nav-footer-bg-color);
   padding-top: 1.5rem;
   padding-bottom: 3rem;
-}
 
-.footer-social-media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.footer-social-media a {
-  display: flex;
-  align-items: center;
-  background: $secondary-black-bg;
-  padding: 8px;
-  border-radius: 12px;
-  transition: 0.25s ease-in;
-}
-
-.footer-social-media a:hover {
-  background: $secondary-white-bg;
-}
-
-.footer-social-media a:hover img {
-  filter: invert(10%) sepia(0%) saturate(7492%) hue-rotate(144deg) brightness(89%) contrast(121%);
-}
-
-.footer-social-media img {
-  height: 1rem;
-  filter: invert(100%) sepia(0%) saturate(7492%) hue-rotate(144deg) brightness(89%) contrast(121%);
-}
-
-.footer-rg-logo {
-  height: 2rem;
-  margin-top: 1rem;
-  filter: invert(47%) sepia(1%) saturate(0%) hue-rotate(281deg) brightness(94%) contrast(84%);
-}
-
-.footer-rg-logo:hover {
-  filter: invert(100%) sepia(72%) saturate(2%) hue-rotate(56deg) brightness(111%) contrast(101%);
-}
-
-.copyright-text {
-  text-align: center;
-  @include mixin.text($size: 0.8rem, $color: $secondary-grey-text);
-  line-height: 1.3rem;
-  width: 38rem;
-
-  @media #{$md} {
-    width: 100%;
+  &__social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
   }
-}
 
-.other-dl-links {
-  background: none;
-  gap: 0rem;
-  padding: 0;
+  &__social-media-item {
+    display: flex;
+    align-items: center;
+    background: var(--secondary-black);
+    padding: 8px;
+    border-radius: 12px;
+    transition: 0.25s ease-in;
 
-  @media #{$md} {
-    font-size: 0.6rem;
+    &:hover {
+      background: var(--secondary-white);
+
+      .footer-lower__social-media-icon {
+        filter: invert(10%) sepia(0%) saturate(7492%) hue-rotate(144deg) brightness(89%) contrast(121%);
+      }
+    }
   }
-}
 
-.esrb-rating {
-  display: flex;
-  align-items: stretch;
-  gap: 0.5rem;
-  background: $secondary-black-bg;
-  padding: 0.8rem;
-  border-radius: 8px;
-  height: 100%;
-}
+  &__social-media-icon {
+    height: 1rem;
+    filter: invert(100%) sepia(0%) saturate(7492%) hue-rotate(144deg) brightness(89%) contrast(121%);
+  }
 
-.esrb-rating img {
-  height: 6.1rem;
-}
+  &__riot-games-logo {
+    height: 2rem;
+    margin-top: 1rem;
+    filter: invert(47%) sepia(1%) saturate(0%) hue-rotate(281deg) brightness(94%) contrast(84%);
 
-.esrb-rating ul {
-  @include mixin.flex-column();
-  @include mixin.text($size: 0.75rem, $weight: 600, $color: $secondary-white-text);
-  letter-spacing: 1px;
-  list-style: none;
-}
+    &:hover {
+      filter: invert(100%) sepia(72%) saturate(2%) hue-rotate(56deg) brightness(111%) contrast(101%);
+    }
+  }
 
-.esrb-rating ul li {
-  flex: 1;
+  &__copyright-text {
+    text-align: center;
+    @include mixin.text($size: 0.8rem, $color: var(--secondary-grey));
+    line-height: 1.3rem;
+    width: 38rem;
+  
+    @media #{$md} {
+      width: 100%;
+    }
+  }
+
+  &__other-links-container {
+    background: none;
+    gap: 0rem;
+    padding: 0;
+  
+    @media #{$md} {
+      font-size: 0.6rem;
+    }
+  }
+
+  &__other-link {
+    @extend %shared-link-styling;
+  }
+
+  &__esrb-rating {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+    background: var(--secondary-black);
+    padding: 0.8rem;
+    border-radius: 8px;
+    height: 100%;
+  }
+
+  &__esrb-rating-image {
+    height: 6.1rem;
+  }
+
+  &__esrb-contains-list {
+    @include mixin.flex-column();
+    @include mixin.text($size: 0.75rem, $weight: 600, $color: var(--secondary-white));
+    letter-spacing: 1px;
+    list-style: none;
+  }
+
+  &__esrb-contains-item {
+    flex: 1;
+  }
 }

@@ -4,20 +4,60 @@
 .article-banner {
   @include mixin.absolute-container($z-index: 20);
   @include mixin.grid-column($justify-items: center);
-}
 
-img[alt="Valorant Article Banner"] {
-  object-fit: cover;
-  transform: translateY(-58px);
-  width: 100%;
-}
+  &__banner-image {
+    object-fit: cover;
+    transform: translateY(-58px);
+    width: 100%;
+  }
 
-.white-lines {
-  @include mixin.absolute-container(0, $width: $default-width, $height: 100%, $z-index: 50);
-  border-right: 1px solid rgba(236,232,225,.5);
-  border-left: 1px solid rgba(236,232,225,.5);
+  &__white-lines {
+    @include mixin.absolute-container(0, $width: var(--default-width), $height: 100%, $z-index: 50);
+    border-right: 1px solid rgba(236,232,225,.5);
+    border-left: 1px solid rgba(236,232,225,.5);
 
-  @media #{$lg} {
-    width: 90%;
+    @media #{$lg} {
+      width: 90%;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    @include mixin.absolute-container(179px, $left: 0, $width: 18.8rem, $height: 4.5rem, $z-index: 50);
+    @include mixin.grid-column(repeat(2, 1fr), end, center);
+    background: var(--article-grey-bg-color);
+    padding-right: 2.2rem;
+
+    &::after {
+      content: "";
+      @include mixin.absolute-container(100%, 0, $left: 0);
+      display: block;
+      border-top: 12px solid var(--article-grey-bg-color);
+      border-right: 12px solid transparent;
+    }
+
+    &:hover .article-banner__link-title{
+      transform: scale(1.02);
+    }
+    
+    @media #{$lg} {
+      display: none;
+    }
+  }
+
+  &__link-image {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-top: 1rem;
+    @include mixin.arrow-sway();
+    @include mixin.arrow-sway-keyframes(rotate(180deg));
+  }
+
+  &__link-title {
+    @include mixin.text($size: 14px, $weight: 800, $color: var(--white));
+    white-space: nowrap;
+    font-stretch: condensed;
+    margin-top: 1rem;
+    transition: 0.2s ease-in-out;
   }
 }

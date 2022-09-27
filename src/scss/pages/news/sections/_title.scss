@@ -1,7 +1,7 @@
 @use '../../../base/variables' as *;
 @use '../../../base/mixin';
 
-.title-container {
+.title-section {
   grid-area: titleSection;
   justify-self: flex-start;
   padding: 5.5% 8.5%;
@@ -13,90 +13,87 @@
     padding-bottom: 0;
     padding-inline: 0;
   }
-}
 
-.title-upper-content-container {
-  @include mixin.grid-column(repeat(2, 1fr));
+  &__upper {
+    @include mixin.grid-column(repeat(2, 1fr));
 
-  @media #{$md} {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.4rem;
+    @media #{$md} {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
   }
-}
 
-.title-upper-content-container div:nth-child(2) {
-  grid-column-start: 2;
-  justify-self: flex-end;
+  &__upper-content {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
   
-  @media #{$md} {
-    grid-column-start: 1;
-    justify-self: flex-start;
-  }
-}
+    @media #{$lg} {
+      font-size: 1rem;
+    }
 
-.upper-content {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.9rem;
-  white-space: nowrap;
-
-  @media #{$lg} {
-    font-size: 1rem;
-  }
-}
-
-.upper-content p {
-  letter-spacing: 1px;
-}
-
-.upper-content a {
-  position: relative;
-  display: flex;
-  align-items: end;
-  color: $red-text;
-  width: auto;
-}
-
-.upper-content a::before {
-  content: "";
-  margin-right: 1rem;
-  margin-bottom: 4px;
-  width: 4px;
-  height: 4px;
-  background: black;
-}
-
-#category-upper-content a:hover::after {
-  width: calc(100% - 1rem);
-}
-
-.upper-content a:hover::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  right: 0;
-  width: 7.1rem;
-  height: 1px;
-  background: red;
-}
-
-.title {
-  @include mixin.scaled-text('Teko', 5.5rem, 900, $black-text, (1, 1.5));
-  letter-spacing: -2px;
-  line-height: 4.4rem;
-  margin-top: 5.5rem;
-  width: 86%;
-
-  @media #{$lg} {
-    font-size: 4.5rem;
-    line-height: 3.4rem;
-    width: 70%;
+    &--category {
+      grid-column-start: 2;
+      justify-self: flex-end;
+      
+      @media #{$md} {
+        grid-column-start: 1;
+        justify-self: flex-start;
+      }
+    }
   }
 
-  @media #{$md} {
-    font-size: 2.5rem;
-    line-height: 2rem;
-    margin-top: 3rem;
+  &__label {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: end;
+    color: var(--red);
+    width: auto;
+
+    &::before {
+      content: "";
+      margin-right: 1rem;
+      margin-bottom: 4px;
+      width: 4px;
+      height: 4px;
+      background: black;
+    }
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      right: 0;
+      width: calc(100% - 1.3rem);
+      height: 1px;
+      background: red;
+    }
+  }
+
+  &__title {
+    @include mixin.scaled-text('Teko', 5.5rem, 900, var(--black), (1, 1.5), $text-transform: uppercase);
+    letter-spacing: -2px;
+    line-height: 4.4rem;
+    margin-top: 5.5rem;
+    width: 86%;
+  
+    @media #{$lg} {
+      font-size: 4.5rem;
+      line-height: 3.4rem;
+      width: 70%;
+    }
+  
+    @media #{$md} {
+      font-size: 2.5rem;
+      line-height: 2rem;
+      margin-top: 3rem;
+    }
   }
 }
